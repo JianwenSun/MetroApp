@@ -11,6 +11,7 @@ namespace MetroApp.Themes
     {
         AccentColorKey,
         BasicColorKey,
+        WeakColorKey,
         StrongColorKey,
         MainColorKey,
         MarkerColorKey,
@@ -23,6 +24,7 @@ namespace MetroApp.Themes
         WindowStateButtonPressedColorKey,
         WindowStateButtonClosePressedColorKey,
         WindowStateButtonDisabledColorKey,
+        WindowCommandsForegroundColorKey,
         WindowCommandsDisabledColorKey,
 
         LabelForegroundColorKey,
@@ -40,6 +42,10 @@ namespace MetroApp.Themes
         public static MetroColorKey AccentColorKey
         {
             get { return MetroColorKey.AccentColorKey; }
+        }
+        public static MetroColorKey WeakColorKey
+        {
+            get { return MetroColorKey.WeakColorKey; }
         }
 
         public static MetroColorKey BasicColorKey
@@ -100,6 +106,11 @@ namespace MetroApp.Themes
         public static MetroColorKey WindowStateButtonDisabledColorKey
         {
             get { return MetroColorKey.WindowStateButtonDisabledColorKey; }
+        }
+
+        public static MetroColorKey WindowCommandsForegroundColorKey
+        {
+            get { return MetroColorKey.WindowCommandsForegroundColorKey; }
         }
 
         public static MetroColorKey WindowCommandsDisabledColorKey

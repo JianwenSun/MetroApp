@@ -7,11 +7,8 @@ using System.Windows.Media;
 
 namespace MetroApp.Controls
 {
-    [TemplatePart(Name = PART_TopBar, Type = typeof(MetroWindowTopBar))]
     public class MetroWindow : Window
     {
-        private const string PART_TopBar = "PART_TopBar";
-
         static MetroWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MetroWindow), new FrameworkPropertyMetadata(typeof(MetroWindow)));
@@ -58,39 +55,37 @@ namespace MetroApp.Controls
             set { SetValue(BorderShadowProperty, value); }
         }
 
-        public static readonly DependencyProperty UseNoneWindowStyleProperty = DependencyProperty.Register("UseNoneWindowStyle", typeof(bool), typeof(MetroWindow), new PropertyMetadata(false, OnUseNoneWindowStylePropertyChangedCallback));
+        public static readonly DependencyProperty IsFullScreenProperty = DependencyProperty.Register("IsFullScreen", typeof(bool), typeof(MetroWindow), new PropertyMetadata(false, OnIsFullScreenPropertyChanged));
 
-        /// <summary>
-        /// Gets/sets whether the WindowStyle is None or not.
-        /// </summary>
-        public bool UseNoneWindowStyle
+        private static void OnIsFullScreenPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            get { return (bool)GetValue(UseNoneWindowStyleProperty); }
-            set { SetValue(UseNoneWindowStyleProperty, value); }
-        }
-
-        private static void OnUseNoneWindowStylePropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
+            MetroWindow window = d as MetroWindow;
             if (e.NewValue != e.OldValue)
             {
-                // if UseNoneWindowStyle = true no title bar should be shown
                 if ((bool)e.NewValue)
                 {
                     ((MetroWindow)d).TopBar.Visibility = Visibility.Collapsed;
+                    window.WindowState = WindowState.Maximized;
                 }
                 else
                 {
                     ((MetroWindow)d).TopBar.Visibility = Visibility.Visible;
+                    window.WindowState = WindowState.Normal;
                 }
             }
         }
 
-        public MetroWindow()
+        /// <summary>
+        /// Gets/sets whether the WindowStyle is None or not.
+        /// </summary>
+        public bool IsFullScreen
         {
+            get { return (bool)GetValue(IsFullScreenProperty); }
+            set { SetValue(IsFullScreenProperty, value); }
         }
 
         public static readonly DependencyProperty TopBarProperty
-            = DependencyProperty.Register("TopBar", typeof(MetroWindowTopBar), typeof(MetroWindow), new PropertyMetadata(null));
+            = DependencyProperty.Register("TopBar", typeof(MetroWindowTopBar), typeof(MetroWindow), new PropertyMetadata(null, OnTopBarPropertyChanged));
 
         public MetroWindowTopBar TopBar
         {
@@ -98,10 +93,21 @@ namespace MetroApp.Controls
             set { SetValue(TopBarProperty, value); }
         }
 
+        private static void OnTopBarPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            MetroWindow window = d as MetroWindow;
+        }
+
+        public MetroWindow()
+        {
+        }
+
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            TopBar = GetTemplateChild(PART_TopBar) as MetroWindowTopBar;
+
+            if (this.TopBar == null)
+                TopBar = new MetroWindowTopBar();
         }
 
         internal T GetPart<T>(string name) where T : DependencyObject

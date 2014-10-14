@@ -19,11 +19,10 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Controls:MetroWindowTopBar x:Name="PART_TopBar" 
-                                                Grid.Row="0"
-                                                HorizontalAlignment="Stretch"
-                                                VerticalAlignment="Stretch"
-                                                FocusVisualStyle="{x:Null}"/>
+                    <ContentPresenter x:Name="PART_TopBar"
+                                Focusable="False"
+                                Content="{TemplateBinding TopBar}"
+                                Grid.Row="0"/>
 
                     <!-- the main window content -->
                     <ContentControl Grid.Row="1"
@@ -45,6 +44,14 @@
                         Visibility="Collapsed"
                         VerticalAlignment="Bottom" />
         </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsFullScreen" Value="True">
+                <Setter TargetName="PART_TopBar" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="IsFullScreen" Value="False">
+                <Setter TargetName="PART_TopBar" Property="Visibility" Value="Visible"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <Style TargetType="{x:Type Controls:MetroWindow}" x:Key="MetroWindowStyle">

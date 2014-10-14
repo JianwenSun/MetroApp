@@ -4,7 +4,7 @@
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.StateButtons.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.Commands.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindowTopBar.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.xaml"/>
 
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Label.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Button.xaml" />

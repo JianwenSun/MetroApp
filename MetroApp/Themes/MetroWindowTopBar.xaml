@@ -35,7 +35,7 @@
 
                         <ContentPresenter x:Name="PART_LeftWindowCommands"
                                                   Focusable="False"
-                                                  Content="{Binding LeftWindowCommands, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
+                                                  Content="{Binding LeftWindowCommands}"
                                                   Grid.Column="1"/>
 
                         <!-- the title bar -->
@@ -52,11 +52,10 @@
                             </ContentControl.Content>
                         </ContentControl>
 
-                        <!-- the right window commands -->
                         <ContentPresenter x:Name="PART_RightWindowCommands"
-                                                  Focusable="False"
-                                                  Content="{Binding RightWindowCommands, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
-                                                  Grid.Column="3"/>
+                                          Grid.Column="3"
+                                          Focusable="False"
+                                          Content="{TemplateBinding RightWindowCommands}"/>
 
                         <!-- the window button commands -->
                         <Controls:MetroWindowStateButtons x:Name="PART_WindowButtonCommands"

@@ -105,7 +105,7 @@ namespace MetroApp.Behaviours
 
             // No glow effect if UseNoneWindowStyle is true or GlowBrush not set.
             var metroWindow = this.AssociatedObject as MetroWindow;
-            if (metroWindow != null && (metroWindow.UseNoneWindowStyle || metroWindow.GlowBrush == null))
+            if (metroWindow != null && (metroWindow.GlowBrush == null))
             {
                 return;
             }

@@ -13,10 +13,5 @@ namespace MetroApp.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MetroWindowCommands), new FrameworkPropertyMetadata(typeof(MetroWindowCommands)));
         }
-
-        public override void OnApplyTemplate()
-        {
-            base.OnApplyTemplate();
-        }
     }
 }

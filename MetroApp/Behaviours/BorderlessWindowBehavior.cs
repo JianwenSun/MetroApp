@@ -178,7 +178,7 @@ namespace MetroApp.Behaviours
                     var monitorInfo = new _MonitorInfo();
                     UnsafeNativeMethods.GetMonitorInfo(monitor, monitorInfo);
                     var metroWindow = AssociatedObject as MetroWindow;
-                    var ignoreTaskBar = metroWindow != null && (metroWindow.IgnoreTaskbarOnMaximize || metroWindow.UseNoneWindowStyle);
+                    var ignoreTaskBar = metroWindow != null && (metroWindow.IgnoreTaskbarOnMaximize);
                     var x = ignoreTaskBar ? monitorInfo.rcMonitor.left : monitorInfo.rcWork.left;
                     var y = ignoreTaskBar ? monitorInfo.rcMonitor.top : monitorInfo.rcWork.top;
                     var cx = ignoreTaskBar ? Math.Abs(monitorInfo.rcMonitor.right - x) : Math.Abs(monitorInfo.rcWork.right - x);
@@ -222,7 +222,7 @@ namespace MetroApp.Behaviours
                 mmi.ptMaxPosition.Y = Math.Abs(rcWorkArea.top - rcMonitorArea.top);
 
                 var metroWindow = AssociatedObject as MetroWindow;
-                var ignoreTaskBar = metroWindow != null && (metroWindow.IgnoreTaskbarOnMaximize || metroWindow.UseNoneWindowStyle);
+                var ignoreTaskBar = metroWindow != null && (metroWindow.IgnoreTaskbarOnMaximize);
                 var x = ignoreTaskBar ? monitorInfo.rcMonitor.left : monitorInfo.rcWork.left;
                 var y = ignoreTaskBar ? monitorInfo.rcMonitor.top : monitorInfo.rcWork.top;
                 mmi.ptMaxSize.X = ignoreTaskBar ? Math.Abs(monitorInfo.rcMonitor.right - x) : Math.Abs(monitorInfo.rcWork.right - x);

@@ -15,6 +15,12 @@ namespace MetroApp.Themes
     {
         public static List<Theme> Themes = new List<Theme>();
 
+        /// <summary>
+        /// Gets or sets whether StyleManager will apply themes on controls.
+        /// True by default for normal assemblies (with XAML) and false by default for assemblies without XAML.
+        /// </summary>
+        public static bool IsEnabled { get; set; }
+
         public static Theme AppDefaultTheme
         {
             get;
@@ -50,16 +56,10 @@ namespace MetroApp.Themes
 
         static StyleManager()
         {
-            IsEnabled = true;
+            StyleManager.IsEnabled = true;
             AppDefaultTheme = LightTheme.Instance;
             GetThemes();
         }
-
-        /// <summary>
-        /// Gets or sets whether StyleManager will apply themes on controls.
-        /// True by default for normal assemblies (with XAML) and false by default for assemblies without XAML.
-        /// </summary>
-        public static bool IsEnabled { get; set; }
 
         /// <summary>
         /// Identifies the Theme attached property.
@@ -94,9 +94,10 @@ namespace MetroApp.Themes
             if (StyleManager.IsEnabled)
             {
                 Theme newTheme = changedEventArgs.NewValue as Theme;
+                if (newTheme == null) return;
 
                 Control control = target as Control;
-                if (control != null)
+                if (control != null && control.Resources.MergedDictionaries != null)
                 {
                     foreach (ResourceDictionary rd in control.Resources.MergedDictionaries)
                     {

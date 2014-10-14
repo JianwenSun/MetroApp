@@ -3,6 +3,7 @@
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
 
     <Color x:Key="{x:Static Themes:MetroColorKeys.AccentColorKey}">#FF007ACC</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.WeakColorKey}">#FF2D2D30</Color>
     <Color x:Key="{x:Static Themes:MetroColorKeys.BasicColorKey}">#FF000000</Color>
     <Color x:Key="{x:Static Themes:MetroColorKeys.StrongColorKey}">#FF0F0F0F</Color>
     <Color x:Key="{x:Static Themes:MetroColorKeys.MainColorKey}">#FFEEEEF2</Color>
@@ -12,6 +13,8 @@
     <!-- Base resources-->
     <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.AccentBrushKey}" 
                      Color="{StaticResource {x:Static Themes:MetroColorKeys.AccentColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WeakBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.WeakColorKey}}"/>
     <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.BasicBrushKey}" 
                      Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
     <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.StrongBrushKey}" 
@@ -38,6 +41,8 @@
                      Color="#993D3D" />
     <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonDisabledBrushKey}" 
                      Color="#333333FF" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowCommandsForegroundBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.WeakColorKey}}"/>
     <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowCommandsDisabledBrushKey}" 
                      Color="#333333FF"/>
 

@@ -69,6 +69,7 @@
     <Compile Include="Controls\MetroWindowTopBar.cs">
       <DependentUpon>MetroWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Helpers\MetroWindowHelpers.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="Model\Win32\GWL.cs" />
@@ -117,9 +118,7 @@
     <Compile Include="Themes\ThemeAttribute.cs" />
     <Compile Include="Themes\ThemeConverter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Controls\GlowWindow.xaml">
       <SubType>Designer</SubType>

@@ -12,8 +12,15 @@ namespace MetroApp.Themes
     {
         public static bool IsDictionaryContainTheme(ResourceDictionary resourceDictionary)
         {
-            if (resourceDictionary.Source.ToString().Contains("pack://application:,,,/MetroApp;component/Themes/"))
-                return true;
+            try
+            {
+                if (resourceDictionary.Source.ToString().Contains("pack://application:,,,/MetroApp;component/Themes/"))
+                    return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
             return false;
         }
 

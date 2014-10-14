@@ -9,6 +9,7 @@ namespace MetroApp.Themes
     public enum MetroBrushKey
     {
         AccentBrushKey,
+        WeakBrushKey,
         BasicBrushKey,
         StrongBrushKey,
         MainBrushKey,
@@ -22,6 +23,7 @@ namespace MetroApp.Themes
         WindowStateButtonPressedBrushKey,
         WindowStateButtonClosePressedBrushKey,
         WindowStateButtonDisabledBrushKey,
+        WindowCommandsForegroundBrushKey,
         WindowCommandsDisabledBrushKey,
 
         LabelForegroundBrushKey,
@@ -39,6 +41,10 @@ namespace MetroApp.Themes
         public static MetroBrushKey AccentBrushKey
         {
             get { return MetroBrushKey.AccentBrushKey; }
+        }
+        public static MetroBrushKey WeakBrushKey
+        {
+            get { return MetroBrushKey.WeakBrushKey; }
         }
 
         public static MetroBrushKey BasicBrushKey
@@ -99,6 +105,10 @@ namespace MetroApp.Themes
         public static MetroBrushKey WindowStateButtonDisabledBrushKey
         {
             get { return MetroBrushKey.WindowStateButtonDisabledBrushKey; }
+        }
+        public static MetroBrushKey WindowCommandsForegroundBrushKey
+        {
+            get { return MetroBrushKey.WindowCommandsForegroundBrushKey; }
         }
 
         public static MetroBrushKey WindowCommandsDisabledBrushKey

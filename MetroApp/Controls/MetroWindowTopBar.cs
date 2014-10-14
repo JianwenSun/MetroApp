@@ -16,8 +16,8 @@ namespace MetroApp.Controls
     [TemplatePart(Name = PART_Icon, Type = typeof(UIElement))]
     [TemplatePart(Name = PART_TitleBar, Type = typeof(UIElement))]
     [TemplatePart(Name = PART_WindowTitleBackground, Type = typeof(UIElement))]
-    [TemplatePart(Name = PART_LeftWindowCommands, Type = typeof(MetroWindowCommands))]
-    [TemplatePart(Name = PART_RightWindowCommands, Type = typeof(MetroWindowCommands))]
+    [TemplatePart(Name = PART_LeftWindowCommands, Type = typeof(ContentPresenter))]
+    [TemplatePart(Name = PART_RightWindowCommands, Type = typeof(ContentPresenter))]
     [TemplatePart(Name = PART_WindowButtonCommands, Type = typeof(MetroWindowStateButtons))]
 
     public class MetroWindowTopBar : ContentControl
@@ -37,8 +37,8 @@ namespace MetroApp.Controls
         UIElement icon;
         UIElement titleBar;
         UIElement titleBarBackground;
-        internal ContentPresenter LeftWindowCommandsPresenter;
-        internal ContentPresenter RightWindowCommandsPresenter;
+        public ContentPresenter LeftWindowCommandsPresenter;
+        public ContentPresenter RightWindowCommandsPresenter;
         internal MetroWindowStateButtons WindowButtonCommands;
 
         internal MetroWindow ParentWindow;
@@ -87,15 +87,10 @@ namespace MetroApp.Controls
             get { return (MetroWindowCommands)GetValue(RightWindowCommandsProperty); }
             set { SetValue(RightWindowCommandsProperty, value); }
         }
-
+        
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-
-            if (LeftWindowCommands == null)
-                LeftWindowCommands = new MetroWindowCommands();
-            if (RightWindowCommands == null)
-                RightWindowCommands = new MetroWindowCommands();
 
             LeftWindowCommandsPresenter = GetTemplateChild(PART_LeftWindowCommands) as ContentPresenter;
             RightWindowCommandsPresenter = GetTemplateChild(PART_RightWindowCommands) as ContentPresenter;
@@ -182,17 +177,16 @@ namespace MetroApp.Controls
 
         protected void TitleBarMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left && !this.ParentWindow.UseNoneWindowStyle)
+            if (e.ChangedButton == MouseButton.Left)
             {
-                // if UseNoneWindowStyle = true no movement, no maximize please
                 IntPtr windowHandle = new WindowInteropHelper(this.ParentWindow).Handle;
                 UnsafeNativeMethods.ReleaseCapture();
 
                 var mPoint = Mouse.GetPosition(this.ParentWindow);
 
                 var wpfPoint = this.PointToScreen(mPoint);
-                var x = Convert.ToInt16(wpfPoint.X);
-                var y = Convert.ToInt16(wpfPoint.Y);
+                int x = Convert.ToInt16(wpfPoint.X);
+                int y = Convert.ToInt16(wpfPoint.Y);
                 var lParam = x | (y << 16);
                 UnsafeNativeMethods.SendMessage(windowHandle, Constants.WM_NCLBUTTONDOWN, Constants.HT_CAPTION, lParam);
 

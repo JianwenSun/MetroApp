@@ -3,9 +3,102 @@
                     xmlns:Controls="clr-namespace:MetroApp.Controls"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
 
+    <Style TargetType="{x:Type Button}" x:Key="WindowCommandButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowCommandsForegroundBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="1" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter x:Name="contentPresenter"
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            RecognizesAccessKey="True"
+                                            Opacity="0.75"
+                                            Margin="9,1,9,1" />
+
+                        <Rectangle x:Name="border"
+                                    SnapsToDevicePixels="True"
+                                    IsHitTestVisible="False"
+                                    Opacity="0.25"
+                                    Width="1"
+                                    Height="15"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalAlignment="Right"
+                                    Fill="{TemplateBinding Foreground}"
+                                    Margin="8,0,0,0" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="contentPresenter" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="contentPresenter" Property="Opacity" Value=".7" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#ADADAD" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ToggleButton}" x:Key="WindowCommandToggleButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="1" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter x:Name="contentPresenter"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        RecognizesAccessKey="True"
+                                        Opacity=".7"
+                                        Margin="9,1,9,1" />
+
+                        <Rectangle x:Name="border"
+                                        SnapsToDevicePixels="True"
+                                        IsHitTestVisible="False"
+                                        Opacity=".2"
+                                        Width="1"
+                                        Height="15"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Right"
+                                        Fill="{TemplateBinding Foreground}"
+                                        Margin="8,0,0,0" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="contentPresenter" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="contentPresenter" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#ADADAD" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="{x:Type Controls:MetroWindowCommands}" x:Key="MetroWindowCommandsStyle">
         <Setter Property="Foreground"
-                 Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.BasicBrushKey}}" />
         <Setter Property="IsTabStop"
                 Value="False" />
         <Setter Property="VerticalAlignment"
@@ -15,8 +108,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Controls:MetroWindowCommands}">
-                    <ItemsControl IsTabStop="False"
-                                  ItemsSource="{Binding Items}">
+                    <ItemsControl IsTabStop="False" Margin="2"
+                                  ItemsSource="{Binding Items, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindowCommands}}}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal" />
