@@ -1,0 +1,13 @@
+﻿<MetroApp:MetroWindow x:Class="MetroApp.Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:MetroApp="sunjianwen143@hotmail.com"
+        GlowBrush="WhiteSmoke"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Themes="sunjianwen143@hotmail.com"
+        Title="MainWindow" Height="350" Width="525" Themes:StyleManager.Theme="{x:Static Themes:LightTheme.Instance}">
+    
+    <Grid>
+        <Label Content="WWWWWWWWWWWWWWW"/>
+        <Button Content="Change Theme" Click="Button_Click" Width="60" Height="25"/>
+    </Grid>
+</MetroApp:MetroWindow>

@@ -1,0 +1,9 @@
+F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.dll
+F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.pdb
+F:\Self Workspace\MetroApp\MetroApp\bin\Debug\System.Windows.Interactivity.dll
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.NET45.csprojResolveAssemblyReference.cache
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Generic.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.cache
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb

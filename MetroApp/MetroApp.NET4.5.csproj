@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42113917-3525-4FE1-ACE7-64B2B9ED7B8D}</ProjectGuid>
+    <ProjectGuid>{08D3536A-9081-4E64-8B5E-DDE68D2FF98A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MetroApp</RootNamespace>
     <AssemblyName>MetroApp</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -21,6 +21,7 @@
     <DefineConstants>TRACE;DEBUG;NET4</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -36,6 +38,9 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\NET45\System.Windows.Interactivity.dll</HintPath>
@@ -45,6 +50,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviours\BorderlessWindowBehavior.cs" />
+    <Compile Include="Behaviours\GlowWindowBehavior.cs" />
+    <Compile Include="Behaviours\StylizedBehaviorCollection.cs" />
+    <Compile Include="Behaviours\StylizedBehaviors.cs" />
+    <Compile Include="Controls\Glow.cs" />
+    <Compile Include="Controls\GlowDirection.cs" />
+    <Compile Include="Controls\GlowWindow.xaml.cs">
+      <DependentUpon>GlowWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MetroWindow.Commands.cs">
       <DependentUpon>MetroWindow.cs</DependentUpon>
     </Compile>
@@ -55,6 +69,19 @@
     <Compile Include="Controls\MetroWindowTopBar.cs">
       <DependentUpon>MetroWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MetroWindowHelpers.cs" />
+    <Compile Include="Helpers\TreeHelper.cs" />
+    <Compile Include="Model\Win32\GWL.cs" />
+    <Compile Include="Model\Win32\HitTestValues.cs" />
+    <Compile Include="Model\Win32\NativeMethods.cs" />
+    <Compile Include="Model\Win32\SWP.cs" />
+    <Compile Include="Model\Win32\WM.cs" />
+    <Compile Include="Model\Win32\WS.cs" />
+    <Compile Include="Model\Win32\WSEX.cs" />
+    <Compile Include="Native\ABMsg.cs" />
+    <Compile Include="Native\Constants.cs" />
+    <Compile Include="Native\MinMaxInfo.cs" />
+    <Compile Include="Native\AbEdge.cs" />
     <Compile Include="Shells\Standard\ComGuids.cs" />
     <Compile Include="Shells\Standard\Debug.cs" />
     <Compile Include="Shells\Standard\DoubleUtil.cs" />
@@ -82,67 +109,78 @@
     <Compile Include="Native\UnsafeNativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Themes\Dark\DarkTheme.cs" />
-    <Compile Include="Themes\Dark\Resources\DarkPalette.cs" />
-    <Compile Include="Themes\Dark\Resources\DarkResourceDictionary.cs" />
-    <Compile Include="Themes\Dark\Resources\DarkResourceExtension.cs" />
-    <Compile Include="Themes\Dark\Resources\DarkResourceKey.cs" />
-    <Compile Include="Themes\Dark\Resources\Legacy\DarkColor.cs" />
-    <Compile Include="Themes\Dark\Resources\Legacy\DarkColorType.cs" />
-    <Compile Include="Themes\Dark\Resources\Legacy\DarkPalette.Freezable.cs" />
-    <Compile Include="Themes\InternalResourceKey.cs" />
-    <Compile Include="Themes\IThemable.cs" />
+    <Compile Include="Themes\MetroBrushKey.cs" />
+    <Compile Include="Themes\MetroColorKey.cs" />
     <Compile Include="Themes\Light\LightTheme.cs" />
-    <Compile Include="Themes\Light\Resources\LightPalette.cs" />
-    <Compile Include="Themes\Light\Resources\Legacy\LightColor.cs" />
-    <Compile Include="Themes\Light\Resources\Legacy\LightColorType.cs" />
-    <Compile Include="Themes\Light\Resources\Legacy\LightPalette.Freezable.cs" />
-    <Compile Include="Themes\Light\Resources\LightResourceDictionary.cs" />
-    <Compile Include="Themes\Light\Resources\LightResourceExtension.cs" />
-    <Compile Include="Themes\Light\Resources\LightResourceKey.cs" />
     <Compile Include="Themes\StyleManager.cs" />
     <Compile Include="Themes\Theme.cs" />
     <Compile Include="Themes\ThemeAttribute.cs" />
     <Compile Include="Themes\ThemeConverter.cs" />
-    <Compile Include="Themes\ThemeExtensions.cs" />
-    <Compile Include="Themes\ThemeManager.cs" />
-    <Compile Include="Themes\ThemePalette.cs" />
-    <Compile Include="Themes\ThemeResourceExtension.cs" />
-    <Compile Include="Themes\ThemeResourceKey.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Behaviours\" />
     <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Dark\MetroWindow.Commands.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Controls\GlowWindow.xaml">
       <SubType>Designer</SubType>
-      <DependentUpon>MetroWindow.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Dark\MetroWindow.StateButtons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <DependentUpon>MetroWindow.xaml</DependentUpon>
-    </Page>
-    <Page Include="Themes\Dark\MetroWindowTopBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <DependentUpon>MetroWindow.xaml</DependentUpon>
-    </Page>
-    <Page Include="Themes\Dark\MetroWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
+    <Page Include="Themes\Controls.Label.xaml">
       <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls.Button.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Glow.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MetroWindow.Commands.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindow.StateButtons.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindow.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindowTopBar.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Dark\Common.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Dark\Controls.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
+    <Page Include="Themes\Light\Common.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

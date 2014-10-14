@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.StateButtons.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.Commands.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindowTopBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.xaml" />
+
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Label.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Glow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,14 @@
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.csprojResolveAssemblyReference.cache
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.cache
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.lref
+F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.dll
+F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.pdb
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark\MetroWindow.Commands.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark\MetroWindow.StateButtons.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark\MetroWindowTopBar.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark\MetroWindow.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark\Common.baml

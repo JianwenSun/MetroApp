@@ -1,0 +1,73 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:MetroApp.Controls"
+                    xmlns:Themes="clr-namespace:MetroApp.Themes">
+
+    <Style TargetType="{x:Type Controls:MetroWindowTopBar}" x:Key="MetroWindowTopBarStyle">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Controls:MetroWindowTopBar}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <!-- icon -->
+                            <ColumnDefinition Width="Auto" />
+                            <!-- left window commands -->
+                            <ColumnDefinition Width="Auto" />
+                            <!-- title -->
+                            <ColumnDefinition Width="*" />
+                            <!-- right window commands -->
+                            <ColumnDefinition Width="Auto" />
+                            <!-- min,max,close buttons -->
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- icon -->
+                        <ContentControl x:Name="PART_Icon"
+                                                Focusable="False"
+                                                Grid.Column="0"
+                                                Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Icon}"
+                                                ContentTemplate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=IconTemplate}"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch"/>
+
+                        <ContentPresenter x:Name="PART_LeftWindowCommands"
+                                                  Focusable="False"
+                                                  Content="{Binding LeftWindowCommands, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
+                                                  Grid.Column="1"/>
+
+                        <!-- the title bar -->
+                        <ContentControl x:Name="PART_TitleBar"
+                                                Focusable="False"
+                                                Grid.Column="2"
+                                                ContentTemplate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=TitleTemplate}"
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalContentAlignment="Stretch">
+                            <ContentControl.Content>
+                                <Label Margin="10,0,0,0" Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Title}"
+                                       HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </ContentControl.Content>
+                        </ContentControl>
+
+                        <!-- the right window commands -->
+                        <ContentPresenter x:Name="PART_RightWindowCommands"
+                                                  Focusable="False"
+                                                  Content="{Binding RightWindowCommands, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}"
+                                                  Grid.Column="3"/>
+
+                        <!-- the window button commands -->
+                        <Controls:MetroWindowStateButtons x:Name="PART_WindowButtonCommands"
+                                                                   Focusable="False"
+                                                                   Grid.Column="4"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="{x:Type Controls:MetroWindowTopBar}"  BasedOn="{StaticResource MetroWindowTopBarStyle}" />
+    
+</ResourceDictionary>

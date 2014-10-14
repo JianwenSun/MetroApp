@@ -1,0 +1,63 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Themes="clr-namespace:MetroApp.Themes">
+
+    <Color x:Key="{x:Static Themes:MetroColorKeys.AccentColorKey}">#FF007ACC</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.BasicColorKey}">#FF000000</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.StrongColorKey}">#FF0F0F0F</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.MainColorKey}">#FFEEEEF2</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.MarkerColorKey}">#FF000000</Color>
+    <Color x:Key="{x:Static Themes:MetroColorKeys.ValidationColorKey}">#FFDE3914</Color>
+
+    <!-- Base resources-->
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.AccentBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.AccentColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.BasicBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.StrongBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.StrongColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.MainBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.MainColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.MarkerBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.MarkerColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ValidationBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.ValidationColorKey}}"/>
+
+    <!-- Window specific resources-->
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowBackgroundBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.MainColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonMouseOverBrushKey}" 
+                     Color="#FCFCFD" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonCloseMouseOverBrushKey}" 
+                     Color="#E04343" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonPressedBrushKey}" 
+                     Color="#007ACC" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonClosePressedBrushKey}" 
+                     Color="#993D3D" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowStateButtonDisabledBrushKey}" 
+                     Color="#333333FF" />
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.WindowCommandsDisabledBrushKey}" 
+                     Color="#333333FF"/>
+
+    <!-- Label specific resources-->
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.LabelForegroundBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+
+    <!-- Button specific resources-->
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonBackgroundBrushKey}"
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.MainColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonBackgroundDisabledBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonBorderBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.BasicColorKey}}"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonMouseOverBrushKey}" 
+                     Color="#FCFCFD"/>
+    <SolidColorBrush x:Key="{x:Static Themes:MetroBrushKeys.ButtonPressedBrushKey}" 
+                     Color="{StaticResource {x:Static Themes:MetroColorKeys.AccentColorKey}}"/>
+
+</ResourceDictionary>
+
