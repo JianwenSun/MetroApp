@@ -1,6 +1,9 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
+
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Common.xaml" />
+
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.StateButtons.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.Commands.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindowTopBar.xaml" />
@@ -8,6 +11,34 @@
 
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Label.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.DataGrid.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TabControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ListView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.GridView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ListBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TreeView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Scrollbar.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Glow.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
+
+    <Style TargetType="{x:Type TabControl}" BasedOn="{StaticResource MetroTabControl}" />
+    <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource MetroTabItem}" />
+    <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource MetroDataGrid}" />
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}" />
+    <Style TargetType="{x:Type ComboBoxItem}" BasedOn="{StaticResource MetroComboBoxItem}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}" />
+    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource MetroCheckBox}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource MetroListView}" />
+    <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource MetroListViewItem}" />
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MetroListBox}" />
+    <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MetroListBoxItem}" />
+    <Style TargetType="{x:Type TreeView}" BasedOn="{StaticResource MetroTreeView}" />
+    <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource MetroTreeViewItem}" />
+    <Style TargetType="{x:Type GridViewColumnHeader}" BasedOn="{StaticResource MetroGridViewColumnHeader}" />
+    <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource MetroScrollBar}" />
+    <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource MetroScrollViewer}" />
 </ResourceDictionary>

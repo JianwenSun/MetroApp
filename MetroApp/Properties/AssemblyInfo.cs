@@ -25,6 +25,8 @@ using System.Windows.Markup;
 
 [assembly: XmlnsDefinition("sunjianwen143@hotmail.com", "MetroApp.Behaviours")]
 [assembly: XmlnsDefinition("sunjianwen143@hotmail.com", "MetroApp.Controls")]
+[assembly: XmlnsDefinition("sunjianwen143@hotmail.com", "MetroApp.Helpers")]
+[assembly: XmlnsDefinition("sunjianwen143@hotmail.com", "MetroApp.Converters")]
 [assembly: XmlnsDefinition("sunjianwen143@hotmail.com", "MetroApp.Themes")]
 
 

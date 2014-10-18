@@ -4,8 +4,10 @@
         GlowBrush="WhiteSmoke"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Themes="sunjianwen143@hotmail.com"
+        xmlns:Controls="sunjianwen143@hotmail.com"
         Title="MainWindow" Height="350" Width="525" 
-        Themes:StyleManager.Theme="{x:Static Themes:LightTheme.Instance}">
+        xmlns:Examples="clr-namespace:MetroApp.Example"
+        Themes:StyleManager.Theme="{x:Static Themes:DarkTheme.Instance}">
 
     <MetroApp:MetroWindow.TopBar>
         <MetroApp:MetroWindowTopBar>
@@ -21,7 +23,24 @@
     </MetroApp:MetroWindow.TopBar>
 
     <Grid>
-        <Label Content="WWWWWWWWWWWWWWW"/>
-        <Button Content="Change Theme" Click="Button_Click" Width="60" Height="25"/>
+        <TabControl Controls:ControlsHelper.IsUnderlined="True">
+            <TabItem Header="Label">
+                <Grid>
+                    <Label Content="WWWWWWWWWWWWWWW"/>
+                    <Button Content="Change Theme" Click="Button_Click" Width="60" Height="25"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="DataGrid">
+                <Grid>
+                    <Examples:DataGridExample/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Selections">
+                <Grid>
+                    <Examples:SelectionExample/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
     </Grid>
 </MetroApp:MetroWindow>

@@ -29,7 +29,7 @@
                                                 Focusable="False"
                                                 Grid.Column="0"
                                                 Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Icon}"
-                                                ContentTemplate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=IconTemplate}"
+                                                ContentTemplate="{Binding IconTemplate}"
                                                 HorizontalContentAlignment="Stretch"
                                                 VerticalContentAlignment="Stretch"/>
 
@@ -42,7 +42,7 @@
                         <ContentControl x:Name="PART_TitleBar"
                                                 Focusable="False"
                                                 Grid.Column="2"
-                                                ContentTemplate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=TitleTemplate}"
+                                                ContentTemplate="{Binding TitleTemplate}"
                                                 HorizontalContentAlignment="Stretch"
                                                 VerticalContentAlignment="Stretch">
                             <ContentControl.Content>

@@ -53,6 +53,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Examples\SelectionExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examples\TextExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examples\DataGridExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -61,6 +73,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Examples\SelectionExample.xaml.cs">
+      <DependentUpon>SelectionExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TextExample.xaml.cs">
+      <DependentUpon>TextExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridExample.xaml.cs">
+      <DependentUpon>DataGridExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Models\Album.cs" />
+    <Compile Include="Examples\Models\Artist.cs" />
+    <Compile Include="Examples\Models\Genre.cs" />
+    <Compile Include="Examples\Models\SimpleCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

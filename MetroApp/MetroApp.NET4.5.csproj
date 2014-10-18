@@ -70,7 +70,11 @@
       <DependentUpon>MetroWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ThicknessToDoubleConverter.cs" />
+    <Compile Include="Helpers\ComBoxHelper.cs" />
+    <Compile Include="Helpers\ControlsHelper.cs" />
     <Compile Include="Helpers\MetroWindowHelpers.cs" />
+    <Compile Include="Helpers\TextBoxHelper.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="Model\Win32\GWL.cs" />
     <Compile Include="Model\Win32\HitTestValues.cs" />
@@ -110,8 +114,8 @@
     <Compile Include="Native\UnsafeNativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Themes\Dark\DarkTheme.cs" />
-    <Compile Include="Themes\MetroBrushKey.cs" />
-    <Compile Include="Themes\MetroColorKey.cs" />
+    <Compile Include="Themes\MetroBrushKeys.cs" />
+    <Compile Include="Themes\MetroColorKeys.cs" />
     <Compile Include="Themes\Light\LightTheme.cs" />
     <Compile Include="Themes\StyleManager.cs" />
     <Compile Include="Themes\Theme.cs" />
@@ -124,6 +128,46 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Controls.ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.GridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Scrollbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Controls.Label.xaml">
       <DependentUpon>Controls.xaml</DependentUpon>
       <SubType>Designer</SubType>
@@ -135,6 +179,14 @@
     </Page>
     <Page Include="Themes\Controls.Button.xaml">
       <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Common.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

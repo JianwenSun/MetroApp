@@ -1,0 +1,253 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Themes="clr-namespace:MetroApp.Themes">
+
+    <!-- =============================================================================== -->
+    <!-- Metro styled TreeView                                                           -->
+    <!-- =============================================================================== -->
+
+    <Style x:Key="TreeViewExpandCollapseToggleStyle"
+           TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable"
+                Value="False" />
+        <Setter Property="Width"
+                Value="16" />
+        <Setter Property="Height"
+                Value="16" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid Background="Transparent"
+                          Height="16"
+                          Width="16">
+                        <Path x:Name="ExpandPath"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Data="M 4 0 L 8 4 L 4 8 Z"
+                              Fill="Transparent"
+                              StrokeThickness="1"
+                              Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter Property="RenderTransform"
+                                    TargetName="ExpandPath">
+                                <Setter.Value>
+                                    <RotateTransform Angle="45"
+                                                     CenterY="4"
+                                                     CenterX="4" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Fill"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                            <Setter Property="Stroke"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Stroke"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled"
+                                           Value="False" />
+                                <Condition Property="IsChecked"
+                                           Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Fill"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                            <Setter Property="Stroke"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Stroke"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandMouseOverBrushKey}}" />
+                            <Setter Property="Fill"
+                                    TargetName="ExpandPath"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandMouseOverBrushKey}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TreeViewItemFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle Margin="0,0,0,0"
+                                   StrokeThickness="5"
+                                   Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemFocusBrushKey}}"
+                                   StrokeDashArray="1 2"
+                                   Opacity="0" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MetroTreeViewItem"
+           TargetType="{x:Type TreeViewItem}">
+        <Setter Property="MinHeight"
+                Value="22" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemForegroundBrushKey}}" />
+        <Setter Property="Background"
+                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemBackgroundBrushKey}}" />
+        <Setter Property="FocusVisualStyle"
+                Value="{StaticResource TreeViewItemFocusVisual}" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                    <StackPanel>
+                        <Border x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}"
+                                MinHeight="{TemplateBinding MinHeight}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <Grid VerticalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="19" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ToggleButton x:Name="Expander"
+                                              Style="{StaticResource TreeViewExpandCollapseToggleStyle}"
+                                              IsChecked="{Binding Path=IsExpanded, RelativeSource={x:Static RelativeSource.TemplatedParent}, Mode=TwoWay}"
+                                              ClickMode="Press" />
+
+                                <ContentPresenter x:Name="PART_Header"
+                                                  Grid.Column="1"
+                                                  ContentSource="Header"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Grid>
+                        </Border>
+                        <ItemsPresenter x:Name="ItemsHost">
+                            <ItemsPresenter.LayoutTransform>
+                                <ScaleTransform ScaleY="1" />
+                            </ItemsPresenter.LayoutTransform>
+                        </ItemsPresenter>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded"
+                                 Value="False">
+                            <Setter TargetName="ItemsHost"
+                                    Property="Visibility"
+                                    Value="Collapsed" />
+                        </Trigger>
+
+                        <Trigger Property="HasItems"
+                                 Value="False">
+                            <Setter TargetName="Expander"
+                                    Property="Visibility"
+                                    Value="Hidden" />
+                        </Trigger>
+
+                        <Trigger SourceName="Border"
+                                 Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemMouseOverBackgroundBrushKey}}" />
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemMouseOverForegroundBrushKey}}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected"
+                                 Value="True">
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectedBackgroundBrushKey}}" />
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectedForegroundBrushKey}}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledForegroundBrushKey}}" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled"
+                                           Value="False" />
+                                <Condition Property="IsSelected"
+                                           Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="Border"
+                                        Property="Background"
+                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledSelectedBackgroundBrushKey}}" />
+                                <Setter Property="Foreground"
+                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledSelectedForegroundBrushKey}}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected"
+                                           Value="True" />
+                                <Condition Property="Selector.IsSelectionActive"
+                                           Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border"
+                                    Property="Background"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectionActiveSelectedBrushKey}}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MetroTreeView"
+           TargetType="{x:Type TreeView}">
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewBorderBrushKey}}" />
+        <Setter Property="Background"
+                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewBackgroundBrushKey}}" />
+        <!-- default to 0 -->
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TreeView}">
+                    <Border Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ScrollViewer>
+                            <ItemsPresenter />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="Border"
+                                    Property="BorderBrush"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewDisabledBorderBrushKey}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemContainerStyle"
+                Value="{StaticResource MetroTreeViewItem}" />
+    </Style>
+    
+</ResourceDictionary>

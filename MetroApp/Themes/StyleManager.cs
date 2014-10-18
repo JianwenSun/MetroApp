@@ -107,7 +107,6 @@ namespace MetroApp.Themes
                             break;
                         }
                     }
-
                     control.Resources.MergedDictionaries.Add(newTheme.Source);
                 }
             }
