@@ -101,6 +101,14 @@
                                        Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxPressedBackgroundBrushKey}}"
                                        Width="18"
                                        Height="18" />
+
+                            <Rectangle x:Name="disabled"
+                                       Opacity="0"
+                                       StrokeThickness="1"
+                                       Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBorderBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBackgroundBrushKey}}"
+                                       Width="18"
+                                       Height="18" />
                             <Path x:Name="checkBox"
                                   Height="10"
                                   Width="12"
@@ -114,12 +122,6 @@
                                        Height="3"
                                        Width="8"
                                        Opacity="0" />
-                            <Rectangle x:Name="disabled"
-                                       Opacity="0"
-                                       StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBackgroundBrushKey}}"
-                                       Width="18"
-                                       Height="18" />
                         </Grid>
                         <ContentPresenter x:Name="contentPresenter"
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -130,6 +132,10 @@
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisabledForegroundBrushKey}}" />
+                        </Trigger>
                         <Trigger Property="FlowDirection" Value="RightToLeft">
                             <Setter TargetName="checkBox"
                                     Property="LayoutTransform">

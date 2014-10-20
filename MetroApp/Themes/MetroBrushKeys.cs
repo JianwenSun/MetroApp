@@ -66,6 +66,7 @@ namespace MetroApp.Themes
         public static string DataGridSelectAllButtonArrowBrushKey { get; private set; }
         public static string DataGridSelectAllButtonPressedBrushKey { get; private set; }
         public static string DataGridColumnHeaderGripperBrushKey { get; private set; }
+        public static string DataGridColumnHeaderGripperDisabledBrushKey { get; private set; }
         public static string DataGridRowHeaderGripperBrushKey { get; private set; }
         public static string DataGridColumnHeaderForegroundBrushKey { get; private set; }
         public static string DataGridColumnHeaderBorderBrushKey { get; private set; }
@@ -81,6 +82,7 @@ namespace MetroApp.Themes
         public static string DataGridCellMouseOverUnSelectedBackgroundBrushKey { get; private set; }
         public static string DataGridCellDisabledForegroundBrushKey { get; private set; }
         public static string DataGridCellDisabledSelectedForegroundBrushKey { get; private set; }
+        public static string DataGridCellDisabledSelectedBackgroundBrushKey { get; private set; }
         public static string DataGridRowForegroundBrushKey { get; private set; }
         public static string DataGridRowBackgroundBrushKey { get; private set; }
         public static string DataGridRowSelectedForegroundBrushKey { get; private set; }
@@ -121,6 +123,7 @@ namespace MetroApp.Themes
         #region CheckBox
 
         public static string CheckBoxForegroundBrushKey { get; private set; }
+        public static string CheckBoxDisabledForegroundBrushKey { get; private set; }
         public static string CheckBoxFillBrushKey { get; private set; }
         public static string CheckBoxIndeterminateFillBrushKey { get; private set; }
         public static string CheckBoxBackgroundBrushKey { get; private set; }
@@ -130,7 +133,7 @@ namespace MetroApp.Themes
         public static string CheckBoxPressedBorderBrushKey { get; private set; }
         public static string CheckBoxPressedBackgroundBrushKey { get; private set; }
         public static string CheckBoxDisableBackgroundBrushKey { get; private set; }
-
+        public static string CheckBoxDisableBorderBrushKey { get; private set; }
         #endregion
 
         #region ComboBox
@@ -139,6 +142,7 @@ namespace MetroApp.Themes
         public static string ComboBoxBackgroundBrushKey { get; private set; }
         public static string ComboBoxBorderBrushKey { get; private set; }
         public static string ComboBoxDisableBackgroundBrushKey { get; private set; }
+        public static string ComboBoxDisableForegroundBrushKey { get; private set; }
         public static string ComboBoxMouseOverBackgroundBrushKey { get; private set; }
         public static string ComboBoxMouseOverBorderBrushKey { get; private set; }
         public static string ComboBoxRessedBackgroundBrushKey { get; private set; }

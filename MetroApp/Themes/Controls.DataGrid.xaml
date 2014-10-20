@@ -70,7 +70,9 @@
     <Style x:Key="MetroColumnHeaderGripperStyle"
            TargetType="{x:Type Thumb}">
         <Setter Property="Width"
-                Value="8" />
+                Value="6" />
+        <Setter Property="Margin"
+                Value="0,0,0,3"/>
         <Setter Property="Background"
                 Value="{DynamicResource {x:Static Themes:MetroBrushKeys.DataGridColumnHeaderGripperBrushKey}}" />
         <Setter Property="Cursor"
@@ -84,6 +86,11 @@
                                    Width="1"
                                    Fill="{TemplateBinding Background}" />
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.DataGridColumnHeaderGripperDisabledBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -242,7 +249,7 @@
         <Setter Property="BorderBrush"
                 Value="{DynamicResource {x:Static Themes:MetroBrushKeys.DataGridRowHeaderBorderBrushKey}}" />
         <Setter Property="BorderThickness"
-                Value="0,0,1,0" />
+                Value="0,0,0,0" />
         <Setter Property="Margin"
                 Value="0,0,0,0" />
         <Setter Property="Template">
@@ -380,6 +387,8 @@
                 </MultiTrigger.Conditions>
                 <Setter Property="Foreground"
                         Value="{DynamicResource {x:Static Themes:MetroBrushKeys.DataGridCellDisabledSelectedForegroundBrushKey}}" />
+                <Setter Property="Background"
+                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.DataGridCellDisabledSelectedBackgroundBrushKey}}" />
             </MultiTrigger>
         </Style.Triggers>
     </Style>

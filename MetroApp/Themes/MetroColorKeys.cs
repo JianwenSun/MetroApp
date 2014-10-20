@@ -33,7 +33,6 @@ namespace MetroApp.Themes
         public static string StrongColorKey { get; private set; }
         public static string MainColorKey { get; private set; }
         public static string MainDisableColorKey { get; private set; }
-        public static string DisableColorKey { get; private set; }
         public static string MarkerColorKey { get; private set; }
         public static string ValidationColorKey { get; private set; }
     }

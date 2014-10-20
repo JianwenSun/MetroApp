@@ -27,10 +27,10 @@ namespace MetroApp.Example
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Theme_click(object sender, RoutedEventArgs e)
         {
             Theme theme = this.GetValue(StyleManager.ThemeProperty) as Theme;
-            if(theme is LightTheme)
+            if (theme is LightTheme)
             {
                 this.SetValue(StyleManager.ThemeProperty, DarkTheme.Instance);
             }

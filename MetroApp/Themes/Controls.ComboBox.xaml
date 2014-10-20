@@ -99,15 +99,15 @@
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}" />
                                                 <Rectangle x:Name="DisabledVisualElement"
-                                                           Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBackgroundBrushKey}}"
+                                                           Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxDisableBackgroundBrushKey}}"
                                                            IsHitTestVisible="false"
                                                            Opacity="0" />
                                                 <Border x:Name="MouseOverBorder"
-                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxMouseOverBackgroundBrushKey}}"
+                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxMouseOverBackgroundBrushKey}}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Opacity="0" />
                                                 <Border x:Name="PressedBorder"
-                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxPressedBackgroundBrushKey}}"
+                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxRessedBackgroundBrushKey}}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Opacity="0" />
                                                 <Rectangle x:Name="FocusRectangle"
@@ -115,14 +115,13 @@
                                                            Opacity="0" />
                                                 <Rectangle x:Name="FocusVisualElement"
                                                            IsHitTestVisible="false"
-                                                           Margin="1"
                                                            Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxFocusBorderBrushKey}}"
                                                            StrokeThickness="1"
                                                            Visibility="Collapsed" />
 
-                                                <Grid Margin="1">
+                                                <Grid Margin="0,1,0,1">
                                                     <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*"/>
                                                         <ColumnDefinition Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualHeight, Mode=OneWay}" />
                                                         <ColumnDefinition Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualHeight, Mode=OneWay}" />
                                                     </Grid.ColumnDefinitions>
@@ -130,6 +129,7 @@
                                                     <Button x:Name="PART_ClearText"
                                                             Grid.Column="1"
                                                             Style="{DynamicResource ChromelessButtonStyle}"
+                                                            Background="{TemplateBinding Background}"
                                                             Foreground="{TemplateBinding Foreground}"
                                                             Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}, Path=(Helpers:TextBoxHelper.ClearTextButton), Converter={StaticResource BooleanToVisibilityConverter}}"
                                                             IsTabStop="False">
@@ -196,7 +196,7 @@
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
                                                                        Storyboard.TargetName="DisabledVisualElement">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00"
-                                                                  Value="0.45" />
+                                                                  Value="0.1" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -239,24 +239,24 @@
                                           BorderBrush="{TemplateBinding BorderBrush}"
                                           BorderThickness="{TemplateBinding BorderThickness}"
                                           Background="{TemplateBinding Background}"
-                                          Margin="0"
                                           Style="{DynamicResource comboToggleStyle}"
                                           IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                                           VerticalAlignment="Stretch"
                                           KeyboardNavigation.IsTabStop="False" />
 
                             <Border x:Name="EditableTextBoxBorder"
+                                    Grid.Column="0"
                                     Visibility="Collapsed"
                                     BorderBrush="Transparent"
-                                    BorderThickness="1,1,1,1"
-                                    Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxEditBackgroundBrushKey}}">
+                                    BorderThickness="1,1,1,1">
                                 <TextBox x:Name="PART_EditableTextBox"
+                                         Grid.Column="0"
                                          HorizontalAlignment="Stretch"
                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                          BorderThickness="0"
-                                         Background="{x:Null}"
+                                         Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxEditBackgroundBrushKey}}"
                                          Helpers:TextBoxHelper.Watermark="{TemplateBinding Helpers:TextBoxHelper.Watermark}"
                                          Foreground="{TemplateBinding Foreground}"
                                          Focusable="True"
@@ -320,6 +320,11 @@
                                     Property="Grid.ColumnSpan"
                                     Value="2" />
                         </DataTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="PART_EditableTextBox" 
+                                    Property="Foreground" 
+                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxDisableForegroundBrushKey}}"/>
+                        </Trigger>
                         <Trigger Property="IsEditable"
                                  Value="True">
                             <Setter Property="IsTabStop"

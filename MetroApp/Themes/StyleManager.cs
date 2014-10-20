@@ -13,8 +13,6 @@ namespace MetroApp.Themes
 {
     public static class StyleManager
     {
-        public static List<Theme> Themes = new List<Theme>();
-
         /// <summary>
         /// Gets or sets whether StyleManager will apply themes on controls.
         /// True by default for normal assemblies (with XAML) and false by default for assemblies without XAML.
@@ -27,38 +25,10 @@ namespace MetroApp.Themes
             private set;
         }
 
-        public static Theme FromName(string themeName)
-        {
-            foreach (var theme in Themes)
-            {
-                if (theme.Name == themeName)
-                    return theme;
-            }
-
-            return AppDefaultTheme;
-        }
-
-        static void GetThemes()
-        {
-            lock (Themes)
-            {
-                foreach (Type type in typeof(Theme).Assembly.GetTypes())
-                {
-                    var attribute = type.GetCustomAttribute(typeof(ThemeAttribute));
-                    if(attribute != null)
-                    {
-                        var theme = Activator.CreateInstance(type);
-                        Themes.Add(theme as Theme);
-                    }
-                }
-            }
-        }
-
         static StyleManager()
         {
             StyleManager.IsEnabled = true;
             AppDefaultTheme = LightTheme.Instance;
-            GetThemes();
         }
 
         /// <summary>
@@ -97,19 +67,44 @@ namespace MetroApp.Themes
                 if (newTheme == null) return;
 
                 Control control = target as Control;
-                if (control != null && control.Resources.MergedDictionaries != null)
+                var resources = control.Resources;
+                ResourceDictionary theme = null;
+                ResourceDictionary containResource = GetThemeResourceDictionary(resources, ref theme);
+                if (containResource != null && theme != null)
                 {
-                    foreach (ResourceDictionary rd in control.Resources.MergedDictionaries)
-                    {
-                        if (Theme.IsDictionaryContainTheme(rd))
-                        {
-                            control.Resources.MergedDictionaries.Remove(rd);
-                            break;
-                        }
-                    }
-                    control.Resources.MergedDictionaries.Add(newTheme.Source);
+                    containResource.MergedDictionaries.Insert(0, newTheme.Source);
+                    containResource.MergedDictionaries.Remove(theme);
+                }
+                else
+                {
+                    resources.MergedDictionaries.Add(newTheme.Source);
+                }
+
+                if (!Theme.IsDictionaryContainControls(resources))
+                {
+                    resources.MergedDictionaries.Add(Theme.Controls);
                 }
             }
         }
+
+        private static ResourceDictionary GetThemeResourceDictionary(ResourceDictionary resource, ref ResourceDictionary theme)
+        {
+            var enumerator = resource.MergedDictionaries.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                var currentRd = enumerator.Current;
+
+                if (Theme.IsDictionaryContainTheme(currentRd))
+                {
+                    theme = currentRd;
+                    return resource;
+                }
+            }
+
+            enumerator.Dispose();
+            return null;
+        }
+
+        
     }
 }

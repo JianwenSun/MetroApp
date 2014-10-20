@@ -83,6 +83,7 @@
                                    Fill="{TemplateBinding Background}" />
                         <Rectangle x:Name="FocusRectangle"
                                    Visibility="Collapsed"
+                                   Fill="{TemplateBinding Background}"
                                    StrokeThickness="{TemplateBinding BorderThickness, Converter={StaticResource ThicknessToDoubleConverter}}" />
                         <Grid x:Name="PART_InnerGrid">
                             <Grid.ColumnDefinitions>
@@ -107,6 +108,7 @@
                                        Text="{TemplateBinding Helpers:TextBoxHelper.Watermark}"
                                        Padding="{TemplateBinding Padding}"
                                        Visibility="Collapsed"
+                                       Background="{TemplateBinding Background}"
                                        Foreground="{TemplateBinding Foreground}"
                                        IsHitTestVisible="False"
                                        Opacity="0.6"
@@ -238,7 +240,6 @@
                                 <BeginStoryboard Storyboard="{StaticResource exitHasText}" />
                             </Trigger.ExitActions>
                         </Trigger>
-
                         <Trigger Property="Helpers:TextBoxHelper.IsWaitingForData"
                                  Value="True">
                             <Setter TargetName="Base"
