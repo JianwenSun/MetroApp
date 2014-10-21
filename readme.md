@@ -16,6 +16,7 @@ Read it here: [http://mahapps.com](http://mahapps.com)
 
 ### Quick How To
 
+```XML
 <Application x:Class="MetroApp.Example.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -30,7 +31,9 @@ Read it here: [http://mahapps.com](http://mahapps.com)
         </ResourceDictionary>
     </Application.Resources>
 </Application>
+```
 
+```XML
 <MetroApp:MetroWindow x:Class="MetroApp.Example.MainWindow"
 					  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					  xmlns:MetroApp="sunjianwen143@hotmail.com"
@@ -51,9 +54,9 @@ Read it here: [http://mahapps.com](http://mahapps.com)
   
 	</Grid>
 </MetroApp:MetroWindow>
-
+```
 OR
-
+```XML
 <MetroApp:MetroWindow x:Class="MetroApp.Example.MainWindow"
 					  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					  xmlns:MetroApp="sunjianwen143@hotmail.com"
@@ -67,7 +70,8 @@ OR
   
 	</Grid>
 </MetroApp:MetroWindow>
-
+```
+```csharp
 namespace MetroApp.Example
 {
   public partial class MainWindow : MetroWindow
@@ -78,8 +82,8 @@ namespace MetroApp.Example
     }
   }
 }
-
-
+```
+```XML
 <DataGrid Grid.Column="1" Grid.Row="1"
           Themes:StyleManager.Theme="{x:Static Themes:Themes.Dark}"
           RenderOptions.ClearTypeHint="Enabled"
@@ -95,3 +99,4 @@ namespace MetroApp.Example
                         Binding="{Binding Genre.Name}" />
     </DataGrid.Columns>
 </DataGrid>
+```
