@@ -23,10 +23,18 @@ namespace MetroApp.Themes
         #region Base
 
         public static string AccentBrushKey { get; private set; }
+        public static string WeakAccentBrushKey { get; private set; }
+        public static string DisableAccentBrushKey { get; private set; }
         public static string WeakBrushKey { get; private set; }
         public static string BasicBrushKey { get; private set; }
+        public static string BasicMouseOverBrushKey { get; private set; }
+        public static string BasicPressBrushKey { get; private set; }
+        public static string BasicDisableBrushKey { get; private set; }
+        public static string BasicFouseBrushKey { get; private set; }
         public static string StrongBrushKey { get; private set; }
         public static string MainBrushKey { get; private set; }
+        public static string MainStrongBrushKey { get; private set; }
+        public static string MainDisableBrushKey { get; private set; }
         public static string MarkerBrushKey { get; private set; }
         public static string ValidationBrushKey { get; private set; }
         
@@ -229,8 +237,9 @@ namespace MetroApp.Themes
         public static string GridViewColumnHeaderForegroundBrushKey { get; private set; }
         public static string GridViewColumnHeaderBackroundBrushKey { get; private set; }
         public static string GridViewColumnHeaderPressedBackgroundBrushKey { get; private set; }
+        public static string GridViewColumnHeaderMouseOverBackgroundBrushKey { get; private set; }
         public static string GridViewColumnHeaderDisabledForegroundBrushKey { get; private set; }
-
+        public static string GridViewColumnHeaderBorderBrushKey { get; private set; }
 
         #endregion
 

@@ -5,7 +5,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Themes="sunjianwen143@hotmail.com"
         xmlns:Controls="sunjianwen143@hotmail.com"
-        Title="MainWindow" Height="350" Width="525" 
+        Title="MainWindow" Height="350" Width="525"
         xmlns:Examples="clr-namespace:MetroApp.Example">
 
     <MetroApp:MetroWindow.TopBar>

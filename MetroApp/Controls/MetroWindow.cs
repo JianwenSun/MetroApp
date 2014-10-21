@@ -100,6 +100,7 @@ namespace MetroApp.Controls
 
         public MetroWindow()
         {
+            
         }
 
         public override void OnApplyTemplate()

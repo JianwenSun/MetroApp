@@ -27,6 +27,8 @@
            TargetType="GridViewColumnHeader">
         <Setter Property="Foreground"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderForegroundBrushKey}}" />
+        <Setter Property="Background"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderBackroundBrushKey}}" />
         <Setter Property="SnapsToDevicePixels"
                 Value="True" />
         <Setter Property="HorizontalContentAlignment"
@@ -35,6 +37,10 @@
                 Value="Center" />
         <Setter Property="Padding"
                 Value="4 2 4 2" />
+        <Setter Property="BorderThickness"
+                Value="0,0,0,1" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderBorderBrushKey}}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="GridViewColumnHeader">
@@ -42,6 +48,9 @@
                         <Rectangle Fill="Transparent"
                                    IsHitTestVisible="True" />
                         <Border x:Name="HeaderBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
                                 Padding="{TemplateBinding Padding}">
                             <ContentPresenter x:Name="HeaderContent"
                                               Content="{TemplateBinding Content}"
@@ -66,6 +75,12 @@
                             <Setter TargetName="HeaderContent"
                                     Property="Margin"
                                     Value="1,1,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+                            <Setter TargetName="HeaderBorder"
+                                    Property="Background"
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderMouseOverBackgroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
                                  Value="false">

@@ -13,6 +13,7 @@
     <Color x:Key="BasicDisableColorKey">#FF54545C</Color>
     <Color x:Key="StrongColorKey">#FF000000</Color>
     <Color x:Key="MainColorKey">#FFEEEEF2</Color>
+    <Color x:Key="MainStrongColorKey">#DEDFE7</Color>
     <Color x:Key="MainDisableColorKey">#FF2D2D30</Color>
     <Color x:Key="MarkerColorKey">#FF000000</Color>
     <Color x:Key="ValidationColorKey">#FFDE3914</Color>
@@ -39,6 +40,8 @@
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="MainBrushKey"
                      Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="MainStrongBrushKey"
+                     Color="{StaticResource MainStrongColorKey}"/>
     <SolidColorBrush x:Key="MainDisableBrushKey"
                      Color="{StaticResource MainDisableColorKey}"/>
     <SolidColorBrush x:Key="MarkerBrushKey"
@@ -178,7 +181,7 @@
     <SolidColorBrush x:Key="TabItemUnSelectedForegroundBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="TabItemUnSelectedUnderLineBrushKey"
-                     Color="{StaticResource WeakColorKey}"/>
+                     Color="{StaticResource MainStrongColorKey}"/>
     <SolidColorBrush x:Key="TabItemMouseOverForegroundBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="TabItemMouseOverUnderLineBrushKey"
@@ -350,8 +353,12 @@
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderPressedBackgroundBrushKey"
                      Color="{StaticResource BasicPressColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderMouseOverBackgroundBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderDisabledForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
 
     <!-- ListViewGridView specific resources-->
 

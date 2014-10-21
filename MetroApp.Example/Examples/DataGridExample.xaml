@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:Examples="clr-namespace:MetroApp.Example"
              xmlns:Controls="sunjianwen143@hotmail.com"
+             xmlns:Themes="sunjianwen143@hotmail.com"
              mc:Ignorable="d"
              d:DesignHeight="600"
              d:DesignWidth="800">
@@ -263,6 +264,7 @@
             <DataGrid x:Name="AzureDataGrid"
                   Grid.Column="1"
                   Grid.Row="1"
+                  Themes:StyleManager.Theme="{x:Static Themes:Themes.Dark}"
                   RenderOptions.ClearTypeHint="Enabled"
                   TextOptions.TextFormattingMode="Display"
                   Margin="5"

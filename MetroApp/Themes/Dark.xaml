@@ -13,6 +13,7 @@
     <Color x:Key="BasicDisableColorKey">#FF54545C</Color>
     <Color x:Key="StrongColorKey">#FFFFFFFF</Color>
     <Color x:Key="MainColorKey">#FF2D2D30</Color>
+    <Color x:Key="MainStrongColorKey">#FFC7C7C7</Color>
     <Color x:Key="MainDisableColorKey">#FF2D2D30</Color>
     <Color x:Key="MarkerColorKey">#FF000000</Color>
     <Color x:Key="ValidationColorKey">#FFDE3914</Color>
@@ -39,6 +40,8 @@
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="MainBrushKey"
                      Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="MainStrongBrushKey"
+                     Color="{StaticResource MainStrongColorKey}"/>
     <SolidColorBrush x:Key="MainDisableBrushKey"
                      Color="{StaticResource MainDisableColorKey}"/>
     <SolidColorBrush x:Key="MarkerBrushKey"
@@ -342,15 +345,19 @@
     <!-- ListViewGridView specific resources-->
 
     <SolidColorBrush x:Key="GridViewColumnHeaderGripperBackgroundBrushKey"
-                     Color="{StaticResource BasicColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderForegroundBrushKey"
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderBackroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderPressedBackgroundBrushKey"
                      Color="{StaticResource BasicPressColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderMouseOverBackgroundBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
     <SolidColorBrush x:Key="GridViewColumnHeaderDisabledForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
 
     <!-- ListViewGridView specific resources-->
 
