@@ -308,6 +308,31 @@
     <SolidColorBrush x:Key="TextBoxWaitingForDataShadowBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
 
+    <!-- RichTextBox specific resources-->
+
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkForegroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkMouseOverForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkDisabledForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxSelectionBrushBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxDisabledBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxDisabledBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxFocusBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
     <!-- ListView specific resources-->
 
     <SolidColorBrush x:Key="ListViewBorderBrushKey"

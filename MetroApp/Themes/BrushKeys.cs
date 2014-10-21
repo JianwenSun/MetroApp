@@ -210,6 +210,22 @@ namespace MetroApp.Themes
         
         #endregion
 
+        #region RichTextBox
+
+        public static string RichTextBoxHyperlinkForegroundBrushKey { get; private set; }
+        public static string RichTextBoxHyperlinkMouseOverForegroundBrushKey { get; private set; }
+        public static string RichTextBoxHyperlinkDisabledForegroundBrushKey { get; private set; }
+        public static string RichTextBoxBackgroundBrushKey { get; private set; }
+        public static string RichTextBoxSelectionBrushBrushKey { get; private set; }
+        public static string RichTextBoxDisabledBackgroundBrushKey { get; private set; }
+        public static string RichTextBoxForegroundBrushKey { get; private set; }
+        public static string RichTextBoxBorderBrushKey { get; private set; }
+        public static string RichTextBoxDisabledBorderBrushKey { get; private set; }
+        public static string RichTextBoxMouseOverBorderBrushKey { get; private set; }
+        public static string RichTextBoxFocusBorderBrushKey { get; private set; }
+
+        #endregion
+
         #region ListView
 
         public static string ListViewBorderBrushKey { get; private set; }

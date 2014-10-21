@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Themes="sunjianwen143@hotmail.com"
+             xmlns:Controls="sunjianwen143@hotmail.com"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     
@@ -30,31 +31,169 @@
             <ListBoxItem>
                 <Border HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
-                    <Grid>
+                    <Grid Margin="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Row="0" Text="RadioButton" Margin="5" HorizontalAlignment="Center"/>
-                        
+
                         <StackPanel Grid.Row="1">
-                            <RadioButton Margin="10, 10, 0, 0"
-                                         Content="Quick Launch"
+                            <RadioButton Margin="5"
+                                         Content="Views"
                                          GroupName="1" />
-                            <RadioButton Margin="10, 10, 0, 0"
-                                         Content="Debug"
+                            <RadioButton Margin="5"
+                                         Content="Tools"
                                          GroupName="1"
                                          IsChecked="True" />
-                            <RadioButton Margin="10, 10, 0, 0"
-                                         Content="Build"
+                            <RadioButton Margin="5"
+                                         Content="Analyze"
                                          GroupName="2"
                                          IsEnabled="False" />
-                            <RadioButton Margin="10, 10, 0, 0"
-                                         Content="Projects"
+                            <RadioButton Margin="5"
+                                         Content="Windows"
                                          GroupName="2"
                                          IsChecked="True"
                                          IsEnabled="False" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="TextBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <TextBox Margin="5"
+                                     Text="Enabled" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     Controls:TextBoxHelper.IsWaitingForData="True"
+                                     ToolTip="Default alignment" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                     Text="Clear button">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                                            <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True"></Setter>
+                                            <Style.Triggers>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="False">
+                                                    <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True" />
+                                                    <Setter Property="Controls:TextBoxHelper.Watermark" Value="Now enter some text..." />
+                                                </Trigger>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                                    <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                                <TextBox Margin="5" 
+                                     Controls:TextBoxHelper.Watermark="Search..."
+                                     Controls:TextBoxHelper.ClearTextButton="True"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SearchMetroTextBox}">
+                                            <Style.Triggers>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                                    <Setter Property="Controls:TextBoxHelper.ButtonTemplate" Value="{DynamicResource ChromelessButtonTemplate}" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Enter parameter"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmdWithParameter, Mode=OneWay}"
+                                     Controls:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=test2, Path=Text}"
+                                     Style="{DynamicResource SearchMetroTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Custom icon style"
+                                     Controls:TextBoxHelper.ButtonContent="s"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                     Style="{DynamicResource MetroButtonTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Number smaller than 10"
+                                     Text="{Binding IntegerGreater10Property,
+                                                    ValidatesOnDataErrors=True,
+                                                    UpdateSourceTrigger=PropertyChanged,
+                                                    NotifyOnValidationError=True}" />
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBox Margin="5"
+                                     IsEnabled="False"
+                                     Text="Disabled" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     IsEnabled="False" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.ClearTextButton="True"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     IsEnabled="False"
+                                     Text="Clear button" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Search style"
+                                     IsEnabled="False"
+                                     Style="{DynamicResource SearchMetroTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Number smaller than 10"
+                                     IsEnabled="False"
+                                     Text="{Binding IntegerGreater10Property,
+                                                    ValidatesOnDataErrors=True,
+                                                    UpdateSourceTrigger=PropertyChanged,
+                                                    NotifyOnValidationError=True}" />
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="RichTextBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <StackPanel Grid.Row="1">
+                            <RichTextBox Margin="5" Width="200" IsDocumentEnabled="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/MahApps/MahApps.Metro">
+                                            <Run Text="Normal" />
+                                        </Hyperlink>
+                                        <LineBreak />
+                                        <Run>Bacon ipsum dolor sit amet venison drumstick meatball ham hock corned beef. Strip steak bacon andouille pig beef short ribs.</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <RichTextBox Margin="5"
+                                         IsEnabled="False"
+                                         Padding="5"
+                                         Width="200"
+                                         IsDocumentEnabled="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/MahApps/MahApps.Metro">
+                                            <Run Text="Disabled" />
+                                        </Hyperlink>
+                                        <LineBreak />
+                                        <Run>Bacon ipsum dolor sit amet venison drumstick meatball ham hock corned beef. Strip steak bacon andouille pig beef short ribs.</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
                         </StackPanel>
                     </Grid>
                 </Border>
@@ -77,7 +216,7 @@
             <ListBoxItem>
                 <Border HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
-                    <Grid>
+                    <Grid Margin="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
@@ -86,22 +225,160 @@
                         <TextBlock Grid.Row="0" Text="RadioButton" Margin="5" HorizontalAlignment="Center"/>
 
                         <StackPanel Grid.Row="1">
-                            <RadioButton Margin="10, 10, 0, 0"
+                            <RadioButton Margin="5"
                                          Content="Views"
                                          GroupName="3" />
-                            <RadioButton Margin="10, 10, 0, 0"
+                            <RadioButton Margin="5"
                                          Content="Tools"
                                          GroupName="3"
                                          IsChecked="True" />
-                            <RadioButton Margin="10, 10, 0, 0"
+                            <RadioButton Margin="5"
                                          Content="Analyze"
                                          GroupName="4"
                                          IsEnabled="False" />
-                            <RadioButton Margin="10, 10, 0, 0"
+                            <RadioButton Margin="5"
                                          Content="Windows"
                                          GroupName="4"
                                          IsChecked="True"
                                          IsEnabled="False" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="TextBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <TextBox Margin="5"
+                                     Text="Enabled" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     Controls:TextBoxHelper.IsWaitingForData="True"
+                                     ToolTip="Default alignment" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                     Text="Clear button">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                                            <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True"></Setter>
+                                            <Style.Triggers>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="False">
+                                                    <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True" />
+                                                    <Setter Property="Controls:TextBoxHelper.Watermark" Value="Now enter some text..." />
+                                                </Trigger>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                                    <Setter Property="Controls:TextBoxHelper.ClearTextButton" Value="True" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                                <TextBox Margin="5" 
+                                     Controls:TextBoxHelper.Watermark="Search..."
+                                     Controls:TextBoxHelper.ClearTextButton="True"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SearchMetroTextBox}">
+                                            <Style.Triggers>
+                                                <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                                    <Setter Property="Controls:TextBoxHelper.ButtonTemplate" Value="{DynamicResource ChromelessButtonTemplate}" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Enter parameter"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmdWithParameter, Mode=OneWay}"
+                                     Controls:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=test2, Path=Text}"
+                                     Style="{DynamicResource SearchMetroTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Custom icon style"
+                                     Controls:TextBoxHelper.ButtonContent="s"
+                                     Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                     Style="{DynamicResource MetroButtonTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Number smaller than 10"
+                                     Text="{Binding IntegerGreater10Property,
+                                                    ValidatesOnDataErrors=True,
+                                                    UpdateSourceTrigger=PropertyChanged,
+                                                    NotifyOnValidationError=True}" />
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBox Margin="5"
+                                     IsEnabled="False"
+                                     Text="Disabled" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     IsEnabled="False" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.ClearTextButton="True"
+                                     Controls:TextBoxHelper.Watermark="Watermark"
+                                     IsEnabled="False"
+                                     Text="Clear button" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Search style"
+                                     IsEnabled="False"
+                                     Style="{DynamicResource SearchMetroTextBox}" />
+                                <TextBox Margin="5"
+                                     Controls:TextBoxHelper.Watermark="Number smaller than 10"
+                                     IsEnabled="False"
+                                     Text="{Binding IntegerGreater10Property,
+                                                    ValidatesOnDataErrors=True,
+                                                    UpdateSourceTrigger=PropertyChanged,
+                                                    NotifyOnValidationError=True}" />
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="RichTextBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <StackPanel Grid.Row="1">
+                            <RichTextBox Margin="5" Width="200" IsDocumentEnabled="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/MahApps/MahApps.Metro">
+                                            <Run Text="Normal" />
+                                        </Hyperlink>
+                                        <LineBreak />
+                                        <Run>Bacon ipsum dolor sit amet venison drumstick meatball ham hock corned beef. Strip steak bacon andouille pig beef short ribs.</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            <RichTextBox Margin="5"
+                                         IsEnabled="False"
+                                         Padding="5"
+                                         Width="200"
+                                         IsDocumentEnabled="True">
+                                <FlowDocument>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/MahApps/MahApps.Metro">
+                                            <Run Text="Disabled" />
+                                        </Hyperlink>
+                                        <LineBreak />
+                                        <Run>Bacon ipsum dolor sit amet venison drumstick meatball ham hock corned beef. Strip steak bacon andouille pig beef short ribs.</Run>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
                         </StackPanel>
                     </Grid>
                 </Border>

@@ -2,9 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
     
-    <Color x:Key="AccentColorKey">#CC119EDA</Color>
-    <Color x:Key="WeakAccentColorKey">#66119EDA</Color>
-    <Color x:Key="DisableAccentColorKey">#11119EDA</Color>
+    <Color x:Key="AccentColorKey">#EE119EDA</Color>
+    <Color x:Key="WeakAccentColorKey">#CC119EDA</Color>
+    <Color x:Key="DisableAccentColorKey">#66119EDA</Color>
     <Color x:Key="WeakColorKey">#FF54545C</Color>
     <Color x:Key="BasicColorKey">#FF0F0F0F</Color>
     <Color x:Key="BasicMouseOverColorKey">#C9DEF5</Color>
@@ -14,7 +14,7 @@
     <Color x:Key="StrongColorKey">#FF000000</Color>
     <Color x:Key="MainColorKey">#FFEEEEF2</Color>
     <Color x:Key="MainStrongColorKey">#DEDFE7</Color>
-    <Color x:Key="MainDisableColorKey">#FF2D2D30</Color>
+    <Color x:Key="MainDisableColorKey">#FFC3C3C6</Color>
     <Color x:Key="MarkerColorKey">#FF000000</Color>
     <Color x:Key="ValidationColorKey">#FFDE3914</Color>
 
@@ -307,6 +307,31 @@
     <SolidColorBrush x:Key="TextBoxClearButtonPressedForegroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="TextBoxWaitingForDataShadowBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <!-- RichTextBox specific resources-->
+
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkForegroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkMouseOverForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxHyperlinkDisabledForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxSelectionBrushBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxDisabledBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxDisabledBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="RichTextBoxFocusBorderBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
 
     <!-- ListView specific resources-->

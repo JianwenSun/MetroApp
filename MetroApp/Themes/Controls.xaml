@@ -32,7 +32,9 @@
     <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}" />
     <Style TargetType="{x:Type ComboBoxItem}" BasedOn="{StaticResource MetroComboBoxItem}" />
     <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource MetroCheckBox}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MetroTextBlock}" />
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}" />
+    <Style TargetType="{x:Type RichTextBox}" BasedOn="{StaticResource MetroRichTextBox}" />
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource MetroListView}" />
     <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource MetroListViewItem}" />
     <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MetroListBox}" />
@@ -44,6 +46,5 @@
     <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource MetroScrollViewer}" />
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MetroRadioButton}" />
     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}" />
-    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MetroTextBlock}" />
 
 </ResourceDictionary>
