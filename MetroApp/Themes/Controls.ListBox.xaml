@@ -57,7 +57,7 @@
         <Setter Property="VerticalContentAlignment"
                 Value="Center" />
         <Setter Property="MinHeight"
-                Value="25" />
+                Value="22" />
         <Setter Property="Margin"
                 Value="0" />
         <Setter Property="SnapsToDevicePixels"
@@ -68,10 +68,10 @@
                     <Border x:Name="Border"
                             Background="{TemplateBinding Background}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <ContentPresenter Margin="5, 0, 0, 0"
+                        <ContentPresenter Margin="0, 0, 0, 0"
                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected"

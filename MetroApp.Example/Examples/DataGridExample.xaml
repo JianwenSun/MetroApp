@@ -264,7 +264,6 @@
             <DataGrid x:Name="AzureDataGrid"
                   Grid.Column="1"
                   Grid.Row="1"
-                  Themes:StyleManager.Theme="{x:Static Themes:Themes.Dark}"
                   RenderOptions.ClearTypeHint="Enabled"
                   TextOptions.TextFormattingMode="Display"
                   Margin="5"

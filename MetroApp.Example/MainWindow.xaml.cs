@@ -3,6 +3,7 @@
     using MetroApp.Controls;
     using MetroApp.Themes;
     using System.Windows;
+    using System.Windows.Controls;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml

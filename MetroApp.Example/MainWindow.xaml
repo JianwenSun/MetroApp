@@ -5,7 +5,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Themes="sunjianwen143@hotmail.com"
         xmlns:Controls="sunjianwen143@hotmail.com"
-        Title="MainWindow" Height="350" Width="525"
+        Title="MetroApp"
         xmlns:Examples="clr-namespace:MetroApp.Example">
 
     <MetroApp:MetroWindow.TopBar>
@@ -32,12 +32,6 @@
 
     <Grid>
         <TabControl Controls:ControlsHelper.IsUnderlined="True">
-            <TabItem Header="Label">
-                <Grid>
-                    <Label Content="WWWWWWWWWWWWWWW"/>
-                    <Button Content="Change Theme" Width="60" Height="25"/>
-                </Grid>
-            </TabItem>
             <TabItem Header="DataGrid">
                 <Grid>
                     <Examples:DataGridExample/>
@@ -46,6 +40,11 @@
             <TabItem Header="Selections">
                 <Grid>
                     <Examples:SelectionExample/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="BaseControls">
+                <Grid>
+                    <Examples:BaseControlsExample/>
                 </Grid>
             </TabItem>
         </TabControl>

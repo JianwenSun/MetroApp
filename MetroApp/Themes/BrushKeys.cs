@@ -284,7 +284,7 @@ namespace MetroApp.Themes
 
         #endregion
 
-        #region
+        #region ScrollBar
 
         public static string ScrollbarHorizontalIncrementBrushKey { get; private set; }
         public static string ScrollbarHorizontalIncrementMouseOverBrushKey { get; private set; }
@@ -311,6 +311,23 @@ namespace MetroApp.Themes
         public static string ScrollbarVerticalThumbMouseOverBrushKey { get; private set; }
         public static string ScrollbarVerticalThumbPressedBrushKey { get; private set; }
         public static string ScrollbarVerticalThumbDisabledBrushKey { get; private set; }
+
+        #endregion
+
+        #region RadioButton
+
+        public static string RadioButtonForegroundBrushKey { get; private set; }
+        public static string RadioButtonBackgroundBrushKey { get; private set; }
+        public static string RadioButtonBorderBrushKey { get; private set; }
+        public static string RadioButtonCheckedBackgroundBrushKey { get; private set; }
+        public static string RadioButtonMouseOverBackgroundBrushKey { get; private set; }
+        public static string RadioButtonMouseOverBorderBrushKey { get; private set; }
+        public static string RadioButtonPressedBackgroundBrushKey { get; private set; }
+        public static string RadioButtonPressedBorderBrushKey { get; private set; }
+        public static string RadioButtonFocusedBackgroundBrushKey { get; private set; }
+        public static string RadioButtonFocusedBorderBrushKey { get; private set; }
+        public static string RadioButtonDisabledBackgroundBrushKey { get; private set; }
+        public static string RadioButtonDisabledBorderBrushKey { get; private set; }
 
         #endregion
     }

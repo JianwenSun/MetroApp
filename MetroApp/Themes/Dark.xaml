@@ -472,4 +472,31 @@
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="ScrollbarVerticalThumbDisabledBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
+    
+    <!-- CheckBox sepcific resources -->
+
+    <SolidColorBrush x:Key="RadioButtonForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonCheckedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonMouseOverBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="RadioButtonMouseOverBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonPressedBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="RadioButtonPressedBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonFocusedBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="RadioButtonFocusedBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="RadioButtonDisabledBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="RadioButtonDisabledBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
 </ResourceDictionary>

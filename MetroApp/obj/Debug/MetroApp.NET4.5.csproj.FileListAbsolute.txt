@@ -1,10 +1,8 @@
 F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.dll
 F:\Self Workspace\MetroApp\MetroApp\bin\Debug\MetroApp.pdb
 F:\Self Workspace\MetroApp\MetroApp\bin\Debug\System.Windows.Interactivity.dll
-F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.5.csprojResolveAssemblyReference.cache
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.baml
-F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Light.baml
-F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Colors.baml
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Controls\GlowWindow.g.cs
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.cache
@@ -29,7 +27,10 @@ F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\MetroWindow.StateButtons.ba
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\MetroWindow.baml
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\MetroWindowTopBar.baml
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Generic.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Dark.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Light.baml
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
-F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Colors.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.5.csprojResolveAssemblyReference.cache
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.RadioButton.baml
