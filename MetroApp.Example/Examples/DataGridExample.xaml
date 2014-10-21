@@ -32,7 +32,50 @@
                 <DataGridHeadersVisibility>None</DataGridHeadersVisibility>
             </x:Array>
 
-            <ControlTemplate x:Key="ConfigDataTemplate">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid RenderOptions.ClearTypeHint="Enabled"
+          TextOptions.TextFormattingMode="Display">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource {x:Static Controls:BrushKeys.MainBrushKey}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Dark.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Label Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Grid.Row="0"
+               Content="Metro Style"
+               HorizontalAlignment="Left" />
+            
+            <ContentControl Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="10,5,5,5"
+                        DataContext="{Binding ElementName=MetroDataGrid}">
                 <Grid d:DataContext="{d:DesignInstance DataGrid}"
                       Grid.IsSharedSizeScope="True">
                     <Grid.ColumnDefinitions>
@@ -98,35 +141,8 @@
                               ItemsSource="{StaticResource DataGridHeadersVisibilityArray}"
                               SelectedValue="{Binding HeadersVisibility}" />
                 </Grid>
-            </ControlTemplate>
-
-        </ResourceDictionary>
-    </UserControl.Resources>
-
-    <Grid RenderOptions.ClearTypeHint="Enabled"
-          TextOptions.TextFormattingMode="Display">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <ContentControl Grid.Column="0"
-                        Grid.Row="1"
-                        Margin="10,5,5,5"
-                        Template="{StaticResource ConfigDataTemplate}"
-                        DataContext="{Binding ElementName=MetroDataGrid}" />
-        <Label Grid.Column="0"
-               Grid.ColumnSpan="2"
-               Grid.Row="0"
-               Content="Metro Style"
-               HorizontalAlignment="Left" />
-        <DataGrid x:Name="MetroDataGrid"
+            </ContentControl>
+            <DataGrid x:Name="MetroDataGrid"
                   Grid.Column="1"
                   Grid.Row="1"
                   RenderOptions.ClearTypeHint="Enabled"
@@ -135,47 +151,133 @@
                   SelectionUnit="FullRow"
                   ItemsSource="{Binding Path=Albums}"
                   AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="IsSelected"
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="IsSelected"
                                         ElementStyle="{DynamicResource MetroDataGridCheckBox}"
                                         Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}" />
-                <DataGridTextColumn Header="Title"
+                    <DataGridTextColumn Header="Title"
                                     Binding="{Binding Title}" />
-                <DataGridTextColumn Header="Artist"
+                    <DataGridTextColumn Header="Artist"
                                     Binding="{Binding Artist.Name}" />
-                <DataGridTextColumn Header="Genre"
+                    <DataGridTextColumn Header="Genre"
                                     Binding="{Binding Genre.Name}" />
-            </DataGrid.Columns>
-        </DataGrid>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
 
-        <ContentControl Grid.Column="0"
-                        Grid.Row="3"
-                        Margin="10,5,5,5"
-                        Template="{StaticResource ConfigDataTemplate}"
-                        DataContext="{Binding ElementName=AzureDataGrid}" />
-        <Label Grid.Column="0"
+        <Grid Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource {x:Static Controls:BrushKeys.MainBrushKey}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />
+                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </Grid.Resources>
+
+            <Label Grid.Column="0"
                Grid.ColumnSpan="2"
-               Grid.Row="2"
+               Grid.Row="0"
                Content="Azure Style"
                HorizontalAlignment="Left"/>
-        <DataGrid x:Name="AzureDataGrid"
+
+            <Grid Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="10,5,5,5"
+                        DataContext="{Binding ElementName=AzureDataGrid}" >
+                <Grid d:DataContext="{d:DesignInstance DataGrid}"
+                      Grid.IsSharedSizeScope="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"
+                                          SharedSizeGroup="labels" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="0"
+                               VerticalAlignment="Center"
+                               Margin="2"
+                               Text="IsEnabled" />
+                    <CheckBox Grid.Column="1"
+                              Grid.Row="0"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Left"
+                              Margin="2"
+                              IsChecked="{Binding IsEnabled}" />
+
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="1"
+                               VerticalAlignment="Center"
+                               Margin="2"
+                               Text="SelectionUnit" />
+                    <ComboBox Grid.Column="1"
+                              Grid.Row="1"
+                              VerticalAlignment="Center"
+                              Margin="2"
+                              Width="100"
+                              ItemsSource="{StaticResource DataGridSelectionUnitArray}"
+                              SelectedValue="{Binding SelectionUnit}" />
+
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="2"
+                               VerticalAlignment="Center"
+                               Margin="2"
+                               Text="GridLines" />
+                    <ComboBox Grid.Column="1"
+                              Grid.Row="2"
+                              VerticalAlignment="Center"
+                              Margin="2"
+                              Width="100"
+                              ItemsSource="{StaticResource DataGridGridLinesVisibilityArray}"
+                              SelectedValue="{Binding GridLinesVisibility}" />
+
+                    <TextBlock Grid.Column="0"
+                               Grid.Row="3"
+                               VerticalAlignment="Center"
+                               Margin="2"
+                               Text="Headers" />
+                    <ComboBox Grid.Column="1"
+                              Grid.Row="3"
+                              VerticalAlignment="Center"
+                              Margin="2"
+                              Width="100"
+                              ItemsSource="{StaticResource DataGridHeadersVisibilityArray}"
+                              SelectedValue="{Binding HeadersVisibility}" />
+                </Grid>
+            </Grid>
+            <DataGrid x:Name="AzureDataGrid"
                   Grid.Column="1"
-                  Grid.Row="3"
+                  Grid.Row="1"
                   RenderOptions.ClearTypeHint="Enabled"
                   TextOptions.TextFormattingMode="Display"
                   Margin="5"
                   ItemsSource="{Binding Path=Albums}"
                   AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Title"
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title"
                                     Binding="{Binding Title}" />
-                <DataGridTextColumn Header="Artist"
+                    <DataGridTextColumn Header="Artist"
                                     Binding="{Binding Artist.Name}" />
-                <DataGridTextColumn Header="Genre"
+                    <DataGridTextColumn Header="Genre"
                                     Binding="{Binding Genre.Name}" />
-            </DataGrid.Columns>
-        </DataGrid>
-
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 
 </UserControl>

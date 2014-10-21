@@ -5,9 +5,9 @@
     <Style x:Key="MetroListBox"
            TargetType="{x:Type ListBox}">
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxBorderBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxBackgroundBrushKey}}" />
         <!-- default to 0 -->
         <Setter Property="BorderThickness"
                 Value="0" />
@@ -29,7 +29,7 @@
                                  Value="False">
                             <Setter TargetName="Border"
                                     Property="BorderBrush"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxDisabledBorderBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxDisabledBorderBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -51,7 +51,7 @@
     <Style x:Key="MetroListBoxItem"
            TargetType="{x:Type ListBoxItem}">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Stretch" />
         <Setter Property="VerticalContentAlignment"
@@ -78,20 +78,20 @@
                                  Value="True">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemSelectedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemSelectedBackgroundBrushKey}}" />
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemSelectedForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemMouseOverBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemMouseOverBackgroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
                                  Value="False">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemDisabledForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemDisabledForegroundBrushKey}}" />
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -102,9 +102,9 @@
                             </MultiTrigger.Conditions>
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemDisabledSelectedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemDisabledSelectedBackgroundBrushKey}}" />
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemDisabledSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemDisabledSelectedForegroundBrushKey}}" />
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -115,7 +115,7 @@
                             </MultiTrigger.Conditions>
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemSelectionActiveSelectedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemSelectionActiveSelectedBackgroundBrushKey}}" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

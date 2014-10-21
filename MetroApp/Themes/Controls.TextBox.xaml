@@ -10,14 +10,12 @@
     <!--TextBox Style-->
     <Style TargetType="{x:Type TextBox}"
            x:Key="MetroTextBox">
-        <Setter Property="ContextMenu"
-                Value="{DynamicResource TextBoxMetroContextMenu}" />
         <Setter Property="Helpers:TextBoxHelper.IsMonitoring"
                 Value="True" />
         <Setter Property="Helpers:ControlsHelper.ButtonWidth"
                 Value="20" />
         <Setter Property="SelectionBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxSelectionBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxSelectionBrushKey}}" />
         <Setter Property="BorderThickness"
                 Value="1" />
         <Setter Property="MinHeight"
@@ -25,17 +23,17 @@
         <Setter Property="Height"
                 Value="20" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxBackgroundBrushKey}}" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxForegroundBrushKey}}" />
         <Setter Property="Padding"
                 Value="0" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxBorderBrushKey}}" />
         <Setter Property="Helpers:TextBoxHelper.FocusBorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxFocusBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxFocusBorderBrushKey}}" />
         <Setter Property="Helpers:TextBoxHelper.MouseOverBorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxMouseOverBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxMouseOverBorderBrushKey}}" />
         <!-- change SnapsToDevicePixels to True to view a better border and validation error -->
         <Setter Property="SnapsToDevicePixels"
                 Value="True" />
@@ -43,10 +41,8 @@
                 Value="Left" />
         <Setter Property="VerticalAlignment"
                 Value="Center" />
-        <Setter Property="Validation.ErrorTemplate"
-                Value="{DynamicResource ValidationErrorTemplate}" />
         <Setter Property="CaretBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxCaretBrusBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxCaretBrusBrushKey}}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
@@ -129,9 +125,9 @@
                             </Button>
                         </Grid>
                         <Rectangle x:Name="DisabledVisualElement"
-                                   Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxDisabledBorderBrushKey}}"
+                                   Stroke="{DynamicResource {x:Static Themes:BrushKeys.TextBoxDisabledBorderBrushKey}}"
                                    StrokeThickness="{TemplateBinding BorderThickness, Converter={StaticResource ThicknessToDoubleConverter}}"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxDisabledBackgroundBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.TextBoxDisabledBackgroundBrushKey}}"
                                    IsHitTestVisible="False"
                                    Opacity="0" />
                     </Grid>
@@ -200,20 +196,20 @@
                                  Value="True">
                             <Setter TargetName="PART_ClearText"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxClearButtonMouseOverBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxClearButtonMouseOverBackgroundBrushKey}}" />
                             <Setter TargetName="PART_ClearText"
                                     Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxClearButtonMouseOverForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxClearButtonMouseOverForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger SourceName="PART_ClearText"
                                  Property="IsPressed"
                                  Value="True">
                             <Setter TargetName="PART_ClearText"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxClearButtonPressedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxClearButtonPressedBackgroundBrushKey}}" />
                             <Setter TargetName="PART_ClearText"
                                     Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxClearButtonPressedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TextBoxClearButtonPressedForegroundBrushKey}}" />
                         </Trigger>
 
                         <MultiTrigger>
@@ -246,7 +242,7 @@
                                     Property="Effect">
                                 <Setter.Value>
                                     <DropShadowEffect ShadowDepth="0"
-                                                      Color="{DynamicResource {x:Static Themes:MetroBrushKeys.TextBoxWaitingForDataShadowBrushKey}}"
+                                                      Color="{DynamicResource {x:Static Themes:BrushKeys.TextBoxWaitingForDataShadowBrushKey}}"
                                                       Opacity="0"
                                                       BlurRadius="10" />
                                 </Setter.Value>

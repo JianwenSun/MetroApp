@@ -55,25 +55,25 @@
                         </VisualStateManager.VisualStateGroups>
                         <Path Data="F1 M 511.047,352.682L 511.047,342.252L 517.145,347.467L 511.047,352.682 Z "
                               Stretch="Uniform"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalIncrementBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalIncrementBrushKey}}" />
                         <Path x:Name="HoverPath"
                               Data="F1 M 511.047,352.682L 511.047,342.252L 517.145,347.467L 511.047,352.682 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalIncrementMouseOverBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalIncrementMouseOverBrushKey}}" />
                         <Path x:Name="Blur"
                               Data="F1 M 511.047,352.682L 511.047,342.252L 517.145,347.467L 511.047,352.682 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalIncrementMouseOverBrushKey}}">
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalIncrementMouseOverBrushKey}}">
                             <Path.Effect>
                                 <BlurEffect />
                             </Path.Effect>
                         </Path>
                         <Rectangle x:Name="DisabledElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalIncrementDisabledBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalIncrementDisabledBrushKey}}"
                                    Opacity="0"
                                    RadiusY="2"
                                    RadiusX="2" />
@@ -115,25 +115,25 @@
                         </VisualStateManager.VisualStateGroups>
                         <Path Data="F1 M 110.692,342.252L 110.692,352.682L 104.594,347.467L 110.692,342.252 Z "
                               Stretch="Uniform"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalDecrementBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalDecrementBrushKey}}" />
                         <Path x:Name="HoverPath"
                               Data="F1 M 110.692,342.252L 110.692,352.682L 104.594,347.467L 110.692,342.252 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalDecrementMouseOverBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalDecrementMouseOverBrushKey}}" />
                         <Path x:Name="Blur"
                               Data="F1 M 110.692,342.252L 110.692,352.682L 104.594,347.467L 110.692,342.252 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalDecrementMouseOverBrushKey}}">
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalDecrementMouseOverBrushKey}}">
                             <Path.Effect>
                                 <BlurEffect />
                             </Path.Effect>
                         </Path>
                         <Rectangle x:Name="DisabledElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalDecrementDisabledBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalDecrementDisabledBrushKey}}"
                                    Opacity="0"
                                    RadiusY="2"
                                    RadiusX="2" />
@@ -165,10 +165,10 @@
                                 </VisualState>
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
-                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
-                                                                       Storyboard.TargetName="ThumbVisual">
-                                            <SplineDoubleKeyFrame KeyTime="0:0:0"
-                                                                  Value="0" />
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                                                       Storyboard.TargetName="DisableRectangle">
+                                            <SplineDoubleKeyFrame KeyTime="0:0:0.1"
+                                                                  Value="1" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -178,15 +178,19 @@
                               Margin="0,1,0,1">
                             <Rectangle x:Name="Background"
                                        StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalThumbBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalThumbBrushKey}}" />
                             <Rectangle x:Name="MouseOverRectangle"
                                        StrokeThickness="1"
                                        Opacity="0"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalThumbMouseOverBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalThumbMouseOverBrushKey}}" />
                             <Rectangle x:Name="PressedRectangle"
                                        StrokeThickness="1"
                                        Opacity="0"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarHorizontalThumbPressedBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalThumbPressedBrushKey}}" />
+                            <Rectangle x:Name="DisableRectangle"
+                                       StrokeThickness="1"
+                                       Opacity="0"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalThumbDisabledBrushKey}}" />
                         </Grid>
                     </Grid>
                 </ControlTemplate>
@@ -305,25 +309,25 @@
                         </VisualStateManager.VisualStateGroups>
                         <Path Data="F1 M 531.107,321.943L 541.537,321.943L 536.322,328.042L 531.107,321.943 Z "
                               Stretch="Uniform"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalIncrementBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalIncrementBrushKey}}" />
                         <Path x:Name="HoverPath"
                               Data="F1 M 531.107,321.943L 541.537,321.943L 536.322,328.042L 531.107,321.943 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalIncrementMouseOverBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalIncrementMouseOverBrushKey}}" />
                         <Path x:Name="Blur"
                               Data="F1 M 531.107,321.943L 541.537,321.943L 536.322,328.042L 531.107,321.943 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalIncrementMouseOverBrushKey}}">
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalIncrementMouseOverBrushKey}}">
                             <Path.Effect>
                                 <BlurEffect />
                             </Path.Effect>
                         </Path>
                         <Rectangle x:Name="DisabledElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalIncrementDisabledBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalIncrementDisabledBrushKey}}"
                                    Opacity="0"
                                    RadiusY="2"
                                    RadiusX="2" />
@@ -365,25 +369,25 @@
                         </VisualStateManager.VisualStateGroups>
                         <Path Data="F1 M 541.537,173.589L 531.107,173.589L 536.322,167.49L 541.537,173.589 Z "
                               Stretch="Uniform"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalDecrementBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalDecrementBrushKey}}" />
                         <Path x:Name="HoverPath"
                               Data="F1 M 541.537,173.589L 531.107,173.589L 536.322,167.49L 541.537,173.589 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalDecrementMouseOverBrushKey}}" />
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalDecrementMouseOverBrushKey}}" />
                         <Path x:Name="Blur"
                               Data="F1 M 541.537,173.589L 531.107,173.589L 536.322,167.49L 541.537,173.589 Z "
                               Stretch="Uniform"
                               UseLayoutRounding="False"
                               Opacity="0"
-                              Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalDecrementMouseOverBrushKey}}">
+                              Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalDecrementMouseOverBrushKey}}">
                             <Path.Effect>
                                 <BlurEffect />
                             </Path.Effect>
                         </Path>
                         <Rectangle x:Name="DisabledElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalDecrementDisabledBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalDecrementDisabledBrushKey}}"
                                    Opacity="0"
                                    RadiusY="2"
                                    RadiusX="2" />
@@ -416,10 +420,10 @@
                                 </VisualState>
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
-                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
-                                                                       Storyboard.TargetName="ThumbVisual">
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                                                       Storyboard.TargetName="DisableRectangle">
                                             <SplineDoubleKeyFrame KeyTime="0:0:0"
-                                                                  Value="0" />
+                                                                  Value="1" />
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -429,15 +433,19 @@
                               Margin="1,0,1,0">
                             <Rectangle x:Name="Background"
                                        StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalThumbBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalThumbBrushKey}}" />
                             <Rectangle x:Name="MouseOverRectangle"
                                        StrokeThickness="1"
                                        Opacity="0"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalThumbMouseOverBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalThumbMouseOverBrushKey}}" />
                             <Rectangle x:Name="PressedRectangle"
                                        StrokeThickness="1"
                                        Opacity="0"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ScrollbarVerticalThumbPressedBrushKey}}" />
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarVerticalThumbPressedBrushKey}}" />
+                            <Rectangle x:Name="DisableRectangle"
+                                       StrokeThickness="1"
+                                       Opacity="0"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.ScrollbarHorizontalThumbDisabledBrushKey}}" />
                         </Grid>
                     </Grid>
                 </ControlTemplate>

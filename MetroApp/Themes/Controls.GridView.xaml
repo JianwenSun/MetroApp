@@ -7,7 +7,7 @@
         <Setter Property="Width"
                 Value="18" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.GridViewColumnHeaderGripperBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderGripperBackgroundBrushKey}}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
@@ -26,7 +26,7 @@
     <Style x:Key="MetroGridViewColumnHeader"
            TargetType="GridViewColumnHeader">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.GridViewColumnHeaderForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderForegroundBrushKey}}" />
         <Setter Property="SnapsToDevicePixels"
                 Value="True" />
         <Setter Property="HorizontalContentAlignment"
@@ -62,7 +62,7 @@
                                  Value="true">
                             <Setter TargetName="HeaderBorder"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.GridViewColumnHeaderPressedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.GridViewColumnHeaderPressedBackgroundBrushKey}}" />
                             <Setter TargetName="HeaderContent"
                                     Property="Margin"
                                     Value="1,1,0,0" />
@@ -70,7 +70,7 @@
                         <Trigger Property="IsEnabled"
                                  Value="false">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource  {x:Static Themes:MetroBrushKeys.GridViewColumnHeaderDisabledForegroundBrushKey}}" />
+                                    Value="{DynamicResource  {x:Static Themes:BrushKeys.GridViewColumnHeaderDisabledForegroundBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

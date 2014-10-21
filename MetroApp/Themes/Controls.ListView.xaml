@@ -85,9 +85,9 @@
     <Style x:Key="MetroListView"
            TargetType="{x:Type ListView}">
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewBorderBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewBackgroundBrushKey}}" />
         <Setter Property="BorderThickness"
                 Value="0 1 0 0" />
         <Setter Property="ScrollViewer.CanContentScroll"
@@ -129,7 +129,7 @@
                                  Value="false">
                             <Setter TargetName="Border"
                                     Property="BorderBrush"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewDisabledBorderBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewDisabledBorderBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -153,7 +153,7 @@
     <Style x:Key="MetroListViewItem"
            TargetType="{x:Type ListViewItem}">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Stretch" />
         <Setter Property="VerticalContentAlignment"
@@ -163,7 +163,7 @@
         <Setter Property="Margin"
                 Value="0,0,0,0" />
         <Setter Property="Border.BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemBorderBrushKey}}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -180,12 +180,12 @@
                                             <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}"
                                                          Value="True">
                                                 <Setter Property="Foreground"
-                                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectedForegroundBrushKey}}" />
+                                                        Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectedForegroundBrushKey}}" />
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
                                                          Value="False">
                                                 <Setter Property="Foreground"
-                                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemDisabledForegroundBrushKey}}" />
+                                                        Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemDisabledForegroundBrushKey}}" />
                                             </DataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
@@ -196,7 +196,7 @@
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter Property="Foreground"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListBoxItemDisabledSelectedForegroundBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ListBoxItemDisabledSelectedForegroundBrushKey}}" />
                                                 </MultiDataTrigger.Setters>
                                             </MultiDataTrigger>
                                         </Style.Triggers>
@@ -218,18 +218,18 @@
                                  Value="true">
                             <Setter TargetName="Bd"
                                     Property="BorderBrush"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectedBorderBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectedBorderBrushKey}}" />
                             <Setter Property="Background"
                                     TargetName="Bd"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectedBackgroundBrushKey}}"/>
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectedBackgroundBrushKey}}"/>
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectedForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter TargetName="Bd"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemMouseOverBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemMouseOverBackgroundBrushKey}}" />
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -240,12 +240,12 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Background"
                                     TargetName="Bd"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectionActiveSelectedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectionActiveSelectedBackgroundBrushKey}}" />
                             <Setter Property="BorderBrush"
                                     TargetName="Bd"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectionActiveSelectedBorderBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectionActiveSelectedBorderBrushKey}}" />
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemSelectionActiveSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemSelectionActiveSelectedForegroundBrushKey}}" />
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -257,7 +257,7 @@
                             <MultiTrigger.Setters>
                                 <Setter TargetName="Bd"
                                         Property="Background"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ListViewItemDisabledSelectedBackgroundBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.ListViewItemDisabledSelectedBackgroundBrushKey}}" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
                     </ControlTemplate.Triggers>

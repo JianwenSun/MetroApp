@@ -9,11 +9,11 @@ using System.Windows.Markup;
 
 namespace MetroApp.Themes
 {
-    public static class MetroColorKeys
+    public static class ColorKeys
     {
-        static MetroColorKeys()
+        static ColorKeys()
         {
-            PropertyInfo[] properties = typeof(MetroColorKeys).GetProperties();
+            PropertyInfo[] properties = typeof(ColorKeys).GetProperties();
             foreach (var property in properties)
             {
                 if (property.SetMethod != null)

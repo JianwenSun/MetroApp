@@ -8,7 +8,7 @@
     <Style x:Key="MetroCheckBox"
            TargetType="CheckBox">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Left" />
         <Setter Property="VerticalContentAlignment"
@@ -82,31 +82,31 @@
                                        Margin="-6, 0"/>
                             <Rectangle x:Name="normal"
                                        Opacity="1"
-                                       Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBorderBrushKey}}"
+                                       Stroke="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBorderBrushKey}}"
                                        StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBackgroundBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBackgroundBrushKey}}"
                                        Width="18"
                                        Height="18" />
                             <Rectangle x:Name="hover"
-                                       Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxMouseOverBorderBrushKey}}"
+                                       Stroke="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxMouseOverBorderBrushKey}}"
                                        StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxMouseOverBackgroundBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxMouseOverBackgroundBrushKey}}"
                                        Opacity="0"
                                        Width="18"
                                        Height="18" />
                             <Rectangle x:Name="pressed"
                                        Opacity="0"
-                                       Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxPressedBorderBrushKey}}"
+                                       Stroke="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxPressedBorderBrushKey}}"
                                        StrokeThickness="1"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxPressedBackgroundBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxPressedBackgroundBrushKey}}"
                                        Width="18"
                                        Height="18" />
 
                             <Rectangle x:Name="disabled"
                                        Opacity="0"
                                        StrokeThickness="1"
-                                       Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBorderBrushKey}}"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisableBackgroundBrushKey}}"
+                                       Stroke="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxDisableBorderBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxDisableBackgroundBrushKey}}"
                                        Width="18"
                                        Height="18" />
                             <Path x:Name="checkBox"
@@ -115,10 +115,10 @@
                                   Stretch="Fill"
                                   Opacity="0"
                                   Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"
-                                  Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxFillBrushKey}}"
+                                  Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxFillBrushKey}}"
                                   UseLayoutRounding="False" />
                             <Rectangle x:Name="IndeterminateCheck"
-                                       Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxIndeterminateFillBrushKey}}"
+                                       Fill="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxIndeterminateFillBrushKey}}"
                                        Height="3"
                                        Width="8"
                                        Opacity="0" />
@@ -134,7 +134,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxDisabledForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxDisabledForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="FlowDirection" Value="RightToLeft">
                             <Setter TargetName="checkBox"

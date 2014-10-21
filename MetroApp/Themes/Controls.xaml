@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
 
-        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Common.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Colors.xaml" />
 
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.StateButtons.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/MetroWindow.Commands.xaml" />
@@ -15,6 +15,7 @@
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.CheckBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TabControl.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TextBlock.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ComboBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ListView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.GridView.xaml" />
@@ -31,7 +32,9 @@
     <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}" />
     <Style TargetType="{x:Type ComboBoxItem}" BasedOn="{StaticResource MetroComboBoxItem}" />
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}" />
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MetroTextBlock}" />
     <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource MetroCheckBox}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}" />
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource MetroListView}" />
     <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource MetroListViewItem}" />
     <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MetroListBox}" />

@@ -5,7 +5,7 @@
 
 
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />-->
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Colors.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

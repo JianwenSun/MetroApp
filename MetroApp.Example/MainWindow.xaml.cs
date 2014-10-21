@@ -1,21 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace MetroApp.Example
+﻿namespace MetroApp.Example
 {
     using MetroApp.Controls;
     using MetroApp.Themes;
+    using System.Windows;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -30,14 +17,20 @@ namespace MetroApp.Example
         private void Theme_click(object sender, RoutedEventArgs e)
         {
             Theme theme = this.GetValue(StyleManager.ThemeProperty) as Theme;
-            if (theme is LightTheme)
+            if (theme is Light)
             {
-                this.SetValue(StyleManager.ThemeProperty, DarkTheme.Instance);
+                this.SetValue(StyleManager.ThemeProperty, Dark.Instance);
             }
             else
             {
-                this.SetValue(StyleManager.ThemeProperty, LightTheme.Instance);
+                this.SetValue(StyleManager.ThemeProperty, Light.Instance);
             }
+        }
+
+        private void VS_click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
         }
     }
 }

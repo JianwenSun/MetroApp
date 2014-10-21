@@ -8,11 +8,11 @@ using System.Windows;
 
 namespace MetroApp.Themes
 {
-    public static class MetroBrushKeys
+    public static class BrushKeys
     {
-        static MetroBrushKeys()
+        static BrushKeys()
         {
-            PropertyInfo[] properties = typeof(MetroBrushKeys).GetProperties();
+            PropertyInfo[] properties = typeof(BrushKeys).GetProperties();
             foreach (var property in properties)
             {
                 if (property.SetMethod != null)
@@ -46,7 +46,17 @@ namespace MetroApp.Themes
 
         #endregion
 
+        #region Label
+
         public static string LabelForegroundBrushKey { get; private set; }
+
+        #endregion
+
+        #region TextBlock
+
+        public static string TextBlockForegroundBrushKey { get; private set; }
+
+        #endregion
 
         #region Button
 

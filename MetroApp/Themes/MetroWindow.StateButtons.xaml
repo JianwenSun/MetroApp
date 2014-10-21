@@ -9,7 +9,7 @@
         <Setter Property="Background"
                 Value="Transparent" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.WindowForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -49,17 +49,17 @@
             <Trigger Property="IsMouseOver"
                      Value="True">
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonMouseOverBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonMouseOverBrushKey}}" />
             </Trigger>
             <Trigger Property="IsPressed"
                      Value="True">
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonPressedBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonPressedBrushKey}}" />
             </Trigger>
             <Trigger Property="IsEnabled"
                      Value="false">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonDisabledBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonDisabledBrushKey}}" />
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -69,7 +69,7 @@
         <Setter Property="Background"
                 Value="Transparent" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.WindowForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -109,17 +109,17 @@
             <Trigger Property="IsMouseOver"
                      Value="True">
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonCloseMouseOverBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonCloseMouseOverBrushKey}}" />
             </Trigger>
             <Trigger Property="IsPressed"
                      Value="True">
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonClosePressedBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonClosePressedBrushKey}}" />
             </Trigger>
             <Trigger Property="IsEnabled"
                      Value="false">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowStateButtonDisabledBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.WindowStateButtonDisabledBrushKey}}" />
             </Trigger>
         </Style.Triggers>
     </Style>

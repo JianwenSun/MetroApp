@@ -5,9 +5,11 @@
     <Style TargetType="{x:Type Label}" 
            x:Key="MetroLabel">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.LabelForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.LabelForegroundBrushKey}}" />
     </Style>
 
-    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}" />
+    <Style TargetType="{x:Type Label}" x:Key="SystemLabel">
+        <Setter Property="Style" Value="{x:Null}"/>
+    </Style>
 
 </ResourceDictionary>

@@ -26,7 +26,7 @@
                               Data="M 4 0 L 8 4 L 4 8 Z"
                               Fill="Transparent"
                               StrokeThickness="1"
-                              Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                              Stroke="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandBrushKey}}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked"
@@ -41,16 +41,16 @@
                             </Setter>
                             <Setter Property="Fill"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandBrushKey}}" />
                             <Setter Property="Stroke"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
                                  Value="False">
                             <Setter Property="Stroke"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandDisabledBrushKey}}" />
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -61,19 +61,19 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Fill"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandDisabledBrushKey}}" />
                             <Setter Property="Stroke"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandDisabledBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandDisabledBrushKey}}" />
                         </MultiTrigger>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter Property="Stroke"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandMouseOverBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandMouseOverBrushKey}}" />
                             <Setter Property="Fill"
                                     TargetName="ExpandPath"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewExpandMouseOverBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewExpandMouseOverBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -88,7 +88,7 @@
                     <Border>
                         <Rectangle Margin="0,0,0,0"
                                    StrokeThickness="5"
-                                   Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemFocusBrushKey}}"
+                                   Stroke="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemFocusBrushKey}}"
                                    StrokeDashArray="1 2"
                                    Opacity="0" />
                     </Border>
@@ -102,9 +102,9 @@
         <Setter Property="MinHeight"
                 Value="22" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemForegroundBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemBackgroundBrushKey}}" />
         <Setter Property="FocusVisualStyle"
                 Value="{StaticResource TreeViewItemFocusVisual}" />
         <Setter Property="SnapsToDevicePixels"
@@ -164,22 +164,22 @@
                                  Value="True">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemMouseOverBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemMouseOverBackgroundBrushKey}}" />
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemMouseOverForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemMouseOverForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsSelected"
                                  Value="True">
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectedBackgroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemSelectedBackgroundBrushKey}}" />
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemSelectedForegroundBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
                                  Value="False">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemDisabledForegroundBrushKey}}" />
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -191,9 +191,9 @@
                             <MultiTrigger.Setters>
                                 <Setter TargetName="Border"
                                         Property="Background"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledSelectedBackgroundBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemDisabledSelectedBackgroundBrushKey}}" />
                                 <Setter Property="Foreground"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemDisabledSelectedForegroundBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemDisabledSelectedForegroundBrushKey}}" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
                         <MultiTrigger>
@@ -205,7 +205,7 @@
                             </MultiTrigger.Conditions>
                             <Setter TargetName="Border"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewItemSelectionActiveSelectedBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewItemSelectionActiveSelectedBrushKey}}" />
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -216,9 +216,9 @@
     <Style x:Key="MetroTreeView"
            TargetType="{x:Type TreeView}">
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewBorderBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewBackgroundBrushKey}}" />
         <!-- default to 0 -->
         <Setter Property="BorderThickness"
                 Value="0" />
@@ -240,7 +240,7 @@
                                  Value="False">
                             <Setter TargetName="Border"
                                     Property="BorderBrush"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TreeViewDisabledBorderBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TreeViewDisabledBorderBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

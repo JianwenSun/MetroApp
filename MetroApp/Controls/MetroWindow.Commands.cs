@@ -13,5 +13,10 @@ namespace MetroApp.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MetroWindowCommands), new FrameworkPropertyMetadata(typeof(MetroWindowCommands)));
         }
+
+        public MetroWindowCommands()
+        {
+            
+        }
     }
 }

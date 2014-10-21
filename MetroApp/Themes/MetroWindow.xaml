@@ -55,8 +55,8 @@
     </ControlTemplate>
 
     <Style TargetType="{x:Type Controls:MetroWindow}" x:Key="MetroWindowStyle">
-        <Setter Property="Background" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowBackgroundBrushKey}}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}"/>
+        <Setter Property="Background" Value="{DynamicResource {x:Static Themes:BrushKeys.WindowBackgroundBrushKey}}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:BrushKeys.WindowForegroundBrushKey}}"/>
         <Setter Property="Behaviours:StylizedBehaviors.Behaviors">
             <Setter.Value>
                 <Behaviours:StylizedBehaviorCollection>

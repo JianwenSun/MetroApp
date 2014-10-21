@@ -1,8 +1,471 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Themes="clr-namespace:MetroApp.Themes">
+    
+    <Color x:Key="AccentColorKey">#CC119EDA</Color>
+    <Color x:Key="WeakAccentColorKey">#66119EDA</Color>
+    <Color x:Key="DisableAccentColorKey">#11119EDA</Color>
+    <Color x:Key="WeakColorKey">#FF54545C</Color>
+    <Color x:Key="BasicColorKey">#FF0F0F0F</Color>
+    <Color x:Key="BasicMouseOverColorKey">#C9DEF5</Color>
+    <Color x:Key="BasicPressColorKey">#484949</Color>
+    <Color x:Key="BasicFouseColorKey">#FF54545C</Color>
+    <Color x:Key="BasicDisableColorKey">#FF54545C</Color>
+    <Color x:Key="StrongColorKey">#FF000000</Color>
+    <Color x:Key="MainColorKey">#FFEEEEF2</Color>
+    <Color x:Key="MainDisableColorKey">#FF2D2D30</Color>
+    <Color x:Key="MarkerColorKey">#FF000000</Color>
+    <Color x:Key="ValidationColorKey">#FFDE3914</Color>
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light/Common.xaml" />
-    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="AccentBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="WeakAccentBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="DisableAccentBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="WeakBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="BasicBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="BasicMouseOverBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
+    <SolidColorBrush x:Key="BasicPressBrushKey"
+                     Color="{StaticResource BasicPressColorKey}"/>
+    <SolidColorBrush x:Key="BasicFouseBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="BasicDisableBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="StrongBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="MainBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="MainDisableBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="MarkerBrushKey"
+                     Color="{StaticResource MarkerColorKey}"/>
+    <SolidColorBrush x:Key="ValidationBrushKey"
+                     Color="{StaticResource ValidationColorKey}"/>
+
+    <!-- Window specific resources-->
+    <SolidColorBrush x:Key="WindowBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="WindowForegroundBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="WindowStateButtonMouseOverBrushKey" 
+                     Color="#FCFCFD" />
+    <SolidColorBrush x:Key="WindowStateButtonCloseMouseOverBrushKey" 
+                     Color="#E04343" />
+    <SolidColorBrush x:Key="WindowStateButtonPressedBrushKey" 
+                     Color="#007ACC" />
+    <SolidColorBrush x:Key="WindowStateButtonClosePressedBrushKey" 
+                     Color="#993D3D" />
+    <SolidColorBrush x:Key="WindowStateButtonDisabledBrushKey" 
+                     Color="#333333FF" />
+    <SolidColorBrush x:Key="WindowCommandsForegroundBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="WindowCommandsDisabledBrushKey" 
+                     Color="#333333FF"/>
+    
+    <!-- Label specific resources-->
+    <SolidColorBrush x:Key="LabelForegroundBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <!-- TextBlock specific resources-->
+    <SolidColorBrush x:Key="TextBlockForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <!-- Button specific resources-->
+    <SolidColorBrush x:Key="ButtonBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ButtonBackgroundDisabledBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ButtonForegroundBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ButtonBorderBrushKey" 
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBrushKey" 
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
+    <SolidColorBrush x:Key="ButtonPressedBrushKey" 
+                     Color="{StaticResource AccentColorKey}"/>
+
+    <!-- DataGrid specific resources-->
+    <SolidColorBrush x:Key="DataGridSelectAllButtonBackgroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridSelectAllButtonMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridSelectAllButtonArrowBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridSelectAllButtonPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowHeaderGripperBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderGripperBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderGripperDisabledBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderMouseOverBackgroundBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderForegroundDisabledBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowHeaderBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowHeaderMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellMouseOverSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellMouseOverUnSelectedBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellDisabledSelectedForegroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridCellDisabledSelectedBackgroundBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowDisableForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowSelectionActiveSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowMouseOverFullRowBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowMouseOverSelectedCellOrRowHeaderBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowDisableSelectedForegroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridRowDisableSelectedBackgroundBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="DataGridBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DataGridBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridHorizontalGridLinesBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridVerticalGridLinesBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DataGridSeparatorBackgroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+
+
+    <!-- TabControl specific resources-->
+
+    <SolidColorBrush x:Key="TabItemBorderBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TabItemForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TabItemSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="TabItemSelectedUnderLineBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TabItemUnSelectedForegroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="TabItemUnSelectedUnderLineBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="TabItemMouseOverForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TabItemMouseOverUnderLineBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <!-- CheckBox specific resources-->
+
+    <SolidColorBrush x:Key="CheckBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxFillBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxIndeterminateFillBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxMouseOverBackgroundBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxPressedBorderBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxPressedBackgroundBrushKey"
+                     Color="{StaticResource BasicMouseOverColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxDisableBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="CheckBoxDisableBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+
+    <!-- ComboBox specific resources-->
+
+    <SolidColorBrush x:Key="ComboBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxDisableForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxDisableBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxMouseOverBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxRessedBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxRessedBorderBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxFocusBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxFocusBackgroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxArrowBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxArrowMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonMouseOverForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonMouseOverBackgroundBrushKey"
+                     Color="Transparent"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonPressedForegroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxClearButtonPressedBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxEditBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxPopupBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxPopupBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+
+    <!-- ComboBoxItem specific resources-->
+
+    <SolidColorBrush x:Key="ComboBoxItemForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxItemBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxItemSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxItemSelectedForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxItemMouseOverBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="ComboBoxItemFouseBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+
+    <!-- TextBox specific resources-->
+
+    <SolidColorBrush x:Key="TextBoxSelectionBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxFocusBorderBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxCaretBrusBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxDisabledBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxDisabledBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxClearButtonMouseOverBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxClearButtonMouseOverForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxClearButtonPressedBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxClearButtonPressedForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TextBoxWaitingForDataShadowBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <!-- ListView specific resources-->
+
+    <SolidColorBrush x:Key="ListViewBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListViewDisabledBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListViewBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+
+    <SolidColorBrush x:Key="ListViewItemForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectedBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemDisabledSelectedForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemDisabledSelectedBackgroundBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemMouseOverBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectionActiveSelectedBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectionActiveSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ListViewItemSelectionActiveSelectedForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+
+    <!-- ListViewGridView specific resources-->
+
+    <SolidColorBrush x:Key="GridViewColumnHeaderGripperBackgroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderBackroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderPressedBackgroundBrushKey"
+                     Color="{StaticResource BasicPressColorKey}"/>
+    <SolidColorBrush x:Key="GridViewColumnHeaderDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+
+    <!-- ListViewGridView specific resources-->
+
+    <SolidColorBrush x:Key="ListBoxBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxDisabledBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemMouseOverBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemDisabledSelectedBackgroundBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemDisabledSelectedForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="ListBoxItemSelectionActiveSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+
+    <!-- TreeView specific resources-->
+
+    <SolidColorBrush x:Key="TreeViewExpandBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewExpandDisabledBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewExpandMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemFocusBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewDisabledBorderBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemDisabledForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemMouseOverForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemMouseOverBackgroundBrushKey"
+                     Color="{StaticResource WeakAccentColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemSelectedForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemSelectedBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemDisabledSelectedForegroundBrushKey"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemDisabledSelectedBackgroundBrushKey"
+                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="TreeViewItemSelectionActiveSelectedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+
+    <!-- Scrollbar specific resources-->
+
+    <SolidColorBrush x:Key="ScrollbarHorizontalIncrementBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalIncrementMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalIncrementPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalIncrementDisabledBrushKey"
+                     Color="LightGray"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalDecrementBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalDecrementMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalDecrementPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalDecrementDisabledBrushKey"
+                     Color="LightGray"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalThumbBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalThumbMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalThumbPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarHorizontalThumbDisabledBrushKey"
+                     Color="LightGray"/>
+
+    <SolidColorBrush x:Key="ScrollbarVerticalIncrementBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalIncrementMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalIncrementPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalIncrementDisabledBrushKey"
+                     Color="LightGray"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalDecrementBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalDecrementMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalDecrementPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalDecrementDisabledBrushKey"
+                     Color="LightGray"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalThumbBrushKey"
+                     Color="Gray"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalThumbMouseOverBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalThumbPressedBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="ScrollbarVerticalThumbDisabledBrushKey"
+                     Color="LightGray"/>
 
 </ResourceDictionary>
+

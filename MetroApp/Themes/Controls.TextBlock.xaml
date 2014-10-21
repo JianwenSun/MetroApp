@@ -2,12 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
 
-    <!-- note: default style for textblock is now in MetroWindow !!! -->
-    <!-- never ever make a default style for TextBlock in App.xaml !!!  -->
     <Style TargetType="{x:Type TextBlock}"
            x:Key="MetroTextBlock">
-        <!-- doesn't need this anymore... -->
-        <!--<Setter Property="Foreground"
-                Value="{DynamicResource LabelTextBrush}" />-->
+        <Setter Property="Foreground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TextBlockForegroundBrushKey}}" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="SystemTextBlock">
+        <Setter Property="Style" Value="{x:Null}"/>
     </Style>
 </ResourceDictionary>

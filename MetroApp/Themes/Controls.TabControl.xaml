@@ -149,11 +149,11 @@
         <Setter Property="BorderThickness"
                 Value="0" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemBorderBrushKey}}" />
         <Setter Property="Background"
                 Value="Transparent" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemForegroundBrushKey}}" />
         <Setter Property="SnapsToDevicePixels"
                 Value="True" />
         <Setter Property="Template">
@@ -188,29 +188,29 @@
                                  Value="true">
                             <Setter Property="TextElement.Foreground"
                                     TargetName="ContentSite"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemSelectedForegroundBrushKey}}" />
                             <Setter Property="Fill"
                                     TargetName="Underline"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemSelectedUnderLineBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemSelectedUnderLineBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsSelected"
                                  Value="false">
                             <Setter Property="TextElement.Foreground"
                                     TargetName="ContentSite"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemUnSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemUnSelectedForegroundBrushKey}}" />
                             <Setter Property="Fill"
                                     TargetName="Underline"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemUnSelectedUnderLineBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemUnSelectedUnderLineBrushKey}}" />
                         </Trigger>
                         <Trigger SourceName="ContentSite"
                                  Property="IsMouseOver"
                                  Value="True">
                             <Setter Property="TextElement.Foreground"
                                     TargetName="ContentSite"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemMouseOverForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemMouseOverForegroundBrushKey}}" />
                             <Setter Property="Fill"
                                     TargetName="Underline"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.TabItemMouseOverUnderLineBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.TabItemMouseOverUnderLineBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

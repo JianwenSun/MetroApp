@@ -13,5 +13,10 @@ namespace MetroApp.Example
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            Themes.StyleManager.SetAppTheme(Themes.Themes.Dark);
+            base.OnStartup(e);
+        }
     }
 }

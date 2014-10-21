@@ -9,10 +9,12 @@
            x:Key="MetroComboBox">
         <Setter Property="MinHeight"
                 Value="22" />
+        <Setter Property="Height"
+                Value="22" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxForegroundBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBackgroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Left" />
         <Setter Property="VerticalContentAlignment"
@@ -26,14 +28,12 @@
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
                 Value="Auto" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBorderBrushKey}}" />
         <Setter Property="ItemContainerStyle"
                 Value="{DynamicResource MetroComboBoxItem}" />
         <!-- change SnapsToDevicePixels to true to view a better border and validation error -->
         <Setter Property="SnapsToDevicePixels"
                 Value="True" />
-        <Setter Property="Validation.ErrorTemplate"
-                Value="{DynamicResource ValidationErrorTemplate}" />
         <Setter Property="ScrollViewer.CanContentScroll"
                 Value="False" />
         <Setter Property="Template">
@@ -44,11 +44,11 @@
                             <Style x:Key="comboToggleStyle"
                                    TargetType="{x:Type ToggleButton}">
                                 <Setter Property="Foreground"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxForegroundBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxForegroundBrushKey}}" />
                                 <Setter Property="Background"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBackgroundBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBackgroundBrushKey}}" />
                                 <Setter Property="BorderBrush"
-                                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.CheckBoxBorderBrushKey}}" />
+                                        Value="{DynamicResource {x:Static Themes:BrushKeys.CheckBoxBorderBrushKey}}" />
                                 <Setter Property="BorderThickness"
                                         Value="1" />
                                 <Setter Property="Padding"
@@ -99,23 +99,23 @@
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Background="{TemplateBinding Background}" />
                                                 <Rectangle x:Name="DisabledVisualElement"
-                                                           Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxDisableBackgroundBrushKey}}"
+                                                           Fill="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxDisableBackgroundBrushKey}}"
                                                            IsHitTestVisible="false"
                                                            Opacity="0" />
                                                 <Border x:Name="MouseOverBorder"
-                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxMouseOverBackgroundBrushKey}}"
+                                                        Background="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxMouseOverBackgroundBrushKey}}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Opacity="0" />
                                                 <Border x:Name="PressedBorder"
-                                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxRessedBackgroundBrushKey}}"
+                                                        Background="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxRessedBackgroundBrushKey}}"
                                                         BorderThickness="{TemplateBinding BorderThickness}"
                                                         Opacity="0" />
                                                 <Rectangle x:Name="FocusRectangle"
-                                                           Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxFocusBorderBrushKey}}"
+                                                           Stroke="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxFocusBorderBrushKey}}"
                                                            Opacity="0" />
                                                 <Rectangle x:Name="FocusVisualElement"
                                                            IsHitTestVisible="false"
-                                                           Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxFocusBorderBrushKey}}"
+                                                           Stroke="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxFocusBorderBrushKey}}"
                                                            StrokeThickness="1"
                                                            Visibility="Collapsed" />
 
@@ -150,7 +150,7 @@
                                                           Height="4"
                                                           Stretch="Uniform"
                                                           Width="8"
-                                                          Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxArrowBrushKey}}" />
+                                                          Fill="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxArrowBrushKey}}" />
                                                 </Grid>
                                             </Grid>
                                             <ControlTemplate.Triggers>
@@ -159,27 +159,27 @@
                                                          Value="True">
                                                     <Setter TargetName="BtnArrowBackground"
                                                             Property="Fill"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxArrowMouseOverBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxArrowMouseOverBrushKey}}" />
                                                 </Trigger>
                                                 <Trigger SourceName="PART_ClearText"
                                                          Property="IsMouseOver"
                                                          Value="True">
                                                     <Setter TargetName="PART_ClearText"
                                                             Property="Background"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxClearButtonMouseOverBackgroundBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxClearButtonMouseOverBackgroundBrushKey}}" />
                                                     <Setter TargetName="PART_ClearText"
                                                             Property="Foreground"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxClearButtonMouseOverForegroundBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxClearButtonMouseOverForegroundBrushKey}}" />
                                                 </Trigger>
                                                 <Trigger SourceName="PART_ClearText"
                                                          Property="IsPressed"
                                                          Value="True">
                                                     <Setter TargetName="PART_ClearText"
                                                             Property="Background"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxClearButtonPressedBackgroundBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxClearButtonPressedBackgroundBrushKey}}" />
                                                     <Setter TargetName="PART_ClearText"
                                                             Property="Foreground"
-                                                            Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxClearButtonPressedForegroundBrushKey}}" />
+                                                            Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxClearButtonPressedForegroundBrushKey}}" />
                                                 </Trigger>
                                             </ControlTemplate.Triggers>
                                         </ControlTemplate>
@@ -256,7 +256,7 @@
                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                          BorderThickness="0"
-                                         Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxEditBackgroundBrushKey}}"
+                                         Background="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxEditBackgroundBrushKey}}"
                                          Helpers:TextBoxHelper.Watermark="{TemplateBinding Helpers:TextBoxHelper.Watermark}"
                                          Foreground="{TemplateBinding Foreground}"
                                          Focusable="True"
@@ -276,10 +276,10 @@
                             </Grid>
                         </Grid>
                         <Rectangle x:Name="FocusRectangle"
-                                   Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxFocusBorderBrushKey}}"
+                                   Stroke="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxFocusBorderBrushKey}}"
                                    Opacity="0" />
                         <Rectangle x:Name="DisabledVisualElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxFocusBackgroundBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxFocusBackgroundBrushKey}}"
                                    IsHitTestVisible="false"
                                    Opacity="0" />
                         <!-- AllowsTransparency="true" fixes the redraw problem under windows vista/7 with a selected non aero theme -->
@@ -297,8 +297,8 @@
                                         BorderThickness="{TemplateBinding BorderThickness}"
                                         HorizontalAlignment="Stretch"
                                         Height="Auto"
-                                        BorderBrush="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxPopupBorderBrushKey}}"
-                                        Background="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxPopupBackgroundBrushKey}}">
+                                        BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxPopupBorderBrushKey}}"
+                                        Background="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxPopupBackgroundBrushKey}}">
                                 </Border>
                                 <ScrollViewer x:Name="DropDownScrollViewer"
                                               BorderThickness="0"
@@ -323,7 +323,7 @@
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter TargetName="PART_EditableTextBox" 
                                     Property="Foreground" 
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxDisableForegroundBrushKey}}"/>
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxDisableForegroundBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsEditable"
                                  Value="True">
@@ -375,7 +375,7 @@
     <Style TargetType="ComboBoxItem"
            x:Key="MetroComboBoxItem">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemForegroundBrushKey}}" />
         <Setter Property="Padding"
                 Value="2" />
         <Setter Property="HorizontalContentAlignment"
@@ -385,7 +385,7 @@
         <Setter Property="RenderOptions.ClearTypeHint"
                 Value="Enabled" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemBackgroundBrushKey}}" />
         <Setter Property="BorderThickness"
                 Value="1" />
         <Setter Property="Template">
@@ -437,11 +437,11 @@
                         <Rectangle x:Name="SelectedRectangle"
                                    IsHitTestVisible="False"
                                    Opacity="0"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemSelectedBackgroundBrushKey}}" />
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemSelectedBackgroundBrushKey}}" />
                         <Rectangle x:Name="MouseOverRectangle"
                                    IsHitTestVisible="False"
                                    Opacity="0"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemMouseOverBackgroundBrushKey}}" />
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemMouseOverBackgroundBrushKey}}" />
                         <ContentControl Foreground="{TemplateBinding Foreground}">
                             <ContentPresenter x:Name="contentPresenter"
                                               Margin="{TemplateBinding Padding}"
@@ -449,7 +449,7 @@
                                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
                         </ContentControl>
                         <Rectangle x:Name="FocusVisualElement"
-                                   Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemFouseBorderBrushKey}}"
+                                   Stroke="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemFouseBorderBrushKey}}"
                                    StrokeThickness="1"
                                    Visibility="Collapsed" />
                     </Grid>
@@ -458,7 +458,7 @@
                         <Trigger Property="IsSelected"
                                  Value="True">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ComboBoxItemSelectedForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ComboBoxItemSelectedForegroundBrushKey}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

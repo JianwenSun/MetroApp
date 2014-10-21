@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MetroApp.Themes
 {
     /// <summary>
-    /// LightTheme class represents the key to the LightTheme theme.
+    /// Dark class represents the key to the Dark theme.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1707:IdentifiersShouldNotContainUnderscores")]
-
     [Theme]
-    public class LightTheme : Theme
+    public class Dark : Theme
     {
-        public static LightTheme Instance
+        public static Dark Instance 
         {
-            get
+            get 
             {
-                return new LightTheme();
+                return new Dark();
             }
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LightTheme"/> class.
+        /// Initializes a new instance of the <see cref="Dark"/> class.
         /// </summary>
-        public LightTheme()
+        public Dark()
         {
-            this.Name = "Light";
+            this.Name = "Dark";
         }
     }
 }

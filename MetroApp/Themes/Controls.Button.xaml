@@ -7,7 +7,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Control}">
                     <Ellipse Margin="8"
-                             Stroke="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBorderBrushKey}}"
+                             Stroke="{DynamicResource {x:Static Themes:BrushKeys.ButtonBorderBrushKey}}"
                              StrokeDashArray="2 2"
                              StrokeThickness="1"
                              SnapsToDevicePixels="True" />
@@ -23,11 +23,11 @@
         <Setter Property="Background"
                 Value="Transparent" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}}"/>
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonForegroundBrushKey}}"/>
         <Setter Property="BorderThickness"
                 Value="2" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonBorderBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -42,7 +42,7 @@
                                  Margin="4"
                                  StrokeThickness="0" />
                         <Ellipse x:Name="ellipsebg"
-                                 Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBackgroundBrushKey}}"
+                                 Fill="{DynamicResource {x:Static Themes:BrushKeys.ButtonBackgroundBrushKey}}"
                                  Opacity="0"
                                  Margin="4"
                                  StrokeThickness="0" />
@@ -98,7 +98,7 @@
                         <Trigger Property="IsEnabled"
                                  Value="false">
                             <Setter Property="Foreground"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonForegroundBrushKey}}" />
                             <Setter TargetName="ellipse"
                                     Property="Opacity"
                                     Value="0.3" />
@@ -136,7 +136,7 @@
             <Trigger Property="IsEnabled"
                      Value="false">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}}" />
+                        Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonForegroundBrushKey}}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -144,9 +144,9 @@
     <Style x:Key="ChromelessButtonStyle"
            TargetType="{x:Type ButtonBase}">
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonBackgroundBrushKey}}" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonForegroundBrushKey}}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -165,11 +165,11 @@
         <Setter Property="FontWeight"
                 Value="Bold" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBackgroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonBackgroundBrushKey}}" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBorderBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonBorderBrushKey}}" />
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonForegroundBrushKey}}" />
+                Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonForegroundBrushKey}}" />
         <Setter Property="BorderThickness"
                 Value="1" />
         <Setter Property="Template">
@@ -182,7 +182,7 @@
                                 Background="{TemplateBinding Background}"
                                 CornerRadius="0" />
                         <Rectangle x:Name="DisabledVisualElement"
-                                   Fill="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonBackgroundDisabledBrushKey}}"
+                                   Fill="{DynamicResource {x:Static Themes:BrushKeys.ButtonBackgroundDisabledBrushKey}}"
                                    IsHitTestVisible="false"
                                    Opacity="0"/>
                         <ContentPresenter x:Name="contentPresenter"
@@ -198,13 +198,13 @@
                                  Value="True">
                             <Setter TargetName="Background"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonMouseOverBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonMouseOverBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="True">
                             <Setter TargetName="Background"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:MetroBrushKeys.ButtonPressedBrushKey}}" />
+                                    Value="{DynamicResource {x:Static Themes:BrushKeys.ButtonPressedBrushKey}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled"
                                  Value="False">

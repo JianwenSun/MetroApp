@@ -19,16 +19,19 @@ namespace MetroApp.Themes
         /// </summary>
         public static bool IsEnabled { get; set; }
 
-        public static Theme AppDefaultTheme
-        {
-            get;
-            private set;
-        }
+        public static Theme AppDefaultTheme = Light.Instance;
 
         static StyleManager()
         {
             StyleManager.IsEnabled = true;
-            AppDefaultTheme = LightTheme.Instance;
+        }
+
+        public static void SetAppTheme(Theme appTheme)
+        {
+            if (StyleManager.IsEnabled)
+            {
+                ChangeTheme(Application.Current.Resources, appTheme);
+            }
         }
 
         /// <summary>
@@ -66,24 +69,9 @@ namespace MetroApp.Themes
                 Theme newTheme = changedEventArgs.NewValue as Theme;
                 if (newTheme == null) return;
 
-                Control control = target as Control;
-                var resources = control.Resources;
-                ResourceDictionary theme = null;
-                ResourceDictionary containResource = GetThemeResourceDictionary(resources, ref theme);
-                if (containResource != null && theme != null)
-                {
-                    containResource.MergedDictionaries.Insert(0, newTheme.Source);
-                    containResource.MergedDictionaries.Remove(theme);
-                }
-                else
-                {
-                    resources.MergedDictionaries.Add(newTheme.Source);
-                }
-
-                if (!Theme.IsDictionaryContainControls(resources))
-                {
-                    resources.MergedDictionaries.Add(Theme.Controls);
-                }
+                FrameworkElement element = target as FrameworkElement;
+                if(element != null)
+                    ChangeTheme(element.Resources, newTheme);
             }
         }
 
@@ -94,7 +82,7 @@ namespace MetroApp.Themes
             {
                 var currentRd = enumerator.Current;
 
-                if (Theme.IsDictionaryContainTheme(currentRd))
+                if (Theme.IsContainControlsResource(currentRd))
                 {
                     theme = currentRd;
                     return resource;
@@ -105,6 +93,30 @@ namespace MetroApp.Themes
             return null;
         }
 
-        
+        private static void ChangeTheme(ResourceDictionary resources, Theme newTheme)
+        {
+            ResourceDictionary theme = null;
+            ResourceDictionary containResource = GetThemeResourceDictionary(resources, ref theme);
+            if (containResource != null && theme != null)
+            {
+                if (Theme.IsContainControlsResource(containResource))
+                {
+                    var dir = Theme.GetControlsDictionary(containResource);
+                    if (dir != null)
+                        resources.MergedDictionaries.Remove(dir);
+                }
+                containResource.MergedDictionaries.Insert(0, newTheme.Source);
+                containResource.MergedDictionaries.Remove(theme);
+            }
+            else
+            {
+                resources.MergedDictionaries.Add(newTheme.Source);
+            }
+
+            if (!Theme.IsContainControlsResource(resources))
+            {
+                resources.MergedDictionaries.Add(Theme.Controls);
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@
 
     <Style TargetType="{x:Type Controls:MetroWindowTopBar}" x:Key="MetroWindowTopBarStyle">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:MetroBrushKeys.WindowForegroundBrushKey}}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static Themes:BrushKeys.WindowForegroundBrushKey}}"/>
         <Setter Property="Height" Value="25"/>
         <Setter Property="Template">
             <Setter.Value>
