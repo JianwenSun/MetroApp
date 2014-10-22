@@ -410,5 +410,47 @@ namespace MetroApp.Themes
         public static string DatePickerButtonPressedForegroundBrushKey { get; private set; }
         
         #endregion
+
+        #region Slider
+
+        public static string HorizontalSliderThumbBackgroundBrushKey { get; private set; }
+        public static string HorizontalSliderThumbBorderBrushKey { get; private set; }
+        public static string HorizontalSliderThumbDisabledBackgroundBrushKey { get; private set; }
+        public static string HorizontalTrackLargeDecreaseBackgroundBrushKey { get; private set; }
+        public static string HorizontalTrackValueAccentBackgroundBrushKey { get; private set; }
+        public static string VerticalSliderThumbBackgroundBrushKey { get; private set; }
+        public static string VerticalSliderThumbBorderBrushKey { get; private set; }
+        public static string VerticalSliderThumbDisabledBackgroundBrushKey { get; private set; }
+        public static string VerticalTrackLargeDecreaseBackgroundBrushKey { get; private set; }
+        public static string VerticalTrackValueAccentBackgroundBrushKey { get; private set; }
+        public static string SliderBorderBrushKey { get; private set; }
+        public static string SliderForegroundBrushKey { get; private set; }
+        public static string SliderTickBarFillBrushKey { get; private set; }
+
+        public static string FlatSliderVerticalDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderVerticalThumbBackground { get; private set; }
+        public static string FlatSliderVerticalIncreaseRepeatButtonBackground { get; private set; }
+
+        public static string FlatSliderVerticalMouseOverDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderVerticalMouseOverThumbBackground { get; private set; }
+        public static string FlatSliderVerticalMouseOverIncreaseRepeatButtonBackground { get; private set; }
+
+        public static string FlatSliderVerticalDisabledDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderVerticalDisabledThumbBackground { get; private set; }
+        public static string FlatSliderVerticalDisabledIncreaseRepeatButtonBackground { get; private set; }
+
+        public static string FlatSliderHorizontalDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderHorizontalThumbBackground { get; private set; }
+        public static string FlatSliderHorizontalIncreaseRepeatButtonBackground { get; private set; }
+
+        public static string FlatSliderHorizontalMouseOverDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderHorizontalMouseOverThumbBackground { get; private set; }
+        public static string FlatSliderHorizontalMouseOverIncreaseRepeatButtonBackground { get; private set; }
+
+        public static string FlatSliderHorizontalDisabledDecreaseRepeatButtonBackground { get; private set; }
+        public static string FlatSliderHorizontalDisabledThumbBackground { get; private set; }
+        public static string FlatSliderHorizontalDisabledIncreaseRepeatButtonBackground { get; private set; }
+
+        #endregion
     }
 }

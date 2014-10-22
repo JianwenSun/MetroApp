@@ -7,7 +7,7 @@
              xmlns:Helpers="sunjianwen143@hotmail.com"
              xmlns:Controls="sunjianwen143@hotmail.com"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="2800">
     
     <Grid Margin="1">
         <Grid.RowDefinitions>
@@ -274,6 +274,143 @@
                     </Grid>
                 </Border>
             </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Silder" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <Label Content="Horizontal Slider"/>
+                                <Slider Minimum="0"
+                                        Maximum="100"
+                                        Value="20"
+                                        LargeChange="10"
+                                        SmallChange="1"
+                                        Width="200"
+                                        Margin="5" />
+                                <Slider Width="200"
+                                        Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        Value="50" />
+                                <Slider Width="200"
+                                        Margin="5"
+                                        Value="67"
+                                        IsEnabled="False" />
+                                <Slider Width="200"
+                                        Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        IsEnabled="False"
+                                        Value="50" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="Vertical Slider"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Slider Orientation="Vertical"
+                                            Height="200"
+                                            Value="75"
+                                            Cursor="SizeNS" />
+                                    <Slider Orientation="Vertical"
+                                            Margin="5"
+                                            Height="200"
+                                            Style="{DynamicResource FlatSlider}"
+                                            Value="50" />
+                                    <Slider Orientation="Vertical"
+                                            Height="200"
+                                            Value="46"
+                                            Margin="5"
+                                            IsEnabled="False" />
+                                    <Slider Orientation="Vertical"
+                                            Margin="5"
+                                            Height="200"
+                                            Style="{DynamicResource FlatSlider}"
+                                            Value="50"
+                                            IsEnabled="False" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Sliders TickPlacement" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <Label Content="Horizontal Slider"/>
+                                <Slider Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        VerticalAlignment="top"
+                                        IsSnapToTickEnabled="True"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        Value="10"
+                                        TickPlacement="Both"
+                                        TickFrequency="25" />
+                                <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        TickPlacement="BottomRight"
+                                        TickFrequency="25"
+                                        Value="50" />
+                                <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        TickPlacement="Both"
+                                        TickFrequency="25"
+                                        Value="50" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="Vertical Slider"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Slider Margin="5"
+                                        Style="{DynamicResource FlatSlider}"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="TopLeft"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                    <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="BottomRight"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                    <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="TopLeft"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
         </ListBox>
         <ListBox Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
             <ListBox.Resources>
@@ -530,6 +667,143 @@
                                         HorizontalAlignment="Center"
                                         IsEnabled="False"
                                         Helpers:TextBoxHelper.Watermark="Select a date"/>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Silder" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <Label Content="Horizontal Slider"/>
+                                <Slider Minimum="0"
+                                        Maximum="100"
+                                        Value="20"
+                                        LargeChange="10"
+                                        SmallChange="1"
+                                        Width="200"
+                                        Margin="5" />
+                                <Slider Width="200"
+                                        Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        Value="50" />
+                                <Slider Width="200"
+                                        Margin="5"
+                                        Value="67"
+                                        IsEnabled="False" />
+                                <Slider Width="200"
+                                        Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        IsEnabled="False"
+                                        Value="50" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="Vertical Slider"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Slider Orientation="Vertical"
+                                            Height="200"
+                                            Value="75"
+                                            Cursor="SizeNS" />
+                                    <Slider Orientation="Vertical"
+                                            Margin="5"
+                                            Height="200"
+                                            Style="{DynamicResource FlatSlider}"
+                                            Value="50" />
+                                    <Slider Orientation="Vertical"
+                                            Height="200"
+                                            Value="46"
+                                            Margin="5"
+                                            IsEnabled="False" />
+                                    <Slider Orientation="Vertical"
+                                            Margin="5"
+                                            Height="200"
+                                            Style="{DynamicResource FlatSlider}"
+                                            Value="50"
+                                            IsEnabled="False" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Sliders TickPlacement" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <StackPanel>
+                                <Label Content="Horizontal Slider"/>
+                                <Slider Style="{DynamicResource FlatSlider}"
+                                        Margin="5"
+                                        VerticalAlignment="top"
+                                        IsSnapToTickEnabled="True"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        Value="10"
+                                        TickPlacement="Both"
+                                        TickFrequency="25" />
+                                <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        TickPlacement="BottomRight"
+                                        TickFrequency="25"
+                                        Value="50" />
+                                <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Width="150"
+                                        TickPlacement="Both"
+                                        TickFrequency="25"
+                                        Value="50" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="Vertical Slider"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Slider Margin="5"
+                                        Style="{DynamicResource FlatSlider}"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="TopLeft"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                    <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="BottomRight"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                    <Slider Margin="5"
+                                        VerticalAlignment="top"
+                                        HorizontalAlignment="Left"
+                                        Height="200"
+                                        TickPlacement="TopLeft"
+                                        TickFrequency="25"
+                                        Value="50"
+                                        Orientation="Vertical" />
+                                </StackPanel>
+                            </StackPanel>
                         </DockPanel>
                     </Grid>
                 </Border>

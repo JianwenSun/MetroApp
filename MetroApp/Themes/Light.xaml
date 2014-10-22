@@ -635,5 +635,74 @@
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="DatePickerButtonPressedForegroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
+
+    <!-- DatePicker sepcific resources -->
+
+    <SolidColorBrush x:Key="HorizontalSliderThumbBackgroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="HorizontalSliderThumbBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="HorizontalSliderThumbDisabledBackgroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="HorizontalTrackLargeDecreaseBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="HorizontalTrackValueAccentBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    
+    <SolidColorBrush x:Key="VerticalSliderThumbBackgroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="VerticalSliderThumbBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="VerticalSliderThumbDisabledBackgroundBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="VerticalTrackLargeDecreaseBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="VerticalTrackValueAccentBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="SliderBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="SliderForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+
+    <SolidColorBrush x:Key="SliderTickBarFillBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalDecreaseRepeatButtonBackground"
+                     Color="{StaticResource AccentWeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalThumbBackground"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalMouseOverDecreaseRepeatButtonBackground"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalMouseOverThumbBackground"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalMouseOverIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalDisabledDecreaseRepeatButtonBackground"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalDisabledThumbBackground"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderHorizontalDisabledIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+
+    <SolidColorBrush x:Key="FlatSliderVerticalDecreaseRepeatButtonBackground"
+                     Color="{StaticResource AccentWeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalThumbBackground"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalMouseOverDecreaseRepeatButtonBackground"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalMouseOverThumbBackground"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalMouseOverIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalDisabledDecreaseRepeatButtonBackground"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalDisabledThumbBackground"
+                     Color="{StaticResource BasicDisableColorKey}"/>
+    <SolidColorBrush x:Key="FlatSliderVerticalDisabledIncreaseRepeatButtonBackground"
+                     Color="{StaticResource WeakColorKey}"/>
+    
 </ResourceDictionary>
 
