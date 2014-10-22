@@ -22,6 +22,9 @@
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.ListBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.TreeView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Scrollbar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.PasswordBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Calendar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.DatePicker.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Glow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -46,5 +49,9 @@
     <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource MetroScrollViewer}" />
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource MetroRadioButton}" />
     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}" />
-
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource MetroPasswordBox}" />
+    <Style TargetType="{x:Type Calendar}" BasedOn="{StaticResource MetroCalendar}" />
+    <Style TargetType="{x:Type DatePickerTextBox}" BasedOn="{StaticResource MetroDatePickerTextBox}" />
+    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource MetroDatePicker}" />
+    
 </ResourceDictionary>

@@ -1,7 +1,9 @@
 ﻿
 
 FF:\Self Workspace\MetroApp\MetroApp\Controls\GlowWindow.xaml;;
+FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.DatePicker.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.ComboBox.xaml;;
+FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.PasswordBox.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.TabControl.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.CheckBox.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.ListView.xaml;;
@@ -15,6 +17,7 @@ FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.Label.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.Button.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.DataGrid.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.RadioButton.xaml;;
+FF:\Self Workspace\MetroApp\MetroApp\Themes\Controls.Calendar.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\Glow.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\MetroWindow.Commands.xaml;;
 FF:\Self Workspace\MetroApp\MetroApp\Themes\MetroWindow.StateButtons.xaml;;

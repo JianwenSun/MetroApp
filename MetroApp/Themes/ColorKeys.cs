@@ -22,9 +22,10 @@ namespace MetroApp.Themes
         }
 
         public static string AccentColorKey { get; private set; }
-        public static string WeakAccentColorKey { get; private set; }
-        public static string DisableAccentColorKey { get; private set; }
+        public static string AccentWeakColorKey { get; private set; }
+        public static string AccentDisableColorKey { get; private set; }
         public static string WeakColorKey { get; private set; }
+        public static string WeakDisableColorKey { get; private set; }
         public static string BasicColorKey { get; private set; }
         public static string BasicMouseOverColorKey { get; private set; }
         public static string BasicPressColorKey { get; private set; }

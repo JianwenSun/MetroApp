@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Themes="sunjianwen143@hotmail.com"
+             xmlns:Helpers="sunjianwen143@hotmail.com"
              xmlns:Controls="sunjianwen143@hotmail.com"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
@@ -114,7 +115,6 @@
                                 <TextBox Margin="5"
                                      Controls:TextBoxHelper.Watermark="Enter parameter"
                                      Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmdWithParameter, Mode=OneWay}"
-                                     Controls:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=test2, Path=Text}"
                                      Style="{DynamicResource SearchMetroTextBox}" />
                                 <TextBox Margin="5"
                                      Controls:TextBoxHelper.Watermark="Custom icon style"
@@ -195,6 +195,82 @@
                                 </FlowDocument>
                             </RichTextBox>
                         </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="PasswordBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <StackPanel Grid.Row="1">
+                            <PasswordBox Margin="5" 
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.ClearTextButton="True"
+                                         Helpers:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.Watermark="Custom icon style"
+                                         Helpers:TextBoxHelper.ButtonContent="4"
+                                         Helpers:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                         Style="{DynamicResource MetroButtonPasswordBox}" />
+                            <PasswordBox Margin="5"
+                                         IsEnabled="False"
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.ClearTextButton="True"
+                                         IsEnabled="False"
+                                         Password="Password" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Calendar" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <Calendar Margin="5" />
+                            <Calendar Margin="5" IsEnabled="False"/>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="DatePicker" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <DatePicker Width="150" Margin="5"
+                                        HorizontalAlignment="Center"
+                                        Helpers:TextBoxHelper.Watermark="Select a date"/>
+
+                            <DatePicker Width="150" Margin="5"
+                                        HorizontalAlignment="Center"
+                                        IsEnabled="False"
+                                        Helpers:TextBoxHelper.Watermark="Select a date"/>
+                        </DockPanel>
                     </Grid>
                 </Border>
             </ListBoxItem>
@@ -299,7 +375,6 @@
                                 <TextBox Margin="5"
                                      Controls:TextBoxHelper.Watermark="Enter parameter"
                                      Controls:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmdWithParameter, Mode=OneWay}"
-                                     Controls:TextBoxHelper.ButtonCommandParameter="{Binding ElementName=test2, Path=Text}"
                                      Style="{DynamicResource SearchMetroTextBox}" />
                                 <TextBox Margin="5"
                                      Controls:TextBoxHelper.Watermark="Custom icon style"
@@ -380,6 +455,82 @@
                                 </FlowDocument>
                             </RichTextBox>
                         </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="PasswordBox" Margin="5" HorizontalAlignment="Center"/>
+
+                        <StackPanel Grid.Row="1">
+                            <PasswordBox Margin="5" 
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.ClearTextButton="True"
+                                         Helpers:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.Watermark="Custom icon style"
+                                         Helpers:TextBoxHelper.ButtonContent="4"
+                                         Helpers:TextBoxHelper.ButtonCommand="{Binding TextBoxButtonCmd, Mode=OneWay}"
+                                         Style="{DynamicResource MetroButtonPasswordBox}" />
+                            <PasswordBox Margin="5"
+                                         IsEnabled="False"
+                                         Password="Password" />
+                            <PasswordBox Margin="5"
+                                         Helpers:TextBoxHelper.ClearTextButton="True"
+                                         IsEnabled="False"
+                                         Password="Password" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="Calendar" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <Calendar Margin="5"/>
+                            <Calendar Margin="5" IsEnabled="False"/>
+                        </DockPanel>
+                    </Grid>
+                </Border>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="DatePicker" Margin="5" HorizontalAlignment="Center"/>
+
+                        <DockPanel Grid.Row="1">
+                            <DatePicker Width="150" Margin="5"
+                                        HorizontalAlignment="Center"
+                                        Helpers:TextBoxHelper.Watermark="Select a date"/>
+
+                            <DatePicker Width="150" Margin="5"
+                                        HorizontalAlignment="Center"
+                                        IsEnabled="False"
+                                        Helpers:TextBoxHelper.Watermark="Select a date"/>
+                        </DockPanel>
                     </Grid>
                 </Border>
             </ListBoxItem>

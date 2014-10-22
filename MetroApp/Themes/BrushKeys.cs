@@ -23,8 +23,8 @@ namespace MetroApp.Themes
         #region Base
 
         public static string AccentBrushKey { get; private set; }
-        public static string WeakAccentBrushKey { get; private set; }
-        public static string DisableAccentBrushKey { get; private set; }
+        public static string AccentWeakBrushKey { get; private set; }
+        public static string AccentDisableBrushKey { get; private set; }
         public static string WeakBrushKey { get; private set; }
         public static string BasicBrushKey { get; private set; }
         public static string BasicMouseOverBrushKey { get; private set; }
@@ -345,6 +345,70 @@ namespace MetroApp.Themes
         public static string RadioButtonDisabledBackgroundBrushKey { get; private set; }
         public static string RadioButtonDisabledBorderBrushKey { get; private set; }
 
+        #endregion
+
+        #region PasswordBox
+
+        public static string PasswordBoxSelectionBrushKey { get; private set; }
+        public static string PasswordBoxBackgroundBrushKey { get; private set; }
+        public static string PasswordBoxDisabledBackgroundBrushKey { get; private set; }
+        public static string PasswordBoxForegroundBrushKey { get; private set; }
+        public static string PasswordBoxBorderBrushKey { get; private set; }
+        public static string PasswordBoxFocusBorderBrushKey { get; private set; }
+        public static string PasswordBoxMouseOverBorderBrushKey { get; private set; }
+        public static string PasswordBoxDisabledBorderBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonBackgroundBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonForegroundBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonMouseOverBackgroundBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonMouseOverForegroundBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonPressedBackgroundBrushKey { get; private set; }
+        public static string PasswordBoxClearButtonPressedForegroundBrushKey { get; private set; }
+
+        #endregion
+
+        #region Calendar
+
+        public static string CalendarDayButtonForegroundBrushKey { get; private set; }
+        public static string CalendarDayButtonInactiveBrushKey { get; private set; }
+        public static string CalendarDayButtonTodayBackgroundBrushKey { get; private set; }
+        public static string CalendarDayButtonTodayForegroundBrushKey { get; private set; }
+        public static string CalendarDayButtonSelectedBackgroundBrushKey { get; private set; }
+        public static string CalendarDayButtonHighLightBackgroundBrushKey { get; private set; }
+        public static string CalendarDayButtonFocusBorderBrushKey { get; private set; }
+        public static string CalendarDayButtonNoTodaySelectedForegroundBrushKey { get; private set; }
+        public static string CalendarDayButtonBlackoutBrushKey { get; private set; }
+        public static string CalendarItemDayTitleBrushKey { get; private set; }
+        public static string CalendarItemDayArrowBrushKey { get; private set; }
+        public static string CalendarItemHeaderBackgroundBrushKey { get; private set; }
+        public static string CalendarItemDisabledBorderBrushKey { get; private set; }
+        public static string CalendarItemDisabledBackgroundBrushKey { get; private set; }
+        public static string CalendarButtonBackgroundBrushKey { get; private set; }
+        public static string CalendarButtonInactiveBrushKey { get; private set; }
+        public static string CalendarButtonForegroundBrushKey { get; private set; }
+        public static string CalendarButtonFocusBorderBrushKey { get; private set; }
+        public static string CalendarForegroundBrushKey { get; private set; }
+        public static string CalendarBackgroundBrushKey { get; private set; }
+        public static string CalendarBorderBrushKey { get; private set; }
+        public static string CalendarMouseOverBorderBrushKey { get; private set; }
+
+        #endregion
+
+        #region DatePicker
+
+        public static string DatePickerTextBoxForegroundBrushKey { get; private set; }
+        public static string DatePickerTextBoxBackgroundBrushKey { get; private set; }
+        public static string DatePickerBackgroundBrushKey { get; private set; }
+        public static string DatePickerDisabledBackgroundBrushKey { get; private set; }
+        public static string DatePickerBorderBrushKey { get; private set; }
+        public static string DatePickerMouseOverBorderBrushKey { get; private set; }
+        public static string DatePickerDisabledBorderBrushKey { get; private set; }
+        public static string DatePickerForegroundBrushKey { get; private set; }
+        public static string DatePickerFocusBorderBrushKey { get; private set; }
+        public static string DatePickerButtonMouseOverBackgroundBrushKey { get; private set; }
+        public static string DatePickerButtonMouseOverForegroundBrushKey { get; private set; }
+        public static string DatePickerButtonPressedBackgroundBrushKey { get; private set; }
+        public static string DatePickerButtonPressedForegroundBrushKey { get; private set; }
+        
         #endregion
     }
 }

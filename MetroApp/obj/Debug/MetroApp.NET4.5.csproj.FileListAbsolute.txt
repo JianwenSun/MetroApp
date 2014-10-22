@@ -34,3 +34,6 @@ F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.5.csprojResolveAssemblyReference.cache
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.RadioButton.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.PasswordBox.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.Calendar.baml
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.DatePicker.baml

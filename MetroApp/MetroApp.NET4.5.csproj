@@ -70,6 +70,7 @@
       <DependentUpon>MetroWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\FontSizeOffsetConverter.cs" />
     <Compile Include="Converters\ThicknessToDoubleConverter.cs" />
     <Compile Include="Helpers\ComBoxHelper.cs" />
     <Compile Include="Helpers\ControlsHelper.cs" />
@@ -135,7 +136,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Controls.DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Controls.ComboBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.PasswordBox.xaml">
       <DependentUpon>Controls.xaml</DependentUpon>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -209,6 +219,11 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Controls.RadioButton.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Calendar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

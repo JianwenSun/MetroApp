@@ -3,9 +3,10 @@
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
     
     <Color x:Key="AccentColorKey">#EE119EDA</Color>
-    <Color x:Key="WeakAccentColorKey">#CC119EDA</Color>
-    <Color x:Key="DisableAccentColorKey">#66119EDA</Color>
-    <Color x:Key="WeakColorKey">#FF54545C</Color>
+    <Color x:Key="AccentWeakColorKey">#CC119EDA</Color>
+    <Color x:Key="AccentDisableColorKey">#66119EDA</Color>
+    <Color x:Key="WeakColorKey">#FFB9B9B9</Color>
+    <Color x:Key="WeakDisableColorKey">#FFE3E3E3</Color>
     <Color x:Key="BasicColorKey">#FF0F0F0F</Color>
     <Color x:Key="BasicMouseOverColorKey">#C9DEF5</Color>
     <Color x:Key="BasicPressColorKey">#484949</Color>
@@ -20,12 +21,14 @@
 
     <SolidColorBrush x:Key="AccentBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
-    <SolidColorBrush x:Key="WeakAccentBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
-    <SolidColorBrush x:Key="DisableAccentBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+    <SolidColorBrush x:Key="AccentWeakBrushKey"
+                     Color="{StaticResource AccentWeakColorKey}"/>
+    <SolidColorBrush x:Key="AccentDisableBrushKey"
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="WeakBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="WeakDisableBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
     <SolidColorBrush x:Key="BasicBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="BasicMouseOverBrushKey"
@@ -105,7 +108,7 @@
     <SolidColorBrush x:Key="DataGridColumnHeaderGripperBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridColumnHeaderGripperDisabledBrushKey"
-                     Color="{StaticResource BasicDisableColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridColumnHeaderForegroundBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="DataGridColumnHeaderBorderBrushKey"
@@ -129,13 +132,13 @@
     <SolidColorBrush x:Key="DataGridCellMouseOverSelectedBackgroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="DataGridCellMouseOverUnSelectedBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridCellDisabledForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
     <SolidColorBrush x:Key="DataGridCellDisabledSelectedForegroundBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridCellDisabledSelectedBackgroundBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowForegroundBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowDisableForegroundBrushKey"
@@ -149,13 +152,13 @@
     <SolidColorBrush x:Key="DataGridRowSelectionActiveSelectedBackgroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowMouseOverFullRowBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowMouseOverSelectedCellOrRowHeaderBackgroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowDisableSelectedForegroundBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridRowDisableSelectedBackgroundBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="DataGridBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="DataGridBorderBrushKey"
@@ -272,7 +275,7 @@
     <SolidColorBrush x:Key="ComboBoxItemSelectedForegroundBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="ComboBoxItemMouseOverBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="ComboBoxItemFouseBorderBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
 
@@ -297,7 +300,7 @@
     <SolidColorBrush x:Key="TextBoxDisabledBackgroundBrushKey"
                      Color="{StaticResource MainDisableColorKey}"/>
     <SolidColorBrush x:Key="TextBoxDisabledBorderBrushKey"
-                     Color="{StaticResource BasicDisableColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="TextBoxClearButtonMouseOverBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="TextBoxClearButtonMouseOverForegroundBrushKey"
@@ -312,7 +315,7 @@
     <!-- RichTextBox specific resources-->
 
     <SolidColorBrush x:Key="RichTextBoxHyperlinkForegroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxHyperlinkMouseOverForegroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxHyperlinkDisabledForegroundBrushKey"
@@ -320,15 +323,15 @@
     <SolidColorBrush x:Key="RichTextBoxBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxSelectionBrushBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxDisabledBackgroundBrushKey"
                      Color="{StaticResource MainDisableColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxForegroundBrushKey"
                      Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxBorderBrushKey"
-                     Color="{StaticResource BasicColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxDisabledBorderBrushKey"
-                     Color="{StaticResource BasicDisableColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxMouseOverBorderBrushKey"
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="RichTextBoxFocusBorderBrushKey"
@@ -358,9 +361,9 @@
     <SolidColorBrush x:Key="ListViewItemDisabledSelectedForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
     <SolidColorBrush x:Key="ListViewItemDisabledSelectedBackgroundBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="ListViewItemMouseOverBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="ListViewItemSelectionActiveSelectedBorderBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="ListViewItemSelectionActiveSelectedBackgroundBrushKey"
@@ -400,11 +403,11 @@
     <SolidColorBrush x:Key="ListBoxItemSelectedForegroundBrushKey"
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="ListBoxItemMouseOverBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="ListBoxItemDisabledForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
     <SolidColorBrush x:Key="ListBoxItemDisabledSelectedBackgroundBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="ListBoxItemDisabledSelectedForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
     <SolidColorBrush x:Key="ListBoxItemSelectionActiveSelectedBackgroundBrushKey"
@@ -435,7 +438,7 @@
     <SolidColorBrush x:Key="TreeViewItemBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="TreeViewItemMouseOverBackgroundBrushKey"
-                     Color="{StaticResource WeakAccentColorKey}"/>
+                     Color="{StaticResource AccentWeakColorKey}"/>
     <SolidColorBrush x:Key="TreeViewItemSelectedForegroundBrushKey"
                      Color="{StaticResource StrongColorKey}"/>
     <SolidColorBrush x:Key="TreeViewItemSelectedBackgroundBrushKey"
@@ -443,7 +446,7 @@
     <SolidColorBrush x:Key="TreeViewItemDisabledSelectedForegroundBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
     <SolidColorBrush x:Key="TreeViewItemDisabledSelectedBackgroundBrushKey"
-                     Color="{StaticResource DisableAccentColorKey}"/>
+                     Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="TreeViewItemSelectionActiveSelectedBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
 
@@ -506,7 +509,7 @@
     <SolidColorBrush x:Key="RadioButtonBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
     <SolidColorBrush x:Key="RadioButtonBorderBrushKey"
-                     Color="{StaticResource BasicColorKey}"/>
+                     Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="RadioButtonCheckedBackgroundBrushKey"
                      Color="{StaticResource AccentColorKey}"/>
     <SolidColorBrush x:Key="RadioButtonMouseOverBackgroundBrushKey"
@@ -525,5 +528,112 @@
                      Color="Transparent"/>
     <SolidColorBrush x:Key="RadioButtonDisabledBorderBrushKey"
                      Color="{StaticResource BasicDisableColorKey}"/>
+
+    <!-- PasswordBox sepcific resources -->
+
+    <SolidColorBrush x:Key="PasswordBoxSelectionBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxDisabledBackgroundBrushKey"
+                     Color="{StaticResource MainDisableColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxDisabledBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxFocusBorderBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxMouseOverBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonMouseOverBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonMouseOverForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonPressedBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="PasswordBoxClearButtonPressedForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+
+    <!-- Calendar sepcific resources -->
+
+    <SolidColorBrush x:Key="CalendarDayButtonForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonInactiveBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonTodayBackgroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonTodayForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonSelectedBackgroundBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonHighLightBackgroundBrushKey"
+                     Color="{StaticResource AccentWeakColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonFocusBorderBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonNoTodaySelectedForegroundBrushKey"
+                     Color="{StaticResource AccentDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarDayButtonBlackoutBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CalendarItemDayTitleBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="CalendarItemDayArrowBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CalendarItemHeaderBackgroundBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarItemDisabledBorderBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarItemDisabledBackgroundBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="CalendarButtonBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="CalendarButtonInactiveBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="CalendarButtonForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CalendarButtonFocusBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="CalendarForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="CalendarBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="CalendarBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="CalendarMouseOverBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+
+    <!-- DatePicker sepcific resources -->
+
+    <SolidColorBrush x:Key="DatePickerTextBoxForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerTextBoxBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerDisabledBackgroundBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerBorderBrushKey"
+                     Color="{StaticResource WeakColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerMouseOverBorderBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerDisabledBorderBrushKey"
+                     Color="{StaticResource WeakDisableColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerFocusBorderBrushKey"
+                     Color="{StaticResource BasicFouseColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerButtonMouseOverBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerButtonMouseOverForegroundBrushKey"
+                     Color="{StaticResource StrongColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerButtonPressedBackgroundBrushKey"
+                     Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DatePickerButtonPressedForegroundBrushKey"
+                     Color="{StaticResource AccentColorKey}"/>
 </ResourceDictionary>
 

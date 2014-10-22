@@ -15,8 +15,6 @@ F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.Properties
 F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.csproj.GenerateResource.Cache
 F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.exe
 F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.pdb
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\TextExample.baml
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\TextExample.g.cs
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.g.cs
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\App.g.cs
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.cache
