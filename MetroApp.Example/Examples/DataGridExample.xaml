@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:Examples="clr-namespace:MetroApp.Example"
              xmlns:Controls="sunjianwen143@hotmail.com"
+             xmlns:Helpers="sunjianwen143@hotmail.com"
              xmlns:Themes="sunjianwen143@hotmail.com"
              mc:Ignorable="d"
              d:DesignHeight="600"
@@ -155,7 +156,8 @@
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Header="IsSelected"
                                         ElementStyle="{DynamicResource MetroDataGridCheckBox}"
-                                        Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}" />
+                                        Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}" >
+                    </DataGridCheckBoxColumn>
                     <DataGridTextColumn Header="Title"
                                     Binding="{Binding Title}" />
                     <DataGridTextColumn Header="Artist"
