@@ -49,6 +49,19 @@ namespace MetroApp.Themes
             return false;
         }
 
+        public static ResourceDictionary Controls
+        {
+            get
+            {
+                if (_controls == null)
+                {
+                    _controls = new ResourceDictionary() { Source = new Uri("pack://application:,,,/MetroApp;component/Themes/Controls.xaml") };
+                }
+
+                return _controls;
+            }
+        }
+
         static void GetThemes()
         {
             lock (Themes)
@@ -65,37 +78,42 @@ namespace MetroApp.Themes
             }
         }
 
-        public static bool IsContainThemeResource(ResourceDictionary resourceDictionary)
+        public static Theme GetControlTheme(ResourceDictionary resource)
         {
             try
             {
-                string dirString = resourceDictionary.Source.ToString();
                 string dirPath = "pack://application:,,,/MetroApp;component/Themes/";
-                if (dirString.Contains(dirPath))
+
+                var enumerator = resource.MergedDictionaries.GetEnumerator();
+                while (enumerator.MoveNext())
                 {
-                    int index = dirString.IndexOf(".xaml");
-                    string theme = dirString.Substring(dirPath.Length, dirString.Length - dirPath.Length - 5);
-                    if (Theme.Contains(theme))
-                        return true;
+                    var currentRd = enumerator.Current;
+                    string dirString = currentRd.Source.ToString();
+
+                    if (dirString.Contains(dirPath))
+                    {
+                        int index = dirString.IndexOf(".xaml");
+                        string theme = dirString.Substring(dirPath.Length, dirString.Length - dirPath.Length - 5);
+                        if (Theme.Contains(theme))
+                        {
+                            enumerator.Dispose();
+                            return Theme.FromName(theme);
+                        }
+                    }
+                    else
+                    {
+                        Theme theme = GetControlTheme(currentRd);
+                        if (theme != null)
+                            return theme;
+                    }
                 }
 
-                return false;
+                enumerator.Dispose();
+                return null;
             }
             catch (Exception)
             {
-                return false;
-            }
-        }
-        public static ResourceDictionary Controls
-        {
-            get
-            {
-                if (_controls == null)
-                {
-                    _controls = new ResourceDictionary() { Source = new Uri("pack://application:,,,/MetroApp;component/Themes/Controls.xaml") };
-                }
-
-                return _controls;
+                return null;
             }
         }
 

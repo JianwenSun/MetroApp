@@ -13,6 +13,10 @@
 
     <UserControl.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
             <x:Array x:Key="DataGridSelectionUnitArray"
                      Type="DataGridSelectionUnit">
                 <DataGridSelectionUnit>FullRow</DataGridSelectionUnit>
@@ -33,7 +37,6 @@
                 <DataGridHeadersVisibility>Column</DataGridHeadersVisibility>
                 <DataGridHeadersVisibility>None</DataGridHeadersVisibility>
             </x:Array>
-
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -63,7 +66,6 @@
                 <ResourceDictionary>
                     <ResourceDictionary.MergedDictionaries>
                         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Dark.xaml" />
-                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
                     </ResourceDictionary.MergedDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
@@ -144,6 +146,7 @@
                               SelectedValue="{Binding HeadersVisibility}" />
                 </Grid>
             </ContentControl>
+            
             <DataGrid x:Name="MetroDataGrid"
                   Grid.Column="1"
                   Grid.Row="1"
@@ -153,6 +156,37 @@
                   SelectionUnit="FullRow"
                   ItemsSource="{Binding Path=Albums}"
                   AutoGenerateColumns="False">
+                
+                <DataGrid.Resources>
+                    <Popup x:Key="PopupView" AllowsTransparency="True" Placement="Left" PopupAnimation="Fade">
+                        <Grid Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                            <Grid.Resources>
+                                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Dark.xaml" />
+                            </Grid.Resources>
+                            <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.BasicBrushKey}}">
+                                <StackPanel Margin="10" >
+                                    <DockPanel>
+                                        <TextBlock Text="Title : " />
+                                        <TextBlock Text="{Binding Title}" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <TextBlock Text="Artist : " />
+                                        <TextBlock Text="{Binding Artist.Name}" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <TextBlock Text="Genre : " />
+                                        <TextBlock Text="{Binding Genre.Name}" />
+                                    </DockPanel>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </Popup>
+                </DataGrid.Resources>
+                
+                <Helpers:DataGridPopupHelper.Controller>
+                    <Helpers:DataGridPopupController PopupView="{StaticResource PopupView}" IsStay="True" StayTime="0:0:2"/>
+                </Helpers:DataGridPopupHelper.Controller>
+                
                 <DataGrid.Columns>
                     <DataGridCheckBoxColumn Header="IsSelected"
                                         ElementStyle="{DynamicResource MetroDataGridCheckBox}"
@@ -182,7 +216,6 @@
                 <ResourceDictionary>
                     <ResourceDictionary.MergedDictionaries>
                         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />
-                        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
                     </ResourceDictionary.MergedDictionaries>
                 </ResourceDictionary>
             </Grid.Resources>
@@ -271,6 +304,37 @@
                   Margin="5"
                   ItemsSource="{Binding Path=Albums}"
                   AutoGenerateColumns="False">
+
+                <DataGrid.Resources>
+                    <Popup x:Key="AzurePopupView" AllowsTransparency="True" Placement="Right" PopupAnimation="None">
+                        <Grid Background="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}">
+                            <Grid.Resources>
+                                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />
+                            </Grid.Resources>
+                            <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.BasicBrushKey}}">
+                                <StackPanel Margin="10" >
+                                    <DockPanel>
+                                        <TextBlock Text="Title : " />
+                                        <TextBlock Text="{Binding Title}" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <TextBlock Text="Artist : " />
+                                        <TextBlock Text="{Binding Artist.Name}" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <TextBlock Text="Genre : " />
+                                        <TextBlock Text="{Binding Genre.Name}" />
+                                    </DockPanel>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </Popup>
+                </DataGrid.Resources>
+
+                <Helpers:DataGridPopupHelper.Controller>
+                    <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsStay="False" Target="DataGrid" StayTime="0:0:5"/>
+                </Helpers:DataGridPopupHelper.Controller>
+                
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Title"
                                     Binding="{Binding Title}" />

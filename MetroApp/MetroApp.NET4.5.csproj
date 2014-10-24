@@ -74,8 +74,8 @@
     <Compile Include="Converters\ThicknessToDoubleConverter.cs" />
     <Compile Include="Helpers\ComBoxHelper.cs" />
     <Compile Include="Helpers\ControlsHelper.cs" />
+    <Compile Include="Helpers\DataGridPopupController.cs" />
     <Compile Include="Helpers\DataGridPopupHelper.cs" />
-    <Compile Include="Helpers\DataGridPopupParameter.cs" />
     <Compile Include="Helpers\MetroWindowHelpers.cs" />
     <Compile Include="Helpers\ResourcesHelper.cs" />
     <Compile Include="Helpers\TextBoxHelper.cs" />
@@ -91,6 +91,9 @@
     <Compile Include="Native\Constants.cs" />
     <Compile Include="Native\MinMaxInfo.cs" />
     <Compile Include="Native\AbEdge.cs" />
+    <Compile Include="Extensions\ChildrenOfTypeExtensions.cs" />
+    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="Extensions\ParentOfTypeExtensions.cs" />
     <Compile Include="Shells\Standard\ComGuids.cs" />
     <Compile Include="Shells\Standard\Debug.cs" />
     <Compile Include="Shells\Standard\DoubleUtil.cs" />
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Controls.FlatSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Grid.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

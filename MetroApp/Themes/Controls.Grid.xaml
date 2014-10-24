@@ -1,0 +1,15 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    xmlns:Controls="clr-namespace:MetroApp.Controls"
+                    xmlns:Themes="clr-namespace:MetroApp.Themes">
+
+
+    <!--Grid-->
+    <Style x:Key="MetroGrid"
+           TargetType="Grid">
+        <Setter Property="Background"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.MainBrushKey}}" />
+    </Style>
+
+</ResourceDictionary>

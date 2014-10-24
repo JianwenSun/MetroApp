@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace MetroApp.Themes
 {
@@ -32,6 +33,23 @@ namespace MetroApp.Themes
             {
                 ChangeTheme(Application.Current.Resources, appTheme);
             }
+        }
+
+        public static Theme GetControlTheme(DependencyObject d)
+        {
+            DependencyObject parent = VisualTreeHelper.GetParent(d);
+            while (parent != null)
+            {
+                PropertyInfo property = parent.GetType().GetProperty("Resources", typeof(ResourceDictionary));
+                if(property != null)
+                {
+                    ResourceDictionary resource = (ResourceDictionary)property.GetValue(parent);
+                    Theme theme = Theme.GetControlTheme(resource);
+                    if (theme != null)
+                        return theme;
+                }
+            }
+            return null;
         }
 
         /// <summary>

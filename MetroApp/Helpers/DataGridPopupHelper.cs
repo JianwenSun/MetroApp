@@ -9,32 +9,30 @@ using System.Windows.Controls.Primitives;
 
 namespace MetroApp.Helpers
 {
-    public enum PopupPlacement
-    {
-        Window,
-        DataGrid
-    }
-
     public class DataGridPopupHelper
     {
-        public static readonly DependencyProperty PopupViewProperty =
-            DependencyProperty.RegisterAttached("PopupView", typeof(Popup),
-            typeof(DataGridPopupHelper), new PropertyMetadata(null, OnPopupViewPropertyChanged));
+        public static readonly DependencyProperty ControllerProperty =
+            DependencyProperty.RegisterAttached("Controller", typeof(DataGridPopupController),
+            typeof(DataGridPopupHelper), new PropertyMetadata(null, OnControllerPropertyChanged));
 
-        public static Popup GetPopupView(DependencyObject obj)
+        public static DataGridPopupController GetController(DependencyObject obj)
         {
-            return (Popup)obj.GetValue(PopupViewProperty);
+            return (DataGridPopupController)obj.GetValue(ControllerProperty);
         }
 
-        public static void SetPopupView(DependencyObject obj, Popup value)
+        public static void SetController(DependencyObject obj, DataGridPopupController value)
         {
-            obj.SetValue(PopupViewProperty, value);
+            obj.SetValue(ControllerProperty, value);
         }
 
-        private static void OnPopupViewPropertyChanged(DependencyObject sender,
+        private static void OnControllerPropertyChanged(DependencyObject sender,
                          DependencyPropertyChangedEventArgs e)
         {
-            
+            DataGrid dataGrid = sender as DataGrid;
+            if(e.NewValue != null)
+            {
+                (e.NewValue as DataGridPopupController).DataGrid = dataGrid;
+            }
         }
     }
 }

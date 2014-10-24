@@ -39,3 +39,4 @@ F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Light.baml
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
+F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.Grid.baml
