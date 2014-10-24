@@ -61,6 +61,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Examples\FlipperExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examples\SelectionExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,6 +83,9 @@
     </Compile>
     <Compile Include="Examples\BaseControlsExample.xaml.cs">
       <DependentUpon>BaseControlsExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\FlipperExample.xaml.cs">
+      <DependentUpon>FlipperExample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\SelectionExample.xaml.cs">
       <DependentUpon>SelectionExample.xaml</DependentUpon>

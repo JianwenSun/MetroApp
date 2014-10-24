@@ -55,7 +55,7 @@
     <Compile Include="Behaviours\StylizedBehaviorCollection.cs" />
     <Compile Include="Behaviours\StylizedBehaviors.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="Controls\FipperView.cs" />
+    <Compile Include="Controls\FlipperView.cs" />
     <Compile Include="Controls\Glow.cs" />
     <Compile Include="Controls\GlowDirection.cs" />
     <Compile Include="Controls\GlowWindow.xaml.cs">
@@ -246,7 +246,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\FilpperView.xaml">
+    <Page Include="Themes\FlipperView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

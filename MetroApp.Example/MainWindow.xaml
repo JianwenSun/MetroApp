@@ -47,7 +47,11 @@
                     <Examples:BaseControlsExample/>
                 </Grid>
             </TabItem>
+            <TabItem Header="Filpper">
+                <Grid>
+                    <Examples:FlipperExample/>
+                </Grid>
+            </TabItem>
         </TabControl>
-        
     </Grid>
 </MetroApp:MetroWindow>

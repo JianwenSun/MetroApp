@@ -28,7 +28,7 @@
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Slider.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.FlatSlider.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Grid.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/FilpperView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/FlipperView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Glow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
