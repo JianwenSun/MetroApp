@@ -64,7 +64,7 @@ namespace MetroApp.Helpers
 
             if (e.NewValue != null)
             {
-                controller.dispatcherTimer.Interval = (TimeSpan)e.NewValue;
+                controller.stayDispatcherTimer.Interval = (TimeSpan)e.NewValue;
             }
         }
 
@@ -72,6 +72,36 @@ namespace MetroApp.Helpers
         {
             get { return (TimeSpan)this.GetValue(StayTimeProperty); }
             set { this.SetValue(StayTimeProperty, value); }
+        }
+
+        public static readonly DependencyProperty IsDelayProperty =
+            DependencyProperty.RegisterAttached("IsDelay", typeof(bool),
+            typeof(DataGridPopupController), new PropertyMetadata(true));
+
+        public bool IsDelay
+        {
+            get { return (bool)this.GetValue(IsDelayProperty); }
+            set { this.SetValue(IsDelayProperty, value); }
+        }
+
+        public static readonly DependencyProperty DelayTimeProperty =
+            DependencyProperty.RegisterAttached("DelayTime", typeof(TimeSpan),
+            typeof(DataGridPopupController), new PropertyMetadata(new TimeSpan(0, 0, 1), OnDelayTimePropertyChanged));
+
+        private static void OnDelayTimePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            DataGridPopupController controller = d as DataGridPopupController;
+
+            if (e.NewValue != null)
+            {
+                controller.delayDispatcherTimer.Interval = (TimeSpan)e.NewValue;
+            }
+        }
+
+        public TimeSpan DelayTime
+        {
+            get { return (TimeSpan)this.GetValue(DelayTimeProperty); }
+            set { this.SetValue(DelayTimeProperty, value); }
         }
 
         public static readonly DependencyProperty DataGridProperty =
@@ -109,7 +139,10 @@ namespace MetroApp.Helpers
             set { this.SetValue(TargetProperty, value); }
         }
 
-        DispatcherTimer dispatcherTimer;
+        DispatcherTimer stayDispatcherTimer;
+        DispatcherTimer delayDispatcherTimer;
+
+        DataGridRow currentRow;
 
         public DataGridPopupController()
         {
@@ -148,9 +181,13 @@ namespace MetroApp.Helpers
 
         void SetupTimer()
         {
-            dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Interval = this.StayTime;
-            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            stayDispatcherTimer = new DispatcherTimer();
+            stayDispatcherTimer.Interval = this.StayTime;
+            stayDispatcherTimer.Tick += stayDispatcherTimer_Tick;
+
+            delayDispatcherTimer = new DispatcherTimer();
+            delayDispatcherTimer.Interval = this.DelayTime;
+            delayDispatcherTimer.Tick += delayDispatcherTimer_Tick;
         }
 
         #region DataGrid Row Events
@@ -173,32 +210,41 @@ namespace MetroApp.Helpers
         {
             if(this.PopupView != null)
             {
-                this.ShowPopup(sender as DataGridRow);
-
-                if(this.IsStay)
-                    dispatcherTimer.Stop();
+                if(!this.IsDelay)
+                    this.ShowPopup(sender as DataGridRow);
+                else
+                {
+                    this.currentRow = sender as DataGridRow;
+                    if (this.PopupView.IsOpen)
+                        this.ShowPopup(sender as DataGridRow);
+                    else
+                        this.delayDispatcherTimer.Start();
+                }
             }
         }
 
         void Row_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             if(this.IsStay)
-                dispatcherTimer.Start();
+                stayDispatcherTimer.Start();
             else
             {
                 if (this.PopupView != null)
                     this.PopupView.IsOpen = false;
             }
+
+            if(this.IsDelay)
+                this.delayDispatcherTimer.Stop();
         }
 
         void Row_LostFocus(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer.Start();
+            stayDispatcherTimer.Start();
         }
 
         void dataGrid_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            dispatcherTimer.Start();
+            stayDispatcherTimer.Start();
         }
 
         #endregion
@@ -207,27 +253,37 @@ namespace MetroApp.Helpers
 
         void popup_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            dispatcherTimer.Stop();
+            stayDispatcherTimer.Stop();
         }
 
         void popup_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            dispatcherTimer.Start();
+            stayDispatcherTimer.Start();
         }
 
         #endregion
 
-        void dispatcherTimer_Tick(object sender, EventArgs e)
+        void stayDispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (this.PopupView != null && this.dispatcherTimer.IsEnabled)
+            if (this.PopupView != null && this.stayDispatcherTimer.IsEnabled)
                 this.PopupView.IsOpen = false;
 
-            dispatcherTimer.Stop();
+            stayDispatcherTimer.Stop();
+        }
+
+        void delayDispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.PopupView != null && this.delayDispatcherTimer.IsEnabled)
+            {
+                this.ShowPopup(this.currentRow);
+            }
+
+            delayDispatcherTimer.Stop();
         }
 
         void ShowPopup(DataGridRow row)
         {
-            dispatcherTimer.Stop();
+            stayDispatcherTimer.Stop();
 
             UIElement popupTarget = null;
 

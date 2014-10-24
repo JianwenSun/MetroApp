@@ -163,28 +163,30 @@
                             <Grid.Resources>
                                 <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Dark.xaml" />
                             </Grid.Resources>
-                            <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.BasicBrushKey}}">
-                                <StackPanel Margin="10" >
-                                    <DockPanel>
-                                        <TextBlock Text="Title : " />
-                                        <TextBlock Text="{Binding Title}" />
-                                    </DockPanel>
-                                    <DockPanel>
-                                        <TextBlock Text="Artist : " />
-                                        <TextBlock Text="{Binding Artist.Name}" />
-                                    </DockPanel>
-                                    <DockPanel>
-                                        <TextBlock Text="Genre : " />
-                                        <TextBlock Text="{Binding Genre.Name}" />
-                                    </DockPanel>
-                                </StackPanel>
-                            </Border>
+                            <Grid Margin="3" Background="{DynamicResource {x:Static Themes:BrushKeys.AccentWeakBrushKey}}">
+                                <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.WeakBrushKey}}">
+                                    <StackPanel Margin="10" >
+                                        <DockPanel>
+                                            <TextBlock Text="Title : " />
+                                            <TextBlock Text="{Binding Title}" />
+                                        </DockPanel>
+                                        <DockPanel>
+                                            <TextBlock Text="Artist : " />
+                                            <TextBlock Text="{Binding Artist.Name}" />
+                                        </DockPanel>
+                                        <DockPanel>
+                                            <TextBlock Text="Genre : " />
+                                            <TextBlock Text="{Binding Genre.Name}" />
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
                         </Grid>
                     </Popup>
                 </DataGrid.Resources>
                 
                 <Helpers:DataGridPopupHelper.Controller>
-                    <Helpers:DataGridPopupController PopupView="{StaticResource PopupView}" IsStay="True" StayTime="0:0:2"/>
+                    <Helpers:DataGridPopupController PopupView="{StaticResource PopupView}" IsDelay="True" IsStay="True" StayTime="0:0:2"/>
                 </Helpers:DataGridPopupHelper.Controller>
                 
                 <DataGrid.Columns>
@@ -311,7 +313,7 @@
                             <Grid.Resources>
                                 <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />
                             </Grid.Resources>
-                            <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.BasicBrushKey}}">
+                            <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static Themes:BrushKeys.WeakBrushKey}}">
                                 <StackPanel Margin="10" >
                                     <DockPanel>
                                         <TextBlock Text="Title : " />
@@ -332,7 +334,7 @@
                 </DataGrid.Resources>
 
                 <Helpers:DataGridPopupHelper.Controller>
-                    <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsStay="False" Target="DataGrid" StayTime="0:0:5"/>
+                    <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsDelay="False" IsStay="False" Target="DataGrid" StayTime="0:0:2"/>
                 </Helpers:DataGridPopupHelper.Controller>
                 
                 <DataGrid.Columns>
