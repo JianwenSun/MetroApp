@@ -8,6 +8,15 @@
         Title="MetroApp"
         xmlns:Examples="clr-namespace:MetroApp.Example">
 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <MetroApp:MetroWindow.TopBar>
         <MetroApp:MetroWindowTopBar>
             <MetroApp:MetroWindowTopBar.RightWindowCommands>
@@ -23,6 +32,12 @@
                     <Button Width="25" Height="25" Click="VS_click">
                         <Button.Content>
                             VS
+                        </Button.Content>
+                    </Button>
+
+                    <Button Width="60" Height="25" Click="Flipper_click">
+                        <Button.Content>
+                            Flipper
                         </Button.Content>
                     </Button>
                 </MetroApp:MetroWindowCommands>
@@ -45,11 +60,6 @@
             <TabItem Header="BaseControls">
                 <Grid>
                     <Examples:BaseControlsExample/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Filpper">
-                <Grid>
-                    <Examples:FlipperExample/>
                 </Grid>
             </TabItem>
         </TabControl>

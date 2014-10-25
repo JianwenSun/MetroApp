@@ -61,15 +61,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Examples\FlipperExample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Examples\SelectionExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Examples\DataGridExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examples\FlipperExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,9 +84,6 @@
     <Compile Include="Examples\BaseControlsExample.xaml.cs">
       <DependentUpon>BaseControlsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\FlipperExample.xaml.cs">
-      <DependentUpon>FlipperExample.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Examples\SelectionExample.xaml.cs">
       <DependentUpon>SelectionExample.xaml</DependentUpon>
     </Compile>
@@ -97,6 +94,9 @@
     <Compile Include="Examples\Models\Artist.cs" />
     <Compile Include="Examples\Models\Genre.cs" />
     <Compile Include="Examples\Models\SimpleCommand.cs" />
+    <Compile Include="Examples\FlipperExample.xaml.cs">
+      <DependentUpon>FlipperExample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -33,5 +33,11 @@
             MainWindow window = new MainWindow();
             window.Show();
         }
+
+        private void Flipper_click(object sender, RoutedEventArgs e)
+        {
+            FlipperExample window = new FlipperExample();
+            window.Show();
+        }
     }
 }
