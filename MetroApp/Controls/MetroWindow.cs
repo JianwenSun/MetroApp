@@ -62,16 +62,8 @@ namespace MetroApp.Controls
             MetroWindow window = d as MetroWindow;
             if (e.NewValue != e.OldValue)
             {
-                if ((bool)e.NewValue)
-                {
-                    ((MetroWindow)d).TopBar.Visibility = Visibility.Collapsed;
-                    window.WindowState = WindowState.Maximized;
-                }
-                else
-                {
-                    ((MetroWindow)d).TopBar.Visibility = Visibility.Visible;
-                    window.WindowState = WindowState.Normal;
-                }
+                if(window.isLoadCompeleted)
+                    window.ChangeToScreen((bool)e.NewValue);
             }
         }
 
@@ -98,22 +90,45 @@ namespace MetroApp.Controls
             MetroWindow window = d as MetroWindow;
         }
 
+        private bool isLoadCompeleted;
+
         public MetroWindow()
         {
-            
+            this.KeyDown += MetroWindow_KeyDown;
         }
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
+            this.ChangeToScreen(this.IsFullScreen);
+            this.isLoadCompeleted = true;
+        }
 
-            if (this.TopBar == null)
-                TopBar = new MetroWindowTopBar();
+        void ChangeToScreen(bool isFullScreen)
+        {
+            if (isFullScreen)
+            {
+                this.TopBar.Visibility = Visibility.Collapsed;
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.TopBar.Visibility = Visibility.Visible;
+                this.WindowState = WindowState.Normal;
+            }
         }
 
         internal T GetPart<T>(string name) where T : DependencyObject
         {
             return GetTemplateChild(name) as T;
+        }
+
+        private void MetroWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.IsFullScreen = false;
+            }
         }
     }
 }
