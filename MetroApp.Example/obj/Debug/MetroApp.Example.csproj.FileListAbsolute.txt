@@ -1,45 +1,11 @@
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\MetroApp.Example.exe.config
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\MetroApp.Example.exe
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\MetroApp.Example.pdb
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\MetroApp.dll
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\System.Windows.Interactivity.dll
-F:\Self Workspace\MetroApp\MetroApp.Sample\bin\Debug\MetroApp.pdb
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.csprojResolveAssemblyReference.cache
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MainWindow.baml
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\App.baml
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MainWindow.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\App.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example_MarkupCompile.cache
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.g.resources
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.Properties.Resources.resources
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.csproj.GenerateResource.Cache
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.exe
-F:\Self Workspace\MetroApp\MetroApp.Sample\obj\Debug\MetroApp.Example.pdb
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe.config
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.csprojResolveAssemblyReference.cache
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\App.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.cache
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.lref
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.pdb
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\MetroApp.dll
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\System.Windows.Interactivity.dll
-F:\Self Workspace\MetroApp\MetroApp.Example\bin\Debug\MetroApp.pdb
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExample.baml
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.baml
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExample.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MainWindow.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\GeneratedInternalTypeHelper.g.cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.baml
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MainWindow.baml
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.g.resources
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.exe
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\App.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.cache
 E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe.config
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.exe
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.dll
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\System.Windows.Interactivity.dll
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.pdb
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.csprojResolveAssemblyReference.cache
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExample.baml
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.baml
@@ -47,17 +13,10 @@ E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExa
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.g.cs
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.g.cs
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MainWindow.g.cs
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\App.g.cs
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.cache
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.lref
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\FlipperExample.g.cs
-E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe
-E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.pdb
-E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.dll
-E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\System.Windows.Interactivity.dll
-E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.pdb
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.baml
-E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\FlipperExample.baml
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MainWindow.baml
 E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.g.resources
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.exe
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.pdb

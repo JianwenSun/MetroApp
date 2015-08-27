@@ -1,5 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Converters="clr-namespace:MetroApp.Converters"
                     xmlns:Themes="clr-namespace:MetroApp.Themes"
                     xmlns:Helpers="clr-namespace:MetroApp.Helpers">
 
@@ -10,12 +11,11 @@
            TargetType="RadioButton">
         <Setter Property="Foreground"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonForegroundBrushKey}}" />
+        <Setter Property="Height" Value="16"/>
         <Setter Property="HorizontalContentAlignment"
                 Value="Left" />
         <Setter Property="VerticalContentAlignment"
                 Value="Center" />
-        <Setter Property="Padding"
-                Value="5,0,0,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
@@ -87,48 +87,48 @@
                                      Stroke="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonBorderBrushKey}}"
                                      StrokeThickness="1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonBackgroundBrushKey}}"
-                                     Width="18"
-                                     Height="18" />
+                                     Width="{TemplateBinding Height}"
+                                     Height="{TemplateBinding Height}" />
                             <Ellipse x:Name="hover"
                                      Stroke="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonMouseOverBorderBrushKey}}"
                                      StrokeThickness="1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonMouseOverBackgroundBrushKey}}"
                                      Opacity="0"
-                                     Width="18"
-                                     Height="18" />
+                                     Width="{TemplateBinding Height}"
+                                     Height="{TemplateBinding Height}" />
                             <Ellipse x:Name="pressed"
                                      Opacity="0"
                                      Stroke="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonPressedBorderBrushKey}}"
                                      StrokeThickness="1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonPressedBackgroundBrushKey}}"
-                                     Width="18"
-                                     Height="18" />
+                                     Width="{TemplateBinding Height}"
+                                     Height="{TemplateBinding Height}" />
                             <Ellipse x:Name="focused"
                                      Opacity="0"
                                      Stroke="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonFocusedBorderBrushKey}}"
                                      StrokeThickness="1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonFocusedBackgroundBrushKey}}"
-                                     Width="18"
-                                     Height="18" />
+                                     Width="{TemplateBinding Height}"
+                                     Height="{TemplateBinding Height}" />
                             <Ellipse x:Name="Checked1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonCheckedBackgroundBrushKey}}"
                                      Opacity="0"
-                                     Width="10"
-                                     Height="10" />
+                                     Width="{TemplateBinding Height, Converter={x:Static Converters:StrokeMaginConverter.Instance}}"
+                                     Height="{TemplateBinding Height, Converter={x:Static Converters:StrokeMaginConverter.Instance}}" />
                             <Ellipse x:Name="disabled"
                                      Opacity="0"
                                      Stroke="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonDisabledBorderBrushKey}}"
                                      StrokeThickness="1"
                                      Fill="{DynamicResource {x:Static Themes:BrushKeys.RadioButtonDisabledBackgroundBrushKey}}"
-                                     Width="18"
-                                     Height="18" />
+                                     Width="{TemplateBinding Height}"
+                                     Height="{TemplateBinding Height}" />
                         </Grid>
 
                         <ContentPresenter x:Name="contentPresenter" Grid.Column="1"
                                           ContentTemplate="{TemplateBinding ContentTemplate}"
                                           Content="{TemplateBinding Content}"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                          Margin="{TemplateBinding Padding}"
+                                          Margin="3,0,0,0"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Grid>
                 </ControlTemplate>

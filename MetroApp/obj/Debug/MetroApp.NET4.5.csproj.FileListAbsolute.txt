@@ -40,18 +40,19 @@ F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.dll
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
 F:\Self Workspace\MetroApp\MetroApp\obj\Debug\Themes\Controls.Grid.baml
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.5.csprojResolveAssemblyReference.cache
+E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\MetroApp.dll
+E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\MetroApp.pdb
+E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\System.Windows.Interactivity.dll
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Colors.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Controls\GlowWindow.g.cs
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.cache
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp_MarkupCompile.lref
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.dll
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Controls\GlowWindow.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.FlatSlider.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.Grid.baml
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.Menu.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.Slider.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.DatePicker.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.ComboBox.baml
@@ -78,10 +79,8 @@ E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\MetroWindowTopBar.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Generic.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Dark.baml
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Light.baml
-E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\MetroApp.dll
-E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\MetroApp.pdb
-E:\Workspace\Github\MetroApp\MetroApp\bin\Debug\System.Windows.Interactivity.dll
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\FlipperView.baml
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
 E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\White.baml
-E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\Themes\Controls.Menu.baml
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.g.resources
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.dll
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.pdb
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\MetroApp.NET4.5.csprojResolveAssemblyReference.cache
