@@ -2,9 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
     
-    <Color x:Key="AccentColorKey">#EE119EDA</Color>
-    <Color x:Key="AccentWeakColorKey">#CC119EDA</Color>
-    <Color x:Key="AccentDisableColorKey">#66119EDA</Color>
+    <Color x:Key="AccentColorKey">#66119EDA</Color>
+    <Color x:Key="AccentWeakColorKey">#66119EDA</Color>
+    <Color x:Key="AccentDisableColorKey">#33119EDA</Color>
     <Color x:Key="WeakColorKey">#FFB9B9B9</Color>
     <Color x:Key="WeakDisableColorKey">#FFE3E3E3</Color>
     <Color x:Key="BasicColorKey">#FF0F0F0F</Color>
