@@ -26,12 +26,18 @@
 
                         <!-- icon -->
                         <ContentControl x:Name="PART_Icon"
-                                                Focusable="False"
-                                                Grid.Column="0"
-                                                Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Icon}"
-                                                ContentTemplate="{Binding IconTemplate}"
-                                                HorizontalContentAlignment="Stretch"
-                                                VerticalContentAlignment="Stretch"/>
+                                        Margin="3"
+                                        Focusable="False"
+                                        Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Icon}"
+                                        Grid.Column="0"
+                                        HorizontalContentAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch">
+                            <ContentControl.ContentTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding}"/>
+                                </DataTemplate>
+                            </ContentControl.ContentTemplate>
+                        </ContentControl>
 
                         <ContentPresenter x:Name="PART_LeftWindowCommands"
                                                   Focusable="False"
@@ -42,11 +48,11 @@
                         <ContentControl x:Name="PART_TitleBar"
                                                 Focusable="False"
                                                 Grid.Column="2"
-                                                ContentTemplate="{Binding TitleTemplate}"
-                                                HorizontalContentAlignment="Stretch"
-                                                VerticalContentAlignment="Stretch">
+                                                HorizontalContentAlignment="Left"
+                                                VerticalContentAlignment="Stretch"
+                                                ContentTemplate="{Binding TitleTemplate}">
                             <ContentControl.Content>
-                                <Label Margin="10,0,0,0" Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Title}"
+                                <Label Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:MetroWindow}}, Path=Title}"
                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
                             </ContentControl.Content>

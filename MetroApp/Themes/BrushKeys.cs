@@ -37,7 +37,7 @@ namespace MetroApp.Themes
         public static string MainDisableBrushKey { get; private set; }
         public static string MarkerBrushKey { get; private set; }
         public static string ValidationBrushKey { get; private set; }
-        
+
         #endregion
 
         #region Window
@@ -186,7 +186,7 @@ namespace MetroApp.Themes
         public static string ComboBoxItemSelectedForegroundBrushKey { get; private set; }
         public static string ComboBoxItemMouseOverBackgroundBrushKey { get; private set; }
         public static string ComboBoxItemFouseBorderBrushKey { get; private set; }
-        
+
         #endregion
 
         #region TextBox
@@ -206,8 +206,8 @@ namespace MetroApp.Themes
         public static string TextBoxClearButtonPressedBackgroundBrushKey { get; private set; }
         public static string TextBoxClearButtonPressedForegroundBrushKey { get; private set; }
         public static string TextBoxWaitingForDataShadowBrushKey { get; private set; }
-        
-        
+
+
         #endregion
 
         #region RichTextBox
@@ -273,7 +273,7 @@ namespace MetroApp.Themes
         public static string ListBoxItemDisabledSelectedBackgroundBrushKey { get; private set; }
         public static string ListBoxItemDisabledSelectedForegroundBrushKey { get; private set; }
         public static string ListBoxItemSelectionActiveSelectedBackgroundBrushKey { get; private set; }
-        
+
 
         #endregion
 
@@ -408,7 +408,7 @@ namespace MetroApp.Themes
         public static string DatePickerButtonMouseOverForegroundBrushKey { get; private set; }
         public static string DatePickerButtonPressedBackgroundBrushKey { get; private set; }
         public static string DatePickerButtonPressedForegroundBrushKey { get; private set; }
-        
+
         #endregion
 
         #region Slider
@@ -450,6 +450,34 @@ namespace MetroApp.Themes
         public static string FlatSliderHorizontalDisabledDecreaseRepeatButtonBackground { get; private set; }
         public static string FlatSliderHorizontalDisabledThumbBackground { get; private set; }
         public static string FlatSliderHorizontalDisabledIncreaseRepeatButtonBackground { get; private set; }
+
+        #endregion
+
+        #region Menu
+
+        public static string MenuItemBorderBrushKey { get; private set; }
+        public static string MenuItemTopLevelBackgroundMouseOverBrushKey { get; private set; }
+        public static string MenuItemSeparatorBackgroundBrushKey { get; private set; }
+        public static string MenuBorderBrushKey { get; private set; }
+        public static string MenuBackgroundBrushKey { get; private set; }
+        public static string MenuForegroundBrushKey { get; private set; }
+        public static string SubmenuItemBorderBrushKey { get; private set; }
+        public static string SubmenuItemBackgroundBrushKey { get; private set; }
+        public static string MenuItemBackgroundBrushKey { get; private set; }
+        public static string MenuItemForegroundDisableBrushKey { get; private set; }
+        public static string MenuItemBackgroundDisableBrushKey { get; private set; }
+        public static string MenuItemDownArrowBrushKey { get; private set; }
+        public static string MenuItemRightArrowFillBrushKey { get; private set; }
+        public static string MenuItemCheckmarkFillBrushKey { get; private set; }
+        public static string MenuItemBackgroundHighlightBrushKey { get; private set; }
+
+        #endregion
+
+        #region ContextMenu
+
+        public static string ContextMenuBackgroundBrushKey { get; private set; }
+        public static string ContextMenuBorderBrushKey { get; private set; }
+        public static string ContextMenuForegroundBrushKey { get; private set; }
 
         #endregion
     }

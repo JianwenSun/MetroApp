@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\
 MetroApp.Example
 none
 false
 DEBUG;TRACE
-F:\Self Workspace\MetroApp\MetroApp.Example\App.xaml
-4990678207
+E:\Workspace\Github\MetroApp\MetroApp.Example\App.xaml
+5362779109
 
-10-104895409
-131601113326
-Examples\BaseControlsExample.xaml;Examples\SelectionExample.xaml;Examples\DataGridExample.xaml;MainWindow.xaml;
+111247260146
+13752393805
+Examples\BaseControlsExample.xaml;Examples\SelectionExample.xaml;Examples\DataGridExample.xaml;Examples\FlipperExample.xaml;MainWindow.xaml;
 
 False
 

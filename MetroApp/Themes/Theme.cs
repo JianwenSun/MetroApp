@@ -15,6 +15,7 @@ namespace MetroApp.Themes
     {
         public static Theme Dark { get { return MetroApp.Themes.Dark.Instance; } }
         public static Theme Light { get { return MetroApp.Themes.Light.Instance; } }
+        public static Theme White { get { return MetroApp.Themes.White.Instance; } }
     }
 
     public abstract class Theme
@@ -189,17 +190,17 @@ namespace MetroApp.Themes
             internal set;
         }
 
-        public ResourceDictionary Source 
+        public ResourceDictionary Source
         {
-            get 
+            get
             {
-                if(_source == null)
+                if (_source == null)
                 {
                     _source = new ResourceDictionary() { Source = new Uri(String.Format("pack://application:,,,/MetroApp;component/Themes/{0}.xaml", this.Name)) };
                 }
 
                 return _source;
-            } 
+            }
         }
 
         ResourceDictionary _source;

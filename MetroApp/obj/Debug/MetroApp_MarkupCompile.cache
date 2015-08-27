@@ -4,17 +4,17 @@
 library
 C#
 .cs
-F:\Self Workspace\MetroApp\MetroApp\obj\Debug\
+E:\Workspace\Github\MetroApp\MetroApp\obj\Debug\
 MetroApp
 none
 false
 TRACE;DEBUG
 
-311069182493
+34627661383
 
-68400435442
-13-1410348934
-Controls\GlowWindow.xaml;Themes\Controls.FlatSlider.xaml;Themes\Controls.Grid.xaml;Themes\Controls.Slider.xaml;Themes\Controls.DatePicker.xaml;Themes\Controls.ComboBox.xaml;Themes\Controls.PasswordBox.xaml;Themes\Controls.TabControl.xaml;Themes\Controls.CheckBox.xaml;Themes\Controls.ListView.xaml;Themes\Controls.GridView.xaml;Themes\Controls.ListBox.xaml;Themes\Controls.Scrollbar.xaml;Themes\Controls.TreeView.xaml;Themes\Controls.TextBox.xaml;Themes\Controls.TextBlock.xaml;Themes\Controls.Label.xaml;Themes\Controls.xaml;Themes\Controls.Button.xaml;Themes\Controls.DataGrid.xaml;Themes\Colors.xaml;Themes\Controls.RadioButton.xaml;Themes\Controls.Calendar.xaml;Themes\Glow.xaml;Themes\MetroWindow.Commands.xaml;Themes\MetroWindow.StateButtons.xaml;Themes\MetroWindow.xaml;Themes\MetroWindowTopBar.xaml;Themes\Generic.xaml;Themes\Dark.xaml;Themes\Light.xaml;
+70937367944
+13-175982991
+Controls\GlowWindow.xaml;Themes\Controls.FlatSlider.xaml;Themes\Controls.Grid.xaml;Themes\Controls.Menu.xaml;Themes\Controls.Slider.xaml;Themes\Controls.DatePicker.xaml;Themes\Controls.ComboBox.xaml;Themes\Controls.PasswordBox.xaml;Themes\Controls.TabControl.xaml;Themes\Controls.CheckBox.xaml;Themes\Controls.ListView.xaml;Themes\Controls.GridView.xaml;Themes\Controls.ListBox.xaml;Themes\Controls.Scrollbar.xaml;Themes\Controls.TreeView.xaml;Themes\Controls.TextBox.xaml;Themes\Controls.TextBlock.xaml;Themes\Controls.Label.xaml;Themes\Controls.xaml;Themes\Controls.Button.xaml;Themes\Controls.DataGrid.xaml;Themes\Colors.xaml;Themes\Controls.RadioButton.xaml;Themes\Controls.Calendar.xaml;Themes\FlipperView.xaml;Themes\Glow.xaml;Themes\MetroWindow.Commands.xaml;Themes\MetroWindow.StateButtons.xaml;Themes\MetroWindow.xaml;Themes\MetroWindowTopBar.xaml;Themes\Generic.xaml;Themes\Dark.xaml;Themes\Light.xaml;Themes\White.xaml;
 
 False
 

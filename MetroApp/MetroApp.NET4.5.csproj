@@ -55,7 +55,6 @@
     <Compile Include="Behaviours\StylizedBehaviorCollection.cs" />
     <Compile Include="Behaviours\StylizedBehaviors.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="Controls\FlipperView.cs" />
     <Compile Include="Controls\Glow.cs" />
     <Compile Include="Controls\GlowDirection.cs" />
     <Compile Include="Controls\GlowWindow.xaml.cs">
@@ -73,6 +72,7 @@
     </Compile>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\FontSizeOffsetConverter.cs" />
+    <Compile Include="Converters\StrokeMaginConverter.cs" />
     <Compile Include="Converters\ThicknessToDoubleConverter.cs" />
     <Compile Include="Helpers\ComBoxHelper.cs" />
     <Compile Include="Helpers\ControlsHelper.cs" />
@@ -136,6 +136,9 @@
     <Compile Include="Themes\Light.cs">
       <DependentUpon>Theme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Themes\White.cs">
+      <DependentUpon>Theme.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -151,7 +154,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Controls.Menu.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Controls.Slider.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -285,6 +294,11 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Light.xaml">
+      <DependentUpon>Colors.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\White.xaml">
       <DependentUpon>Colors.xaml</DependentUpon>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

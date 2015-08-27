@@ -28,7 +28,7 @@
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Slider.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.FlatSlider.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Grid.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/FlipperView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.Menu.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Glow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
@@ -58,5 +58,8 @@
     <Style TargetType="{x:Type DatePickerTextBox}" BasedOn="{StaticResource MetroDatePickerTextBox}" />
     <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource MetroDatePicker}" />
     <Style TargetType="{x:Type Slider}" BasedOn="{StaticResource MetroSlider}" />
+    <Style TargetType="{x:Type Menu}" BasedOn="{StaticResource MetroMenu}" />
+    <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource MetroMenuItem}" />
+    <Style TargetType="{x:Type ContextMenu}" BasedOn="{StaticResource MetroContextMenu}" />
     
 </ResourceDictionary>

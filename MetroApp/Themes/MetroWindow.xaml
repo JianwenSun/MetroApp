@@ -19,10 +19,7 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <ContentPresenter x:Name="PART_TopBar"
-                                Focusable="False"
-                                Content="{TemplateBinding TopBar}"
-                                Grid.Row="0"/>
+                    <Controls:MetroWindowTopBar x:Name="PART_TopBar" Grid.Row="0"/>
 
                     <!-- the main window content -->
                     <ContentControl Grid.Row="1"
@@ -69,5 +66,4 @@
     </Style>
 
     <Style TargetType="{x:Type Controls:MetroWindow}" BasedOn="{StaticResource MetroWindowStyle}"/>
-
 </ResourceDictionary>

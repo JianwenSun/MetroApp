@@ -37,3 +37,27 @@ F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MainWindow.baml
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.g.resources
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.exe
 F:\Self Workspace\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe.config
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.exe
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.csprojResolveAssemblyReference.cache
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExample.baml
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.baml
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\BaseControlsExample.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\SelectionExample.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MainWindow.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\App.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.cache
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example_MarkupCompile.lref
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\FlipperExample.g.cs
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.exe
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.Example.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.dll
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\System.Windows.Interactivity.dll
+E:\Workspace\Github\MetroApp\MetroApp.Example\bin\Debug\MetroApp.pdb
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\DataGridExample.baml
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\Examples\FlipperExample.baml
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MainWindow.baml
+E:\Workspace\Github\MetroApp\MetroApp.Example\obj\Debug\MetroApp.Example.g.resources

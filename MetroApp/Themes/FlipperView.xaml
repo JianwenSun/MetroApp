@@ -3,30 +3,6 @@
                     xmlns:Controls="clr-namespace:MetroApp.Controls"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
 
-    <Style TargetType="{x:Type Controls:FlipperView}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Controls:FlipperView}">
-                    <Grid Margin="{TemplateBinding Padding}">
-                        <ContentControl x:Name="PART_BackContentControl" RenderTransformOrigin="0.5,0.5" Content="{TemplateBinding BackContent}">
-                            <ContentControl.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform x:Name="PART_BackScaleTransform" ScaleX="-1" />
-                                </TransformGroup>
-                            </ContentControl.RenderTransform>
-                        </ContentControl>
-
-                        <ContentControl x:Name="PART_FrontContentControl" RenderTransformOrigin="0.5,0.5" Content="{TemplateBinding FrontContent}">
-                            <ContentControl.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform x:Name="PART_FrontScaleTransform" ScaleX="1" />
-                                </TransformGroup>
-                            </ContentControl.RenderTransform>
-                        </ContentControl>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    
 
 </ResourceDictionary>

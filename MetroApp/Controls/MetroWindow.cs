@@ -7,8 +7,11 @@ using System.Windows.Media;
 
 namespace MetroApp.Controls
 {
+    [TemplatePart(Name = PART_TopBar, Type = typeof(MetroWindowTopBar))]
     public class MetroWindow : Window
     {
+        const string PART_TopBar = "PART_TopBar";
+
         static MetroWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MetroWindow), new FrameworkPropertyMetadata(typeof(MetroWindow)));
@@ -62,16 +65,8 @@ namespace MetroApp.Controls
             MetroWindow window = d as MetroWindow;
             if (e.NewValue != e.OldValue)
             {
-                if ((bool)e.NewValue)
-                {
-                    ((MetroWindow)d).TopBar.Visibility = Visibility.Collapsed;
-                    window.WindowState = WindowState.Maximized;
-                }
-                else
-                {
-                    ((MetroWindow)d).TopBar.Visibility = Visibility.Visible;
-                    window.WindowState = WindowState.Normal;
-                }
+                if (window.isLoadCompeleted)
+                    window.ChangeToScreen((bool)e.NewValue);
             }
         }
 
@@ -84,13 +79,10 @@ namespace MetroApp.Controls
             set { SetValue(IsFullScreenProperty, value); }
         }
 
-        public static readonly DependencyProperty TopBarProperty
-            = DependencyProperty.Register("TopBar", typeof(MetroWindowTopBar), typeof(MetroWindow), new PropertyMetadata(null, OnTopBarPropertyChanged));
-
         public MetroWindowTopBar TopBar
         {
-            get { return (MetroWindowTopBar)GetValue(TopBarProperty); }
-            set { SetValue(TopBarProperty, value); }
+            get;
+            private set;
         }
 
         private static void OnTopBarPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -98,22 +90,47 @@ namespace MetroApp.Controls
             MetroWindow window = d as MetroWindow;
         }
 
+        private bool isLoadCompeleted;
+
         public MetroWindow()
         {
-            
+            this.KeyDown += MetroWindow_KeyDown;
         }
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
+            this.ChangeToScreen(this.IsFullScreen);
+            this.TopBar = this.GetTemplateChild(PART_TopBar) as MetroWindowTopBar;
+            this.isLoadCompeleted = true;
+        }
 
-            if (this.TopBar == null)
-                TopBar = new MetroWindowTopBar();
+        void ChangeToScreen(bool isFullScreen)
+        {
+            if (!this.isLoadCompeleted) return;
+            if (isFullScreen)
+            {
+                this.TopBar.Visibility = Visibility.Collapsed;
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.TopBar.Visibility = Visibility.Visible;
+                this.WindowState = WindowState.Normal;
+            }
         }
 
         internal T GetPart<T>(string name) where T : DependencyObject
         {
             return GetTemplateChild(name) as T;
+        }
+
+        private void MetroWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.IsFullScreen = false;
+            }
         }
     }
 }

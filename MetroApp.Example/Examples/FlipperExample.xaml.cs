@@ -29,18 +29,7 @@ namespace MetroApp.Example
         {
             Type type = e.OriginalSource.GetType();
 
-            if (type == typeof(ScrollViewer) || type == typeof(Border))
-            {
-                if (e.LeftButton == MouseButtonState.Pressed)
-                {
-                    this.DragMove();
-                }
-
-                if (e.ClickCount == 2)
-                {
-                    FilpperView.Flip();
-                }
-            }
+            
         }
     }
 }
