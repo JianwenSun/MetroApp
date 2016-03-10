@@ -16,6 +16,23 @@ Read it here: [http://mahapps.com](http://mahapps.com)
 
 ### Quick How To
 
+## Base Controls
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/basecontrol.png)
+
+## DataGrid
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid.png)
+
+```csharp
+
+ <Helpers:DataGridPopupHelper.Controller>
+         <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsDelay="False" IsStay="False" Target="DataGrid" StayTime="0:0:2"/>
+ </Helpers:DataGridPopupHelper.Controller>
+```
+You can use DataGridPopupHelper to add the popup view, also it can extend to any ohter controls.
+
+## Selections Controls
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/selections.png)
+
 ```XML
 <Application x:Class="MetroApp.Example.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -102,20 +119,3 @@ namespace MetroApp.Example
     </DataGrid.Columns>
 </DataGrid>
 ```
-
-## Base Controls
-![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/basecontrol.png)
-
-## DataGrid
-![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid.png)
-
-```csharp
-
- <Helpers:DataGridPopupHelper.Controller>
-         <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsDelay="False" IsStay="False" Target="DataGrid" StayTime="0:0:2"/>
- </Helpers:DataGridPopupHelper.Controller>
-```
-You can use DataGridPopupHelper to add the popup view, also it can extend to any ohter controls.
-
-## Selections Controls
-![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/selections.png)
