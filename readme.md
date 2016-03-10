@@ -100,3 +100,12 @@ namespace MetroApp.Example
     </DataGrid.Columns>
 </DataGrid>
 ```
+
+## Base Controls
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/basecontrol.png)
+
+## DataGrid
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid.png)
+
+## Selections Controls
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/selections.png)
