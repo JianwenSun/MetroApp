@@ -28,7 +28,12 @@ Read it here: [http://mahapps.com](http://mahapps.com)
          <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsDelay="False" IsStay="False" Target="DataGrid" StayTime="0:0:2"/>
  </Helpers:DataGridPopupHelper.Controller>
 ```
-You can use DataGridPopupHelper to add the popup view, also it can extend to any ohter controls.
+## DataGrid Target To Window
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid_window_delay.png)
+
+You can use DataGridPopupHelper to add the popup view and give it delay or stay time,
+and target it to the owner control or window,
+alos it can extend to any ohter controls.
 
 ## Selections Controls
 ![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/selections.png)
