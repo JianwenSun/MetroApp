@@ -29,7 +29,7 @@ Read it here: [http://mahapps.com](http://mahapps.com)
  </Helpers:DataGridPopupHelper.Controller>
 ```
 ## DataGrid Target To Window
-![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid_window_delay.png)
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/popup_window_delay.png)
 
 You can use DataGridPopupHelper to add the popup view and give it delay or stay time,
 and target it to the owner control or window,
