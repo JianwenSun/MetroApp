@@ -2,7 +2,7 @@
 
 A project will make your work more easier and for more in-depth unstanding WPF.
 By the way, I need more developers to make it more powerful.
-If your want it too,please contact me.
+If your want it too,please join me.
 Thanks to Metro.Apps.
 
 ## Metro.Apps.
@@ -71,6 +71,8 @@ OR
 	</Grid>
 </MetroApp:MetroWindow>
 ```
+The StyleManager make the things more easier, and you can add your own theme by adding the color xaml.
+
 ```csharp
 namespace MetroApp.Example
 {
@@ -106,6 +108,14 @@ namespace MetroApp.Example
 
 ## DataGrid
 ![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/datagrid.png)
+
+```csharp
+
+ <Helpers:DataGridPopupHelper.Controller>
+         <Helpers:DataGridPopupController PopupView="{StaticResource AzurePopupView}" IsDelay="False" IsStay="False" Target="DataGrid" StayTime="0:0:2"/>
+ </Helpers:DataGridPopupHelper.Controller>
+```
+You can use DataGridPopupHelper to add the popup view, also it can extend to any ohter controls.
 
 ## Selections Controls
 ![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/Resources/selections.png)
