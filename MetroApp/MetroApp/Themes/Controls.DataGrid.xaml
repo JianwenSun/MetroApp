@@ -35,7 +35,7 @@
                             <Rectangle.Resources>
                                 <Style TargetType="{x:Type Rectangle}">
                                     <Setter Property="Fill"
-                                            Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridSelectAllButtonBackgroundBrushKey}}" />
+                                            Value="Transparent" />
                                 </Style>
                             </Rectangle.Resources>
                         </Rectangle>
@@ -80,7 +80,7 @@
         <Setter Property="Margin"
                 Value="0,0,0,3"/>
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridColumnHeaderGripperBrushKey}}" />
+                Value="Transparent" />
         <Setter Property="Cursor"
                 Value="SizeWE" />
         <Setter Property="Template">
@@ -107,7 +107,7 @@
         <Setter Property="Width"
                 Value="8" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowHeaderGripperBrushKey}}" />
+                Value="Transparent" />
         <Setter Property="Cursor"
                 Value="SizeNS" />
         <Setter Property="Template">
@@ -148,7 +148,7 @@
         <Setter Property="BorderBrush"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridColumnHeaderBorderBrushKey}}" />
         <Setter Property="Background"
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridColumnHeaderBackgroundBrushKey}}" />
+                Value="Transparent" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
@@ -171,7 +171,9 @@
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
                             <ContentPresenter.Content>
-                                <TextBlock Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"/>
+                                <TextBlock Text="{TemplateBinding Content}" 
+                                           Background="Transparent" 
+                                           Foreground="{TemplateBinding Foreground}"/>
                             </ContentPresenter.Content>
                         </ContentPresenter>
 
@@ -203,7 +205,7 @@
                                  Value="{x:Null}">
                             <Setter TargetName="BackgroundBorder"
                                     Property="Background"
-                                    Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridColumnHeaderBackgroundBrushKey}}"/>
+                                    Value="Transparent"/>
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -407,7 +409,7 @@
         <Setter Property="Foreground"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowForegroundBrushKey}}" />
         <Setter Property="Background" 
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowBackgroundBrushKey}}"/>
+                Value="Transparent"/>
         <Setter Property="Margin"
                 Value="0,0,0,0" />
         <Style.Triggers>
@@ -545,6 +547,7 @@
                                                 Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
                                         <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
                                                                         Grid.Column="1"
+                                                                        Background="Transparent" 
                                                                         Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
                                         <Grid Grid.Row="1"
                                               Grid.ColumnSpan="2">
