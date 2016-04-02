@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08D3536A-9081-4E64-8B5E-DDE68D2FF98A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetroApp</RootNamespace>
+    <AssemblyName>MetroApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NET45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviours\BorderlessWindowBehavior.cs" />
+    <Compile Include="Behaviours\GlowWindowBehavior.cs" />
+    <Compile Include="Behaviours\StylizedBehaviorCollection.cs" />
+    <Compile Include="Behaviours\StylizedBehaviors.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Controls\Glow.cs" />
+    <Compile Include="Controls\GlowDirection.cs" />
+    <Compile Include="Controls\GlowWindow.xaml.cs">
+      <DependentUpon>GlowWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetroWindow.Commands.cs">
+      <DependentUpon>MetroWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetroWindow.cs" />
+    <Compile Include="Controls\MetroWindowTopBar.StateButtons.cs">
+      <DependentUpon>MetroWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MetroWindowTopBar.cs">
+      <DependentUpon>MetroWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\FontSizeOffsetConverter.cs" />
+    <Compile Include="Converters\StrokeMaginConverter.cs" />
+    <Compile Include="Converters\ThicknessToDoubleConverter.cs" />
+    <Compile Include="Helpers\ComBoxHelper.cs" />
+    <Compile Include="Helpers\ControlsHelper.cs" />
+    <Compile Include="Helpers\DataGridPopupController.cs" />
+    <Compile Include="Helpers\DataGridPopupHelper.cs" />
+    <Compile Include="Helpers\MetroWindowHelpers.cs" />
+    <Compile Include="Helpers\ResourcesHelper.cs" />
+    <Compile Include="Helpers\TextBoxHelper.cs" />
+    <Compile Include="Helpers\TreeHelper.cs" />
+    <Compile Include="Helpers\WindowHelper.cs" />
+    <Compile Include="Model\Win32\GWL.cs" />
+    <Compile Include="Model\Win32\HitTestValues.cs" />
+    <Compile Include="Model\Win32\NativeMethods.cs" />
+    <Compile Include="Model\Win32\SWP.cs" />
+    <Compile Include="Model\Win32\WM.cs" />
+    <Compile Include="Model\Win32\WS.cs" />
+    <Compile Include="Model\Win32\WSEX.cs" />
+    <Compile Include="Native\ABMsg.cs" />
+    <Compile Include="Native\Constants.cs" />
+    <Compile Include="Native\MinMaxInfo.cs" />
+    <Compile Include="Native\AbEdge.cs" />
+    <Compile Include="Extensions\ChildrenOfTypeExtensions.cs" />
+    <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="Extensions\ParentOfTypeExtensions.cs" />
+    <Compile Include="Shells\Standard\ComGuids.cs" />
+    <Compile Include="Shells\Standard\Debug.cs" />
+    <Compile Include="Shells\Standard\DoubleUtil.cs" />
+    <Compile Include="Shells\Standard\DpiHelper.cs" />
+    <Compile Include="Shells\Standard\ErrorCodes.cs" />
+    <Compile Include="Shells\Standard\MessageWindow.cs" />
+    <Compile Include="Shells\Standard\NativeMethods.cs" />
+    <Compile Include="Shells\Standard\ShellProvider.cs" />
+    <Compile Include="Shells\Standard\StreamHelper.cs" />
+    <Compile Include="Shells\Standard\Utilities.cs" />
+    <Compile Include="Shells\Standard\Utilities.Windows.cs" />
+    <Compile Include="Shells\Standard\Utilities.Wpf.cs" />
+    <Compile Include="Shells\Standard\Verify.cs" />
+    <Compile Include="Shells\SystemCommands.cs" />
+    <Compile Include="Shells\SystemParameters2.cs" />
+    <Compile Include="Shells\WindowChrome.cs" />
+    <Compile Include="Shells\WindowChromeWorker.cs" />
+    <Compile Include="Native\AppBarData.cs" />
+    <Compile Include="Native\Margin.cs" />
+    <Compile Include="Native\MonitorInfo.cs" />
+    <Compile Include="Native\WindowPlacement.cs" />
+    <Compile Include="Native\WindowState.cs" />
+    <Compile Include="Native\Point.cs" />
+    <Compile Include="Native\Rect.cs" />
+    <Compile Include="Native\UnsafeNativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Themes\BrushKeys.cs">
+      <DependentUpon>Colors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\ColorKeys.cs">
+      <DependentUpon>Colors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\StyleManager.cs" />
+    <Compile Include="Themes\Theme.cs" />
+    <Compile Include="Themes\Dark.cs">
+      <DependentUpon>Theme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\Light.cs">
+      <DependentUpon>Theme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\White.cs">
+      <DependentUpon>Theme.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Controls\GlowWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls.FlatSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Grid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Menu.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Slider.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.ComboBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.PasswordBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TabControl.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.CheckBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.ListView.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.GridView.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.ListBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Scrollbar.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TreeView.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TextBox.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.TextBlock.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Label.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Controls.Button.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.DataGrid.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.RadioButton.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Controls.Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Glow.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MetroWindow.Commands.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindow.StateButtons.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindow.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MetroWindowTopBar.xaml">
+      <DependentUpon>Controls.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Dark.xaml">
+      <DependentUpon>Colors.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Light.xaml">
+      <DependentUpon>Colors.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\White.xaml">
+      <DependentUpon>Colors.xaml</DependentUpon>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

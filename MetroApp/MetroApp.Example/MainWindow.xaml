@@ -1,0 +1,42 @@
+﻿<MetroApp:MetroWindow x:Class="MetroApp.Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:MetroApp="sunjianwen143@hotmail.com"
+        GlowBrush="#CC119EDA"
+        BorderShadow="True"
+        Icon="Images/Server.ico"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Themes="sunjianwen143@hotmail.com"
+        xmlns:Controls="sunjianwen143@hotmail.com"
+        xmlns:Helpers="sunjianwen143@hotmail.com"
+        Title="MetroApp"
+        xmlns:Examples="clr-namespace:MetroApp.Example">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MetroApp;component/Themes/Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Helpers:WindowDragHelper.EnableDrag="True">
+        <TabControl Controls:ControlsHelper.IsUnderlined="True">
+            <TabItem Header="DataGrid">
+                <Grid>
+                    <Examples:DataGridExample/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Selections">
+                <Grid>
+                    <Examples:SelectionExample/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="BaseControls">
+                <Grid>
+                    <Examples:BaseControlsExample/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</MetroApp:MetroWindow>
