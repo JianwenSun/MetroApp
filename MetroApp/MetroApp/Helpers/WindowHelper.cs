@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -38,7 +39,7 @@ namespace MetroApp.Helpers
         private static void UIElementOnMouseMove(object sender, MouseEventArgs mouseEventArgs)
         {
             var uiElement = sender as UIElement;
-            if (uiElement != null)
+            if (uiElement != null && mouseEventArgs.OriginalSource.GetType() != typeof(Thumb))
             {
                 if (mouseEventArgs.LeftButton == MouseButtonState.Pressed)
                 {
