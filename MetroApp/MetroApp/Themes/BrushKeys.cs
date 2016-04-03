@@ -112,6 +112,7 @@ namespace MetroApp.Themes
         public static string DataGridRowDisableSelectedForegroundBrushKey { get; private set; }
         public static string DataGridRowDisableSelectedBackgroundBrushKey { get; private set; }
         public static string DataGridBackgroundBrushKey { get; private set; }
+        public static string DataGridForegroundBrushKey { get; private set; }
         public static string DataGridBorderBrushKey { get; private set; }
         public static string DataGridHorizontalGridLinesBrushKey { get; private set; }
         public static string DataGridVerticalGridLinesBrushKey { get; private set; }

@@ -161,6 +161,8 @@
                      Color="{StaticResource AccentDisableColorKey}"/>
     <SolidColorBrush x:Key="DataGridBackgroundBrushKey"
                      Color="{StaticResource MainColorKey}"/>
+    <SolidColorBrush x:Key="DataGridForegroundBrushKey"
+                     Color="{StaticResource BasicColorKey}"/>
     <SolidColorBrush x:Key="DataGridBorderBrushKey"
                      Color="{StaticResource WeakColorKey}"/>
     <SolidColorBrush x:Key="DataGridHorizontalGridLinesBrushKey"

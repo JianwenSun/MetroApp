@@ -1,5 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:helper="clr-namespace:MetroApp.Helpers"
                     xmlns:Themes="clr-namespace:MetroApp.Themes">
 
     <ResourceDictionary.MergedDictionaries>
@@ -302,8 +303,8 @@
 
     <Style x:Key="MetroDataGridCell"
            TargetType="{x:Type DataGridCell}">
-        <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellForegroundBrushKey}}" />
+        <Setter Property="Foreground" 
+                Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=Foreground}" />
         <Setter Property="Background"
                 Value="Transparent" />
         <Setter Property="BorderBrush"
@@ -338,7 +339,7 @@
             <Trigger Property="IsSelected"
                      Value="True">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellSelectedForegroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.SelectedForeground)}" />
             </Trigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -348,7 +349,7 @@
                                Value="Cell" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.SelectedBackground)}" />
             </MultiDataTrigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -360,7 +361,7 @@
                                Value="CellOrRowHeader" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellSelectedBackgroundBrushKey}}" />
+                        Value="Transparent" />
             </MultiDataTrigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -370,7 +371,7 @@
                                Value="Cell" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellMouseOverSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.MouseOverBackground)}" />
             </MultiDataTrigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -382,12 +383,12 @@
                                Value="CellOrRowHeader" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellMouseOverUnSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.MouseOverBackground)}" />
             </MultiDataTrigger>
             <Trigger Property="IsEnabled"
                      Value="False">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellDisabledForegroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableForeground)}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -397,17 +398,17 @@
                                Value="True" />
                 </MultiTrigger.Conditions>
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellDisabledSelectedForegroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableSelectedForeground)}" />
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridCellDisabledSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableSelectedBackground)}" />
             </MultiTrigger>
         </Style.Triggers>
     </Style>
-    
+
     <Style x:Key="MetroDataGridRow"
            TargetType="{x:Type DataGridRow}">
         <Setter Property="Foreground"
-                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowForegroundBrushKey}}" />
+                Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=Foreground}" />
         <Setter Property="Background" 
                 Value="Transparent"/>
         <Setter Property="Margin"
@@ -416,9 +417,9 @@
             <Trigger Property="IsSelected"
                      Value="True">
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.SelectedBackground)}" />
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowSelectedForegroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.SelectedForeground)}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -428,7 +429,7 @@
                                Value="True" />
                 </MultiTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowSelectionActiveSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.SelectedBackground)}" />
             </MultiTrigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -438,7 +439,7 @@
                                Value="FullRow" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowMouseOverFullRowBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.MouseOverBackground)}" />
             </MultiDataTrigger>
             <MultiDataTrigger>
                 <MultiDataTrigger.Conditions>
@@ -450,12 +451,12 @@
                                Value="CellOrRowHeader" />
                 </MultiDataTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowMouseOverSelectedCellOrRowHeaderBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.MouseOverSelectedBackground)}" />
             </MultiDataTrigger>
             <Trigger Property="IsEnabled"
                      Value="False">
                 <Setter Property="Foreground"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowDisableForegroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableForeground)}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -465,23 +466,39 @@
                                Value="True" />
                 </MultiTrigger.Conditions>
                 <Setter Property="Background"
-                        Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowDisableSelectedBackgroundBrushKey}}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableSelectedBackground)}" />
                 <Setter Property="Foreground"
-                        Value="{DynamicResource DataGridRowDisableSelectedForegroundBrushKey}" />
+                        Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=(helper:DataGridHelper.DisableSelectedForeground)}" />
             </MultiTrigger>
         </Style.Triggers>
     </Style>
 
     <Style x:Key="MetroDataGrid"
            TargetType="{x:Type DataGrid}">
-        <Setter Property="MinRowHeight"
-                Value="25" />
-        <Setter Property="GridLinesVisibility"
-                Value="None" />
+        <Setter Property="helper:DataGridHelper.SelectedBackground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowSelectedBackgroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.SelectedForeground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowSelectedForegroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.MouseOverBackground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowMouseOverFullRowBackgroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.MouseOverSelectedBackground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowMouseOverSelectedCellOrRowHeaderBackgroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.DisableForeground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowDisableForegroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.DisableSelectedForeground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowDisableSelectedForegroundBrushKey}}"/>
+        <Setter Property="helper:DataGridHelper.DisableSelectedBackground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridRowDisableSelectedBackgroundBrushKey}}"/>
+        <Setter Property="Foreground"
+                Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridForegroundBrushKey}}" />
         <Setter Property="Background"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridBackgroundBrushKey}}" />
         <Setter Property="BorderBrush"
                 Value="{DynamicResource {x:Static Themes:BrushKeys.DataGridBorderBrushKey}}" />
+        <Setter Property="MinRowHeight"
+                Value="25" />
+        <Setter Property="GridLinesVisibility"
+                Value="None" />
         <Setter Property="BorderThickness"
                 Value="0,0,0,0" />
         <Setter Property="HorizontalGridLinesBrush"
