@@ -149,16 +149,10 @@ namespace MetroApp.Controls
             if (!useTopBar)
             {
                 this.TopBar.Visibility = Visibility.Collapsed;
-                this.MouseDown +=
-                    delegate
-                    {
-                        DragMove();
-                    };
             }
             else
             {
                 this.TopBar.Visibility = Visibility.Visible;
-                this.MouseDown -= delegate { DragMove(); };
             }
         }
 
