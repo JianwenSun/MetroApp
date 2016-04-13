@@ -17,10 +17,10 @@ Read it here: [http://mahapps.com](http://mahapps.com)
 ### Quick How To
 
 ## Base Controls
-![image](https://github.com/JianwenSun/MetroApp/tree/master/MetroApp/MetroApp/Resources/basecontrol.png)
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/MetroApp/Resources/basecontrol.png)
 
 ## DataGrid
-![image](https://github.com/JianwenSun/MetroApp/tree/master/MetroApp/MetroApp/Resources/datagrid.png)
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/MetroApp/Resources/datagrid.png)
 
 ```csharp
 
@@ -29,14 +29,14 @@ Read it here: [http://mahapps.com](http://mahapps.com)
  </Helpers:DataGridPopupHelper.Controller>
 ```
 ## DataGrid Target To Window
-![image](https://github.com/JianwenSun/MetroApp/tree/master/MetroApp/MetroApp/Resources/popup_window_delay.png)
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/MetroApp/Resources/popup_window_delay.png)
 
 You can use DataGridPopupHelper to add the popup view and give it delay or stay time,
 and target it to the owner control or window,
 alos it can extend to any ohter controls.
 
 ## Selections Controls
-![image](https://github.com/JianwenSun/MetroApp/tree/master/MetroApp/MetroApp/Resources/selections.png)
+![image](https://github.com/JianwenSun/MetroApp/blob/master/MetroApp/MetroApp/Resources/selections.png)
 
 ```XML
 <Application x:Class="MetroApp.Example.App"
